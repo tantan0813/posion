@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>不积跬步，何以至千里！</title>
+    <link rel="stylesheet" type="text/css" href="css/css/index.css" />
 </head>
 <body>
-
+<div >
+    <h2>数组常用方法(原生)总结</h2>
+    <section>
+        <h4>indexOf()</h4>
+        <p>匹配成功，返回该值的索引值</p>
+        <p>匹配不成功，返回-1</p>
+    </section>
+    <section>
+        <h4>filter()匹配，遍历函数</h4>
+        <p>按条件筛选</p>
+    </section>
+    <section>
+        <h4>forEach()为每个元素执行对应方法，遍历函数</h4>
+        <p>for循环;并不改变数组本身。</p>
+    </section>
+    <section>
+        <h4>map()为每个元素执行对应方法，遍历函数，映射返回新数组。</h4>
+        <p>处理服务器返回数据时使用。</p>
+    </section>
+    <section>
+        <h4>reduce()累加器功能,数组中每个值（从左到右）开始合并。</h4>
+        <p>累加时使用,返回值为函数处理的结果。</p>
+    </section>
+</div>
+<div class="boll"></div>
+<div>
+    <h2>类数组的转化<br/><p>getElementByClassName得到的是一个类数组，然后就研究了一下类数组转化为数组的方法。</p></h2>
+    <section>
+        <h4>Array.prototype.slice.call(arrayLike)</h4>
+    </section>
+    <section>
+        <h4>Array.prototype.splice.call(arrayLike,0)</h4>
+    </section>
+</div>
+<div class="boll" id="boll"></div>
 </body>
-<>
+<script type ="text/javascript" src="js/es/array.js"></script>
 </html>

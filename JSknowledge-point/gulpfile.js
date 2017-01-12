@@ -7,14 +7,13 @@ var gulp = require('gulp'), //本地安装gulp所用到的地方
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     babel = require("gulp-babel");
-const autoprefixer = require('gulp-autoprefixer');
-const livereload = require('gulp-livereload');
-const livereload = require('gulp-livereload');
+const autoprefixer = require('gulp-autoprefixer'),
+        livereload = require('gulp-livereload');
 gulp.task("ES6", function () {
     return gulp.src("js/es6/*.js")// ES6 源码存放的路径
         .pipe(babel())
         .pipe(gulp.dest("js/es"))//转换成 ES5 存放的路径
-        .pipe(livereload())
+        .pipe(livereload());
 });
 //定义一个testLess任务（自定义任务名称）
 gulp.task('Less', function () {
@@ -26,11 +25,12 @@ gulp.task('Less', function () {
             remove:true //是否去掉不必要的前缀 默认：true
         }))
         .pipe(gulp.dest('css/css'))//将会在css下生成index.css
-        .pipe(livereload())
+        .pipe(livereload());
 });
 //gulp.src(globs[, options]) 执行任务处理的文件  globs：处理的文件路径(字符串或者字符串数组)
 //gulp.dest(path[, options]) 处理完后文件生成路径
 gulp.task('Watch', function () {
+    livereload.listen();
     gulp.watch('css/less/*.less', ['Less']); //当所有less文件发生改变时，调用testLess任务
     gulp.watch('js/es6/*.js', ['ES6']); //当所有less文件发生改变时，调用任务
 });
