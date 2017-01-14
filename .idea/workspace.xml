@@ -18,55 +18,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JSknowledge-point/index.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/H5/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-              <folding>
-                <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#section#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#section#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="array.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JSknowledge-point/js/es6/array.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="64" column="10" lean-forward="true" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+            <state relative-caret-position="108">
+              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JSknowledge-point/css/less/index.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-27">
-              <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-              <folding>
-                <element signature="e#265#548#0" expanded="false" />
-                <element signature="e#574#628#0" expanded="false" />
-                <element signature="e#634#688#0" expanded="false" />
-                <element signature="e#695#754#0" expanded="false" />
-                <element signature="e#761#798#0" expanded="false" />
-                <element signature="e#805#865#0" expanded="false" />
-                <element signature="e#872#911#0" expanded="false" />
-                <element signature="e#918#978#0" expanded="false" />
-                <element signature="e#985#1022#0" expanded="false" />
-                <element signature="e#1029#1089#0" expanded="false" />
-                <element signature="e#1096#1132#0" expanded="false" />
-                <element signature="e#1139#1199#0" expanded="false" />
-                <element signature="e#1206#1242#0" expanded="false" />
-                <element signature="e#1250#1325#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -77,6 +34,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -99,8 +57,9 @@
         <option value="$PROJECT_DIR$/JSknowledge-point/gulpfile.js" />
         <option value="$PROJECT_DIR$/JSknowledge-point/js/es6/index.js" />
         <option value="$PROJECT_DIR$/JSknowledge-point/css/less/index.less" />
-        <option value="$PROJECT_DIR$/JSknowledge-point/index.html" />
         <option value="$PROJECT_DIR$/JSknowledge-point/js/es6/array.js" />
+        <option value="$PROJECT_DIR$/JSknowledge-point/index.html" />
+        <option value="$PROJECT_DIR$/H5/index.html" />
       </list>
     </option>
   </component>
@@ -113,10 +72,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="125" />
-    <option name="y" value="202" />
-    <option name="width" value="1588" />
-    <option name="height" value="1100" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -133,7 +92,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -156,7 +114,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JSknowledge-point" />
+              <option name="myItemId" value="H5" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -170,51 +128,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JSknowledge-point" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="posion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="posion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JSknowledge-point" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="less" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="posion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="posion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JSknowledge-point" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="H5" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -225,17 +139,30 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tantan0813.github.io" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="D:/node.js/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="D:\node.js\node.exe" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="E:\myspace\node_modules\mocha" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\myspace\posion\H5" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\myspace\posion\H5" />
+      <recent name="E:\myspace\posion\H5\css" />
+      <recent name="E:\myspace\posion\JSknowledge-point\js\es6" />
+      <recent name="E:\myspace\posion\JSknowledge-point\css" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -313,18 +240,19 @@
       <updated>1484032842836</updated>
       <workItem from="1484032846419" duration="7065000" />
       <workItem from="1484096509473" duration="8394000" />
-      <workItem from="1484185163258" duration="5447000" />
+      <workItem from="1484185163258" duration="15689000" />
+      <workItem from="1484355681750" duration="3236000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20906000" />
+    <option name="totallyTimeSpent" value="34384000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="125" y="202" width="1588" height="1100" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17302799" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30052084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13530655" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -356,6 +284,52 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/JSknowledge-point/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="43" column="17" lean-forward="false" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+          <folding>
+            <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JSknowledge-point/js/es6/array.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JSknowledge-point/css/less/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="e#640#694#0" expanded="false" />
+            <element signature="e#700#754#0" expanded="false" />
+            <element signature="e#761#820#0" expanded="false" />
+            <element signature="e#827#864#0" expanded="false" />
+            <element signature="e#871#931#0" expanded="false" />
+            <element signature="e#938#977#0" expanded="false" />
+            <element signature="e#984#1044#0" expanded="false" />
+            <element signature="e#1051#1088#0" expanded="false" />
+            <element signature="e#1095#1155#0" expanded="false" />
+            <element signature="e#1162#1198#0" expanded="false" />
+            <element signature="e#1205#1265#0" expanded="false" />
+            <element signature="e#1272#1308#0" expanded="false" />
+            <element signature="e#1316#1391#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JSknowledge-point/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
           <folding>
@@ -363,40 +337,32 @@
             <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JSknowledge-point/js/es6/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1161">
-          <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/JSknowledge-point/js/es6/index.js" />
     <entry file="file://$PROJECT_DIR$/JSknowledge-point/css/less/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#265#548#0" expanded="false" />
-            <element signature="e#574#628#0" expanded="false" />
-            <element signature="e#634#688#0" expanded="false" />
-            <element signature="e#695#754#0" expanded="false" />
-            <element signature="e#761#798#0" expanded="false" />
-            <element signature="e#805#865#0" expanded="false" />
-            <element signature="e#872#911#0" expanded="false" />
-            <element signature="e#918#978#0" expanded="false" />
-            <element signature="e#985#1022#0" expanded="false" />
-            <element signature="e#1029#1089#0" expanded="false" />
-            <element signature="e#1096#1132#0" expanded="false" />
-            <element signature="e#1139#1199#0" expanded="false" />
-            <element signature="e#1206#1242#0" expanded="false" />
-            <element signature="e#1250#1325#0" expanded="false" />
+            <element signature="e#640#694#0" expanded="false" />
+            <element signature="e#700#754#0" expanded="false" />
+            <element signature="e#761#820#0" expanded="false" />
+            <element signature="e#827#864#0" expanded="false" />
+            <element signature="e#871#931#0" expanded="false" />
+            <element signature="e#938#977#0" expanded="false" />
+            <element signature="e#984#1044#0" expanded="false" />
+            <element signature="e#1051#1088#0" expanded="false" />
+            <element signature="e#1095#1155#0" expanded="false" />
+            <element signature="e#1162#1198#0" expanded="false" />
+            <element signature="e#1205#1265#0" expanded="false" />
+            <element signature="e#1272#1308#0" expanded="false" />
+            <element signature="e#1316#1391#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -410,9 +376,9 @@
             <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -421,39 +387,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1484190330300" expanded="true" signature="545:548" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JSknowledge-point/js/es6/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/JSknowledge-point/js/es6/index.js" />
     <entry file="file://$PROJECT_DIR$/JSknowledge-point/css/less/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#265#548#0" expanded="false" />
-            <element signature="e#574#628#0" expanded="false" />
-            <element signature="e#634#688#0" expanded="false" />
-            <element signature="e#695#754#0" expanded="false" />
-            <element signature="e#761#798#0" expanded="false" />
-            <element signature="e#805#865#0" expanded="false" />
-            <element signature="e#872#911#0" expanded="false" />
-            <element signature="e#918#978#0" expanded="false" />
-            <element signature="e#985#1022#0" expanded="false" />
-            <element signature="e#1029#1089#0" expanded="false" />
-            <element signature="e#1096#1132#0" expanded="false" />
-            <element signature="e#1139#1199#0" expanded="false" />
-            <element signature="e#1206#1242#0" expanded="false" />
-            <element signature="e#1250#1325#0" expanded="false" />
+            <element signature="e#640#694#0" expanded="false" />
+            <element signature="e#700#754#0" expanded="false" />
+            <element signature="e#761#820#0" expanded="false" />
+            <element signature="e#827#864#0" expanded="false" />
+            <element signature="e#871#931#0" expanded="false" />
+            <element signature="e#938#977#0" expanded="false" />
+            <element signature="e#984#1044#0" expanded="false" />
+            <element signature="e#1051#1088#0" expanded="false" />
+            <element signature="e#1095#1155#0" expanded="false" />
+            <element signature="e#1162#1198#0" expanded="false" />
+            <element signature="e#1205#1265#0" expanded="false" />
+            <element signature="e#1272#1308#0" expanded="false" />
+            <element signature="e#1316#1391#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -475,74 +430,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JSknowledge-point/js/es/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/JSknowledge-point/js/es/index.js" />
     <entry file="file://$PROJECT_DIR$/JSknowledge-point/css/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3183">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1484190330300" expanded="true" signature="545:548" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JSknowledge-point/js/es6/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/JSknowledge-point/js/es6/index.js" />
     <entry file="file://$PROJECT_DIR$/JSknowledge-point/css/less/index.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
-          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        <state relative-caret-position="270">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           <folding>
-            <element signature="e#265#548#0" expanded="false" />
-            <element signature="e#574#628#0" expanded="false" />
-            <element signature="e#634#688#0" expanded="false" />
-            <element signature="e#695#754#0" expanded="false" />
-            <element signature="e#761#798#0" expanded="false" />
-            <element signature="e#805#865#0" expanded="false" />
-            <element signature="e#872#911#0" expanded="false" />
-            <element signature="e#918#978#0" expanded="false" />
-            <element signature="e#985#1022#0" expanded="false" />
-            <element signature="e#1029#1089#0" expanded="false" />
-            <element signature="e#1096#1132#0" expanded="false" />
-            <element signature="e#1139#1199#0" expanded="false" />
-            <element signature="e#1206#1242#0" expanded="false" />
-            <element signature="e#1250#1325#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JSknowledge-point/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-          <folding>
-            <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#640#694#0" expanded="false" />
+            <element signature="e#700#754#0" expanded="false" />
+            <element signature="e#761#820#0" expanded="false" />
+            <element signature="e#827#864#0" expanded="false" />
+            <element signature="e#871#931#0" expanded="false" />
+            <element signature="e#938#977#0" expanded="false" />
+            <element signature="e#984#1044#0" expanded="false" />
+            <element signature="e#1051#1088#0" expanded="false" />
+            <element signature="e#1095#1155#0" expanded="false" />
+            <element signature="e#1162#1198#0" expanded="false" />
+            <element signature="e#1205#1265#0" expanded="false" />
+            <element signature="e#1272#1308#0" expanded="false" />
+            <element signature="e#1316#1391#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JSknowledge-point/js/es6/array.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="64" column="10" lean-forward="true" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+        <state relative-caret-position="594">
+          <caret line="103" column="42" lean-forward="false" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H5/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JSknowledge-point/js/es6/arrayandregexp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JSknowledge-point/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="64" column="57" lean-forward="false" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
+          <folding>
+            <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/H5/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
           <folding />
         </state>
       </provider>
