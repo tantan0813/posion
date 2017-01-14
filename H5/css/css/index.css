@@ -1,14 +1,14 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-.container{
+.container {
   width: 50%;
   margin: 30px auto;
   border: 1px solid black;
   border-radius: 12px;
-  h2{
-    text-align: center;
-    border-bottom: 1px solid black;
-  }
+}
+.container h2 {
+  text-align: center;
+  border-bottom: 1px solid black;
 }
