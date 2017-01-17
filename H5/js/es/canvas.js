@@ -4,16 +4,17 @@
  * Created by Administrator on 2017/1/14.
  */
 window.onload = function () {
-    var context = document.getElementById("canvas").getContext("2d");
+    var context = document.getElementById("canvas2d").getContext("2d");
     var paint = {
-        //圆
-        Circle: function Circle(context, color, x, y, a, b, n) {
-            var dir = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : 4;
-            var str = arguments.length > 8 && arguments[8] !== undefined ? arguments[8] : false;
+        //圆(半圆，椭圆)
+        Circle: function Circle(context, fillcolor, bordercolor, x, y, a, b, n) {
+            var dir = arguments.length > 8 && arguments[8] !== undefined ? arguments[8] : 4;
+            var lineWidth = arguments[9];
+            var str = arguments[10];
             //x,y参照为圆心,context画布，color fill色，a x轴、b y轴，dir方向，str边框,n可以决定是？/4圆.
             var step = a > b ? 1 / a : 1 / b;
-            context.lineWidth = 2;
-            context.fillStyle = color;
+            context.lineWidth = lineWidth;
+            context.fillStyle = fillcolor;
             context.beginPath();
             if (n <= 1) {
                 context.moveTo(x, y);
@@ -47,14 +48,14 @@ window.onload = function () {
             context.closePath();
             context.fill();
             if (str) {
-                context.strokeStyle = "black";context.stroke();
+                context.strokeStyle = bordercolor;context.stroke();
             }
         },
 
         //线
-        Line: function Line(context, startx, starty, stopx, stopy, width, color) {
+        Line: function Line(context, startx, starty, stopx, stopy, linewidth, color) {
             context.strokeStyle = color;
-            context.lineWidth = width;
+            context.lineWidth = linewidth;
             context.beginPath();
             context.moveTo(startx, starty);
             context.lineTo(stopx, stopy);
@@ -63,17 +64,21 @@ window.onload = function () {
         },
 
         //矩形
-        Rect: function Rect(context, x, y, width, height, color, str) {
+        Rect: function Rect(context, x, y, width, height, color, str, bordercolr, borderwidth) {
             context.fillStyle = color;
             context.beginPath();
             context.rect(x, y, width, height);
             context.closePath();
             context.fill();
-            context.lineWidth = 2;
+            context.lineWidth = borderwidth;
             if (str) {
-                context.strokeStyle = "black";context.stroke();
+                context.strokeStyle = bordercolr;context.stroke();
             }
         }
     };
-    paint.Circle(context, "red", 10, 10, 20, 20, 2, 4, "black");
+    paint.Circle(context, "red", "black", 40, 24, 24, 20, 2, 4, false);
+    paint.Line(context, 49, 60, 40, 80, 1, "black");
+    paint.Line(context, 39, 80, 60, 80, 1, "black");
+    paint.Line(context, 59, 80, 50, 60, 1, "black");
+    paint.Rect(context, 80, 80, 40, 40, "black", false, "red", 1);
 };
