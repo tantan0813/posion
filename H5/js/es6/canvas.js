@@ -60,4 +60,12 @@ window.onload=function(){
     paint.Line(context,39,80,60,80,1,"black");
     paint.Line(context,59,80,50,60,1,"black");
     paint.Rect(context,80,80,40,40,"black",false,"red",1);
+
+    Array.prototype.uniq = function () {
+        var a = new Set();
+        this.forEach((arr,i)=>{
+            a.add(arr);
+        });
+        return Array.from(a);
+    };
 }

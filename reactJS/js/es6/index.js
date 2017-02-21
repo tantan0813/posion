@@ -29,7 +29,7 @@ ReactDOM.render(
     document.getElementById("demo_03")
 );
 //demo_04
-var HelloMessage = React.createClass({  //React.createClass()用于生成一个组件类（组件第一个字母必须大写；自有一个顶层标签）
+var HelloMessage = React.createClass({  //React.createClass()用于生成一个组件类（组件第一个字母必须大写；只有一个顶层标签）
     render:function(){
         return <h1>Hello {this.props.name}</h1>;
     }
@@ -44,7 +44,7 @@ var NotesList = React.createClass({
         return (
             <ol>
                 {
-                    React.Children.map(this.props.children, function (child) { //this.props属与组件的属性一一对应，但this.props.children表示所有子节点
+                    React.Children.map(this.props.children, function (child) { //this.props属性与组件的属性一一对应，但this.props.children表示所有子节点
                         return <li>{child}</li>;
                     })
                 }

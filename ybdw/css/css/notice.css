@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "微软雅黑", "黑体", "Microsoft YaHei UI", "Microsoft YaHei", "SimSun", "宋体", "Segoe UI", Tahoma, Helvetica, Sans-Serif;
+}
+body {
+  background: #ebecef;
+}
+a {
+  text-decoration: none;
+}
+section .time {
+  margin: 20px 0 18px 0;
+}
+section .time p {
+  background: #c6c7ce;
+  color: white;
+  width: 230px ;
+  text-align: center;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+section > a {
+  display: block;
+  width: 340px;
+  background: white;
+  color: black;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+section > a .notice_title {
+  line-height: 30px;
+  text-indent: 4px;
+}
+section > a img {
+  display: block;
+  width: 332px;
+  margin: 0 auto;
+}
+section > a .notice_context {
+  color: #717380;
+  padding: 6px 4px 6px 6px;
+  font-size: 14px;
+  border-bottom: 1px solid #e5d4c3;
+  line-height: 20px;
+}
+section > a .bottom_go {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 6px;
+  padding-bottom: 6px;
+}
+section > a .bottom_go p {
+  text-indent: 10px;
+}
+section > a .bottom_go img {
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin-right: 6px;
+}
