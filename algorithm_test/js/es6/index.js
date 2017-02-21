@@ -45,7 +45,7 @@ window.onload = function(){
         return timer;
     }
 
-    add(6,3);
+    // add(6,3);
     function add(num1,num2){
         while (num2!=0) {
             var temp = num1^num2;
@@ -56,7 +56,7 @@ window.onload = function(){
         return num1;
     }
 
-    duplicates([1,2,3,4,5,6,7,8,12,,3,4,4,5,6,10])
+    // duplicates([1,2,3,4,5,6,7,8,12,,3,4,4,5,6,10])
     function duplicates(arr) {
         var result = [];
         arr.forEach(function(elem){
