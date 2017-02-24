@@ -1,7 +1,6 @@
 var args=process.argv;
-args.shift()
-args.shift()
-args.pop()
+var arr = args.slice(2,args.length);
+console.log(arr);
 function calculate(args) {
 	var result=[];
 	for(var i=0,l=args.length;i<l;i++){
@@ -21,4 +20,4 @@ function calculate(args) {
 	console.log(result.join(' '));
 }
 
-calculate(args);
+calculate(arr);

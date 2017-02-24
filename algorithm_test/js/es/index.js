@@ -37,17 +37,17 @@ window.onload = function () {
     var str_03 = "nhrwlbcc8m7c5hih9mhalw98k0322wf2jjm47kk",
         key = "t";
     // find_time(str_03,key);
-    console.log(str_03.indexOf("t"));
+    // console.log(str_03.indexOf("t"));
     function find_time(str, key) {
         var timer = 0;
         var str = str.split("");
-        console.log(str);
+        // console.log(str);
         for (var i = 0, len = str.length; i < len; i++) {
             if (key == str[i]) {
                 timer++;
             }
         }
-        console.log(timer);
+        // console.log(timer);
         return timer;
     }
 
@@ -91,12 +91,29 @@ window.onload = function () {
         };
     }
 
-    functionFunction('Hello')('world');
-    function functionFunction(str) {
-        var f = function f(s) {
-            return str + ", " + s;
-        };
-        console.log(f);
-        return f;
+    var data = [];
+    data[0] = "nhrwlbcc8m7c5hih9mhalw98k0322wf2jjm47kk3ntm9snfrflzzundn7d608usy049asxalzjk7izj6amcqhr8uubc04g52mcjboj2fmge2l6iarizfu4yve5o4i3srf5zgqbg82ckcotdeqp760mc9gzei5dzk5gj9x9yj05o3hle0ii64krkkp5i7blh7nbu3gu5vgi2scyn4yqx3z4vcjbyzhnqkh887izotjkg2l0mit0k14vyn39";
+    data[1] = "t";
+    fun11(data);
+    function fun11(data) {
+        var counter = 0;
+        var str = data[0].toString();
+        var index = data[1].toString();
+        if (isNaN(index)) {
+            index.toLowerCase();
+            str.toLowerCase().split("");
+            un(str, index);
+        } else {
+            str.split("");
+            un(str, index);
+        }
+        function un(str, index) {
+            for (var i = 0, len = str.length; i < len; i++) {
+                if (str[i] == index) {
+                    counter++;
+                }
+            }
+        }
+        console.log(counter);
     }
 };
