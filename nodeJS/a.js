@@ -130,7 +130,7 @@ var data = [];
 rl.on("line",function(a){
     data.push(a);
     // console.log(data);
-    console.log(insert(data));
+    console.log(findSu());
     //冒泡
     function maopao(arr){
         var len =arr.length-1;
@@ -208,6 +208,40 @@ rl.on("line",function(a){
         }
         return false;
     }
-
-
+    // 素数
+    function findSu(start, end) {
+        var str = "", n = 0;
+        for (var i = start; i <= end; i++) {
+            var m = true; //质数
+            for (var j = start + 1; j < i; j++) {
+                if (i % j == 0) {
+                    m = false; //非质数
+                    break;
+                }
+            }
+            if (m  && i != 2) {
+                str = str + i + "，";
+                n++; //质数个数+1
+            }
+        }
+        return str;
+    }
+    //阶乘的和
+    // console.log(sum(1,10));
+    function sum(start, end) {
+        var i=start;
+        var n = end;
+        var total = 0;
+        while (i <= n) {
+            var tmp = 1;
+            var j = i;
+            while (j >= 1) {
+                tmp *= j;
+                j--;
+            }
+            total += tmp;
+            i++;
+        }
+        return total;
+    }
 })

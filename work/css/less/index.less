@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑", "黑体", "Microsoft YaHei UI", "Microsoft YaHei", "SimSun", "宋体", "Segoe UI", Tahoma, Helvetica, Sans-Serif;
+}
+.search{
+  height: 42px;
+  border-radius:4px ;
+  background: rgb(191, 205, 218);
+  position: relative;
+  top: 0;
+  left: 0;
+  >div{
+    width: 500px;
+    display: flex;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    //border: 1px solid red;
+    .input{
+      width: 160px;
+      height: 26px;
+      border: 1px solid grey;
+      border-radius:4px ;
+      margin-top: 4px;
+      opacity: 0.5;
+    }
+    .button{
+      width: 30px;
+      height: 34px;
+      //border: 1px solid green;
+      margin: 0 60px 0 24px;
+      img{
+        display: block;
+        width: 40px;
+        height: 34px;
+      }
+    }
+
+  }
+
+}
+.content{
+  width: 100%;
+  .title{
+    width: 90%;
+    margin: 30px auto 0;
+    list-style: none;
+    background: rgb(106, 125, 143);
+    color: white;
+    display: flex;
+    li{
+      line-height: 40px;
+      text-align: center;
+      &:nth-of-type(1){
+        width: 20%;
+      }
+      &:nth-of-type(2){
+        width: 30%;
+      }
+      &:nth-of-type(3){
+        width: 34%;
+      }
+      &:nth-of-type(4){
+        width: 16%;
+      }
+    }
+  }
+  .text{
+    width: 90%;
+    margin: 0 auto;
+    list-style: none;
+    li{
+      border: 1px solid black;
+      border-top: none;
+      display: flex;
+      span{
+        text-align: center;
+        line-height: 28px;
+        border-right:1px solid black ;
+        a{
+          color: black;
+          text-decoration: none;
+          &:hover{
+           color: darkred;
+          }
+        }
+        &:nth-of-type(1){
+          width: 20%;
+        }
+        &:nth-of-type(2){
+          width: 30%;
+        }
+        &:nth-of-type(3){
+          width: 34%;
+        }
+        &:nth-of-type(4){
+            width: 16%;
+          border: none;
+          }
+      }
+      &:nth-of-type(10){
+        border: 1px solid black;
+      }
+    }
+  }
+  .list{
+    width: 600px;
+    display: flex;
+    margin-top: 40px;
+    margin-left: 54px;
+    ul{
+      list-style: none;
+      display: flex;
+      margin: 0 20px;
+      li{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin: 0 4px;
+        text-align: center;
+        &.active,:hover{
+          background: grey;
+          color: white;
+          cursor: pointer;
+        }
+      }
+
+    }
+  }
+}

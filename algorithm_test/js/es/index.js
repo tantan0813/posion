@@ -94,7 +94,7 @@ window.onload = function () {
     var data = [];
     data[0] = "nhrwlbcc8m7c5hih9mhalw98k0322wf2jjm47kk3ntm9snfrflzzundn7d608usy049asxalzjk7izj6amcqhr8uubc04g52mcjboj2fmge2l6iarizfu4yve5o4i3srf5zgqbg82ckcotdeqp760mc9gzei5dzk5gj9x9yj05o3hle0ii64krkkp5i7blh7nbu3gu5vgi2scyn4yqx3z4vcjbyzhnqkh887izotjkg2l0mit0k14vyn39";
     data[1] = "t";
-    fun11(data);
+    // fun11(data);
     function fun11(data) {
         var counter = 0;
         var str = data[0].toString();
@@ -114,6 +114,102 @@ window.onload = function () {
                 }
             }
         }
+
         console.log(counter);
+    }
+
+    // 递归二分查找
+    function binarySearch(arr, item, start, end) {
+        var end = end || arr.length - 1;
+        var start = start || 0;
+        var m = Math.floor((start + end) / 2);
+        if (item == arr[m]) {
+            return m;
+        } else if (item < arr[m]) {
+            return binarySearch(arr, item, start, m - 1);
+        } else {
+            return binarySearch(arr, item, m + 1, end);
+        }
+        return false;
+    }
+
+    // 非递归二分查找
+    function find(arr, item) {
+        var len = arr.length - 1,
+            l = 0;
+        while (l <= len) {
+            var m = Math.floor(len + l);
+            if (arr[m] == item) {
+                return m;
+            }
+            if (item > arr[m]) {
+                l = m + 1;
+            } else {
+                len = m - 1;
+            }
+        }
+        return false;
+    }
+
+    // 素数
+    // console.log(findSu(1, 10));
+    function findSu(start, end) {
+        var str = "",
+            n = 0;
+        for (var i = start; i <= end; i++) {
+            var m = true; //质数
+            for (var j = start + 1; j < i; j++) {
+                if (i % j == 0) {
+                    m = false; //非质数
+                    break;
+                }
+            }
+            if (m && i != 2) {
+                str = str + i + "，";
+                n++; //质数个数+1
+            }
+        }
+        return str;
+    }
+
+    //阶乘的和
+    console.log(sum(1, 10));
+    function sum(start, end) {
+        var i = start;
+        var n = end;
+        var total = 0;
+        while (i <= n) {
+            var tmp = 1;
+            var j = i;
+            while (j >= 1) {
+                tmp *= j;
+                j--;
+            }
+            total += tmp;
+            i++;
+        }
+        return total;
+    }
+    findNum();
+    function findNum() {
+        var re = /^[0-9]+$/;
+        var arr = [];
+        console.log(1);
+        for (var i = 0; i < 1000; i++) {
+            var n = Math.sqrt(i);
+            console.log(2);
+            if (re.test(n)) {
+                var m = Math.sqrt(i + 100);
+                console.log(3);
+                if (re.test(m)) {
+                    var d = Math.sqrt(i + 168);
+                    console.log(4);
+                    if (re.test(d)) {
+                        console.log(5);
+                        arr.push(i);
+                    }
+                }
+            }
+        }
     }
 };
