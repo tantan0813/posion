@@ -98,32 +98,116 @@ var data = [];
 //         }
 //     }
 // })
+// rl.on("line",function(a){
+//     var s = a.replace(/\s/g, "").split("");
+//     console.log(s);
+//     var result = [],len=s.length;
+//     if(len>=8){
+//         if(len = 8 ){return s.toString();};
+//         var l = parseFloat(len/8);
+//         for(var i=0;i<l;){
+//             var m = i;
+//             i+=8;
+//             result.concat(s.slice(m,i));
+//         }
+//         var mid = s.slice(8*l-1).split("");
+//         result.concat(bu(mid));
+//     }else{
+//         bu(s);
+//     }
+//     function bu(mid){
+//         var len_01 = mid.length;
+//         var num = 8-len_01;
+//         for(var j=0;j<num;j++){
+//             mid.push("0");
+//         }
+//         console.log(mid.toString())
+//         console.log(typeof mid.toString())
+//         return mid.toString();
+//     }
+//
+// })
 rl.on("line",function(a){
-    var s = a.replace(/\s/g, "").split("");
-    console.log(s);
-    var result = [],len=s.length;
-    if(len>=8){
-        if(len = 8 ){return s.toString();};
-        var l = parseFloat(len/8);
-        for(var i=0;i<l;){
-            var m = i;
-            i+=8;
-            result.concat(s.slice(m,i));
+    data.push(a);
+    // console.log(data);
+    console.log(insert(data));
+    //冒泡
+    function maopao(arr){
+        var len =arr.length-1;
+        for(var i=0;i<len;i++){
+            for(var j=0;j<len-i;j++){
+                if(arr[j]>arr[j+1]){
+                    var temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
         }
-        var mid = s.slice(8*l-1).split("");
-        result.concat(bu(mid));
-    }else{
-        bu(s);
+        return arr;
     }
-    function bu(mid){
-        var len_01 = mid.length;
-        var num = 8-len_01;
-        for(var j=0;j<num;j++){
-            mid.push("0");
+    // 快排
+    function quickSort(arr) {
+        if (arr.length <= 1) { return arr; }
+        var pivotIndex = Math.floor(arr.length / 2);
+        var pivot = arr.splice(pivotIndex, 1)[0];
+        var left = [];
+        var right = [];
+        for (var i = 0; i < arr.length; i++){
+            if (arr[i] < pivot) {
+                left.push(arr[i]);
+            } else {
+                right.push(arr[i]);
+            }
         }
-        console.log(mid.toString())
-        console.log(typeof mid.toString())
-        return mid.toString();
+        return quickSort(left).concat([pivot], quickSort(right));
+    };
+    //直接插入
+    function insert(arr){
+            var i=1,j,step,key,len=arr.length;
+            for(;i<len;i++){
+                step=j=i;
+                key=arr[j];
+                while(--j>-1){
+                    if(arr[j]>key){
+                        arr[j+1] = arr[j];
+                    }else{
+                        break;
+                    }
+                }
+                arr[j+1] = key;
+            }
+            return arr;
     }
+     // 递归二分查找
+    function binarySearch(arr,item,start,end){
+        var end = end || arr.length-1;
+        var start = start || 0;
+        var m = Math.floor((start+end)/2);
+        if(item==arr[m]){
+            return m;
+        }else if(item<arr[m]){
+            return binarySearch(arr,item,start,m-1);
+        }else{
+            return binarySearch(arr,item,m+1,end);
+        }
+        return false;
+    }
+    // 非递归二分查找
+    function find(arr,item){
+        var len = arr.length-1,l=0;
+        while(l<=len){
+            var m = Math.floor((len+l));
+            if(arr[m] == item){
+                return m;
+            }
+            if(item>arr[m]){
+                l = m+1;
+            }else{
+                len = m-1;
+            }
+        }
+        return false;
+    }
+
 
 })
