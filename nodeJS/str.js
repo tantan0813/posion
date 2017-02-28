@@ -535,12 +535,103 @@ rl.on("line",function(a){
     //     }
     // }
 
-    function play23(str){
-        if(/^d+$/ig.test(str)){
+    // 多线程输出问题
 
-        }
+    // function play23(n) {
+    //     var num = parseInt(n);
+    //     var arr = [];
+    //     var a = "A", b = "AB", c = "ABC", d = "ABCD";
+    //     var i = Math.floor(num / 4);
+    //     for (var j = 0; j < i; j++) {
+    //         arr.push(d);
+    //         console.log(arr);
+    //     }
+    //     if (num % 4 == 1) {
+    //         arr.push(a);
+    //     }else if (num % 4 == 2) {
+    //         arr.push(b);
+    //     }else if (num % 4 == 3) {
+    //         arr.push(c);
+    //     }
+    //     return arr.toString().replace(/,/ig, "");
+    // }
+
+    //合法IP
+
+    // function play24(str){
+    //     var arr = str.split(".");
+    //     if(arr.length==4){
+    //         var count = 0;
+    //         for(var i=0;i<4;i++){
+    //             if(arr[i]<=255&&arr[i]>=0){
+    //                 count++;
+    //             }
+    //         }
+    //         if(count==4){
+    //             return "YES";
+    //         }else{
+    //             return "NO";
+    //         }
+    //     }else{
+    //         return "NO";
+    //     }
+    // }
+
+    // 字符个数统计
+
+    // function play26(str){
+    //     var arr = str.split("");
+    //     var count = 0;
+    //     arr.forEach(function(n){
+    //         var num = parseInt(n.charCodeAt(0));
+    //         if(num>0&&num<127){
+    //             count++;
+    //         }
+    //     })
+    //     return count;
+    // }
+
+    // 提取不重复的整数
+
+    // function play27(str){
+    //     var arr = str.split("").reverse().toString().split(",");
+    //     var result = [];
+    //     arr.forEach(function(n){
+    //         if(result.indexOf(n)==-1){
+    //             result.push(n)
+    //         }
+    //     })
+    //     return result.toString().replace(/,/ig,"");
+    // }
+
+    // 按字节截取字符串
+    data.push(a);
+    if(data.length>1){
+        console.log(play27(data));
     }
-
+    function play27(arr){
+      var s = arr[0];
+      var num = parseInt(arr[1]);
+      var mid = s.split("");
+      var re =[],sum=0,result=[];
+      mid.forEach(function(n){
+            if(/^[\u4e00-\u9fa5]$/.test(n)){
+                re.push("1.5");
+            }else{
+                re.push("1");
+            }
+      })
+        var i=0,len=re.length;
+      for(;i<len;i++){
+          sum+=parseInt(re[i]);
+          if(num==Math.floor(sum)){
+              console.log(i);
+            break
+          }
+      }
+      result = mid.slice(0,i);
+      return result.toString().replace(/,/ig,"");
+    }
 })
 
 
