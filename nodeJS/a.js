@@ -161,7 +161,7 @@ rl.on("line",function(a){
         }
         return quickSort(left).concat([pivot], quickSort(right));
     };
-    //直接插入
+    //直接插入  ×
     function insert(arr){
             var i=1,j,step,key,len=arr.length;
             for(;i<len;i++){
@@ -243,5 +243,19 @@ rl.on("line",function(a){
             i++;
         }
         return total;
+    }
+
+    // zichuan(data[0]);截取子串
+    function zichuan(str) {
+        var len = str.length;
+        var start = 0;
+        var end = start+2;
+        var mid = [];
+        for(;end<=len;){
+            var zi = str.slice(start,end);
+            mid.push(zi);
+            start++;
+        }
+        console.log(mid);
     }
 })
