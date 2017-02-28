@@ -605,33 +605,35 @@ rl.on("line",function(a){
     // }
 
     // 按字节截取字符串
-    data.push(a);
-    if(data.length>1){
-        console.log(play27(data));
-    }
-    function play27(arr){
-      var s = arr[0];
-      var num = parseInt(arr[1]);
-      var mid = s.split("");
-      var re =[],sum=0,result=[];
-      mid.forEach(function(n){
-            if(/^[\u4e00-\u9fa5]$/.test(n)){
-                re.push("1.5");
-            }else{
-                re.push("1");
-            }
-      })
-        var i=0,len=re.length;
-      for(;i<len;i++){
-          sum+=parseInt(re[i]);
-          if(num==Math.floor(sum)){
-              console.log(i);
-            break
-          }
-      }
-      result = mid.slice(0,i);
-      return result.toString().replace(/,/ig,"");
-    }
+
+    // if(data.length>1){
+    //     console.log(play27(data));
+    // }
+    // function play27(arr){
+    //   var s = arr[0];
+    //   var num = parseInt(arr[1]);
+    //   var mid = s.split("");
+    //   var re =[],sum=0,result=[];
+    //   mid.forEach(function(n){
+    //         if(/^[\u4e00-\u9fa5]$/.test(n)){
+    //             re.push("1.5");
+    //         }else{
+    //             re.push("1");
+    //         }
+    //   })
+    //     var i=0,len=re.length;
+    //   for(;i<len;i++){
+    //           sum += parseFloat(re[i]);
+    //           if(num==Math.floor(sum)){
+    //               console.log(i);
+    //               break
+    //           }
+    //   }
+    //   result = mid.slice(0,i);
+    //   return result.toString().replace(/,/ig,"");
+    // }
+
+    
 })
 
 
