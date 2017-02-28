@@ -633,6 +633,19 @@ rl.on("line",function(a){
     //   return result.toString().replace(/,/ig,"");
     // }
 
+    // 高精度整数相加
+    function play27(n,m) {
+        var arr1= n.split("");
+        var arr2= m.split("");
+        var result = [];
+        if(n.indexOf("-")!=-1&&m.indexOf("-")!=-1){
+            for(var i=0,len=arr1.length;i<len;i++){
+                
+            }
+        }else if(n.indexOf("-")==-1&&m.indexOf("-")==-1){
+
+        }
+    }
     
 })
 
