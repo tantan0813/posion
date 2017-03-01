@@ -808,7 +808,36 @@ rl.on("line",function(a){
         }
     }
 
-
+    // 计算字符串的相似度
+    
+    // if(data.length==2){
+    //     console.log(play36(data));
+    // }
+    // function play36(arr){
+    //     var s1 = arr[0].split("");
+    //     var s2 = arr[1].split("");
+    //     var n=0;
+    //     var le=s1.length,len=s2.length;
+    //     if(le>len){
+    //         n+=parseInt(le-len);
+    //         n+=parseInt(p(s2,s1));
+    //     }else if(len>le){
+    //         n+=parseInt(len-le);
+    //         n+=parseInt(p(s1,s2));
+    //     }else{
+    //         n+=parseInt(p(s2,s1));
+    //     }
+    //     function p(str1,str2){
+    //         var m=0;
+    //         for(var i=0,l=str1.length;i<l;i++){
+    //             if(str1[i]!=str2[i]){
+    //                 m++;
+    //             }
+    //         }
+    //         return m;
+    //     }
+    //     return 1/(n+1);
+    // }
 
 
 
