@@ -878,31 +878,89 @@ rl.on("line",function(a){
     //     var m =parseInt(p(s2));
     // }
 
-    //字符串排序
-    console.log(play37(a));
-    function play37(str){
-       var arr = str.split("");
-       var mid =[],mi = [];
-       var d=[],di=[];
-       var xi = [];
-       arr.forEach(function(a,index){
-           if(!/[a-z]/ig.test(a)){
-               mi.push(a);
-               mid.push(index);
-           }else if(/[A-Z]/g.test(a)){
-               d.push(a);
-               di.push(index);
-           }else{
-               
-           }
-       })
-        console.log(z.toString());
-        z.sort();
-        console.log(z.toString());
-       for(var i=0,len=mi.length;i<len;i++){
-           z.splice(parseInt(mid[i]),0,mi[i]);
-       }
-       return z.toString().replace(/,/ig,"");
+    //字符串排序×
+
+    // function play37(str){
+    //    var arr = str.split("");
+    //    var mid =[],mi = [];
+    //    var d=[],di=[];
+    //    var xi = [];
+    //    arr.forEach(function(a,index){
+    //        if(!/[a-z]/ig.test(a)){
+    //            mi.push(a);
+    //            mid.push(index);
+    //        }else if(/[A-Z]/g.test(a)){
+    //            d.push(a);
+    //            di.push(index);
+    //        }else{
+    //
+    //        }
+    //    })
+    //     console.log(z.toString());
+    //     z.sort();
+    //     console.log(z.toString());
+    //    for(var i=0,len=mi.length;i<len;i++){
+    //        z.splice(parseInt(mid[i]),0,mi[i]);
+    //    }
+    //    return z.toString().replace(/,/ig,"");
+    // }
+
+    // DNA序列
+    function play39(str){
+
+    }
+
+    // 求解立方根
+
+    // function play40(n){
+    //     var num = parseInt(n);
+    //     return Math.round(Math.pow(num,(1/3)));
+    // }
+
+    // function play41(n){
+    //     var num = parseInt(n);
+    // }
+
+    //表示数字×
+
+
+    // function play43(str){
+    //     var arr = str.split("");
+    //     var result = [];
+    //     arr.forEach(function(b,index){
+    //         if(/[0-9]/ig.test(b)){
+    //             result.push("*");
+    //         }else{
+    //             result.push(b);
+    //         }
+    //     })
+    // }
+
+    // 进制转换
+    // function play43(str){
+    //     return parseInt(str);
+    // }
+
+    // 字符统计
+    console.log(play44(a));
+    function play44(str){
+        var arr = str.split("");
+        var mid = [],t = [];
+        arr.forEach(function(b){
+            if(mid.indexOf(b)==-1){
+                mid.push(b);
+            }
+        })
+        mid.forEach(function(c){
+            var n=0;
+            arr.forEach(function(d){
+                if(c==d){
+                    n++;
+                }
+            })
+          t.push(n);
+        })
+        
     }
 })
 
