@@ -633,20 +633,115 @@ rl.on("line",function(a){
     //   return result.toString().replace(/,/ig,"");
     // }
 
-    // 高精度整数相加
-    function play27(n,m) {
-        var arr1= n.split("");
-        var arr2= m.split("");
-        var result = [];
-        if(n.indexOf("-")!=-1&&m.indexOf("-")!=-1){
-            for(var i=0,len=arr1.length;i<len;i++){
-                
-            }
-        }else if(n.indexOf("-")==-1&&m.indexOf("-")==-1){
+    // 高精度整数相加×
 
-        }
-    }
-    
+    // function play27(n,m) {
+    //     var arr1= n.split("");
+    //     var arr2= m.split("");
+    //     var result = [];
+    //     if(n.indexOf("-")!=-1&&m.indexOf("-")!=-1){
+    //         result.push("-");
+    //         for(var i=1,len=arr1.length;i<len;i++){
+    //             var n = parseInt(arr1[i]);
+    //         }
+    //     }else if(n.indexOf("-")==-1&&m.indexOf("-")==-1){
+    //
+    //     }
+    // }
+
+    // 5次回弹的高度
+
+    // function play28(n){
+    //     var h = parseInt(n);
+    //     var m = parseInt(n);
+    //     for(var i=0;i<5;i++){
+    //         m=m/2;
+    //     }
+    //     return m;
+    // }
+
+    // 称砝码×
+
+    // function play29(data){
+    //
+    // }
+
+    // 字符串加密×
+
+    // function play30(str){
+    //     var arr = str.split("");
+    //     var result = [];
+    //     arr.forEach(function(b){
+    //         if(result.indexOf(b)!=-1){
+    //             result.push(b);
+    //         }
+    //     })
+    //
+    // }
+
+    // 字典顺序排序
+
+    // var n = parseInt(data[0])+1;
+    // if(data.length==n){
+    //     console.log(play31(data));
+    // };
+    // function play31(arr){
+    //     return arr.slice(1).sort().toString().replace(/,/ig,"\n");
+    // }
+
+    // 计算字符串的距离
+
+    // function play32(arr){
+    //     var str1 = arr[0].split("");
+    //     var str2 = arr[1].split("");
+    //     var count = 0;
+    //     var la=str1.length,ls=str2.length;
+    //     if(la>ls){
+    //         count += la-ls;
+    //         count +=parseInt(p(str2,str1));
+    //     }else if(la<ls){
+    //         count += ls-la;
+    //         count +=parseInt( p(str1,str2));
+    //     }else{
+    //         count +=parseInt(p(str2,str1));
+    //     }
+    //     function p(s1,s2){
+    //         var n = 0;
+    //         for(var i=0,len=s1.length;i<len;i++){
+    //             if(s1[i]!=s2[i]){
+    //                 n++;
+    //             }
+    //         }
+    //         return n;
+    //     }
+    //     return count;
+    // }
+
+    //字符统计
+
+    // function play33(str){
+    //     var arr = str.split("");
+    //     var z=0,k=0,shu=0,other=0;
+    //     var result = [];
+    //     arr.forEach(function(a){
+    //         if(/^[0-9]$/.test(a)){
+    //             shu++;
+    //         }else if(/^[a-z]/ig.test(a)){
+    //             z++;
+    //         }else if(a==" "){
+    //             k++;
+    //         }else{
+    //             other++;
+    //         }
+    //     })
+    //     result.push(z);
+    //     result.push(k);
+    //     result.push(shu);
+    //     result.push(other);
+    //     return result.toString().replace(/,/ig,"\n");
+    // }
+
+    //24点游戏
 })
 
 
