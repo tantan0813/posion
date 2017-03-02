@@ -906,9 +906,9 @@ rl.on("line",function(a){
     // }
 
     // DNA序列
-    function play39(str){
-
-    }
+    // function play39(str){
+    //
+    // }
 
     // 求解立方根
 
@@ -941,28 +941,199 @@ rl.on("line",function(a){
     //     return parseInt(str);
     // }
 
-    // 字符统计
-    console.log(play44(a));
-    function play44(str){
-        var arr = str.split("");
-        var mid = [],t = [];
-        arr.forEach(function(b){
-            if(mid.indexOf(b)==-1){
-                mid.push(b);
-            }
-        })
-        mid.forEach(function(c){
-            var n=0;
-            arr.forEach(function(d){
-                if(c==d){
-                    n++;
-                }
-            })
-          t.push(n);
-        })
-        
-    }
+    // 字符统计×
+
+    // function play44(str){
+    //     var arr = str.split("");
+    //     var mid = [],t = [];
+    //     arr.forEach(function(b){
+    //         if(/[0-9]/.test(b)||/[a-z]/ig.test(b)||/\s/.test(b)){
+    //             if(mid.indexOf(b)==-1){
+    //                 mid.push(b);
+    //             }
+    //         }
+    //     })
+    //     mid.forEach(function(c){
+    //         var n=0;
+    //         arr.forEach(function(d){
+    //             if(c==d){
+    //                 n++;
+    //             }
+    //         })
+    //       t.push(n);
+    //     })
+    //     for(var i=0,len=t.length;i<len;i++){
+    //         var m = t.indexOf(Math.max.apply(Math, t))
+    //          t.splice(m,1);
+    //         console.log(t);
+    //     }
+    //
+    // }
+
+    // 名字漂亮度
+
+    // if(data.length>1){
+    //     console.log(play45(data.slice(1)))
+    // }
+    // function play45(arr){
+    //     var result=[];
+    //     for(var i=0,len=arr.length;i<len;i++){
+    //         var sum = 0;
+    //         var s = arr[i].toLowerCase().split("");
+    //         var re = [],m=[];
+    //         s.forEach(function(b){
+    //           if(re.indexOf(b)==-1){
+    //               re.push(b);
+    //           }
+    //         })
+    //         // console.log(re);
+    //         re.forEach(function(d){
+    //             var k=0;
+    //             s.forEach(function(m){
+    //                 if(d==m){
+    //                     k++;
+    //                 }
+    //             })
+    //             m.push(k);
+    //         })
+    //         // console.log(m.sort(function(h,k){return k-h;}));
+    //        m.sort(function(h,k){return k-h;});
+    //         var q = 26;
+    //         for(var j=0,l=m.length;i<l;i++){
+    //             sum+=parseInt(m[i])*q;
+    //             q--;
+    //             console.log(q);
+    //             result.push(sum);
+    //         }
+    //     }
+    //     return result.toString().replace(/,/ig,"\n");
+    // }
+
+    // 输出质数因子  ☆
+
+    // function play46(str){
+    //     var n =parseInt(str);
+    //     var i = 2;
+    //     var handle = n;
+    //     var arr = new Array();
+    //     while(i<handle){     //i小于n则一直循环下去，直到i=n为止
+    //         var result = handle/i;
+    //         if(result%2==0){ //除2结果为整数
+    //             arr.push(i);
+    //             i=2;
+    //             handle=result;
+    //         }else{
+    //             i++;
+    //         }
+    //         if(i == handle-1){  //判断是否要结尾
+    //             arr.push(handle)
+    //             break;
+    //         }
+    //     }
+    //    return arr.toString().replace(/,/ig," ");
+    // }
+
+    // 判断IP是否属于同一子网
+
+    // if(data.length>2){
+    //     console.log(play47(data));
+    // }
+    // function play47(arr){
+    //     var s1 = arr[0].split(".");
+    //     var s2 = arr[1].split(".");
+    //     var s3 = arr[2].split(".");
+    //     var str1="",str2="",str3="";
+    //     str1=p(s1).toString().replace(/,/ig,"");
+    //     str2=p(s2).toString().replace(/,/ig,"");
+    //     str3=p(s3).toString().replace(/,/ig,"");
+    //     var t1 = str1^str2;
+    //     var t2 = str1^str3;
+    //     function p(s){
+    //         var str=[];
+    //         s.forEach(function(b){
+    //             var c = parseInt(b).toString(2);
+    //             var l = c.length;
+    //             if(l<8){
+    //                 var ss = "000000000".split("");
+    //                 var e = ss.slice(0,8-l).concat(c).toString().replace(/,/ig,"");
+    //                 str.push(e)
+    //             }else{
+    //                 str.push(c);
+    //             }
+    //         })
+    //         return str;
+    //     }
+    //     if(t1==t2){
+    //         return 1;
+    //     }else{
+    //         return 0;
+    //     }
+    // }
+
+    // 输出第一个只出现一次的字符
+
+    // function play48(str){
+    //     var arr = str.split("");
+    //     var re = [],ind=[];
+    //     arr.forEach(function(b){
+    //         if(re.indexOf(b)==-1){
+    //             re.push(b)
+    //         }
+    //     })
+    //     re.forEach(function(c){
+    //         var n=0;
+    //         arr.forEach(function(d){
+    //             if(c==d){
+    //                 n++;
+    //             }
+    //         })
+    //         ind.push(n);
+    //     })
+    //     var s = ind.toString().replace(/,/ig,"");
+    //     var ss = s.indexOf("1");
+    //     if(ss){
+    //         return re[ss];
+    //     }else{
+    //         return false;
+    //     }
+    //
+    // }
+
+    // 单词逆序
+
+    // function play49(str){
+    //     var arr = str.split(" ");
+    //     return arr.reverse().toString().replace(/,/ig," ");
+    // }
+
+    // 输出负数个数，及整数平均数
+
+    // if(data.length>=2){
+    //     console.log(play50(data))
+    // }
+    // function play50(data){
+    //     var f =[],z=[];
+    //     var str=[];
+    //     data.forEach(function(b){
+    //         if(/^[0-9]$/g.test(b)){
+    //             z.push(b)
+    //         }else{
+    //             f.push(b);
+    //         }
+    //     })
+    //     str.push(f.length);
+    //     var l = z.length;
+    //     var sum = 0;
+    //     z.forEach(function(d){
+    //        sum += parseInt(d);
+    //     })
+    //     if(z!=0){str.push(sum/l);}else{str.push("0.0")}
+    //     return str.toString().replace(/,/ig,"\n") ;
+    // }
+
+    
 })
+
 
 
 
