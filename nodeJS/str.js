@@ -1377,6 +1377,32 @@ rl.on("line",function(a){
     //         return re.toString().replace(/,/g,"");
     //     }
     // }
+
+    // 投票统计
+
+    // if(data.length>3){
+    //     console.log(play56(data));
+    // }
+    // function play56(data){
+    //     var arr1 = data[1].split(" ");
+    //     var arr2 = data[3].split(" ");
+    //     var sore = [],result=[];
+    //     arr1.forEach(function(b){
+    //         var n=0;
+    //         arr2.forEach(function(c){
+    //             if(c==b){
+    //                 n++;
+    //             }
+    //         })
+    //         sore.push(n);
+    //     })
+    //     for(var i=0,len=arr1.length;i<len;i++){
+    //         result.push(arr1[i]+":"+sore[i]);
+    //     }
+    //     return result.toString().replace(/,/g,"\n");
+    // }
+
+    
 })
 
 
