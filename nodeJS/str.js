@@ -200,9 +200,9 @@ rl.on("line",function(a){
     //     return num;
     // }
 
-    //华为机测喝饮料三换一
+    // 华为机测喝饮料三换一
 
-    // function calculate(args) {
+//     function calculate(args) {
 // 	var result=[];
 // 	for(var i=0,l=args.length;i<l;i++){
 // 		var count=parseInt(args[i]),
@@ -1131,7 +1131,252 @@ rl.on("line",function(a){
     //     return str.toString().replace(/,/ig,"\n") ;
     // }
 
-    
+    // 删除出现次数最小的字母
+
+    // function play51(str){
+    //     if(/^[a-z]+$/ig.test(str)){
+    //         var arr = str.split("");
+    //         var mid=[],ind=[];
+    //         arr.forEach(function(a){
+    //             if(mid.indexOf(a)==-1){
+    //                 mid.push(a);
+    //             }
+    //         })
+    //         mid.forEach(function(b){
+    //             var n=0;
+    //             arr.forEach(function(c){
+    //                 if(b==c){
+    //                     n++;
+    //                 }
+    //             })
+    //             ind.push(n);
+    //         })
+    //         var n = Math.max.apply(null,ind);
+    //         var index =[];
+    //         ind.forEach(function(c,m){
+    //             if(c==n){
+    //                 index.push(m);
+    //             }
+    //         })
+    //         var ss =[];
+    //         mid.forEach(function(d,u){
+    //             index.forEach(function(j,k){
+    //                 if(j==u){
+    //                     for(var i=0;i<n;i++){
+    //                         ss.push(d);
+    //                     }
+    //                 }
+    //             })
+    //         })
+    //         return ss.toString().replace(/,/ig,"");
+    //     }else{
+    //         return false;
+    //     }
+    // }
+
+    // 人民币转换
+
+    // function play52(str){
+    //     var arr = str.split('');
+    //     var result =[];
+    //     result.push("人民币");
+    //     var index = arr.indexOf(".")
+    //     var dian = arr.slice(index+1),zheng = arr.slice(0,index);
+    //     var l =zheng.length;
+    //     zheng.forEach(function(s,d){
+    //         var c = m(parseInt(s));
+    //             result.push(m(parseInt(s)));
+    //             result.push(p(parseInt(l-d)));
+    //     })
+    //     function p(n){
+    //         var s='';
+    //         switch(n){
+    //             case 12: s="千";break;
+    //             case 11: s="百";break;
+    //             case 10: s="十";break;
+    //             case 9: s="亿";break;
+    //             case 8: s="千";break;
+    //             case 7: s="百";break;
+    //             case 6: s="十";break;
+    //             case 5: s="万";break;
+    //             case 4: s="千";break;
+    //             case 3: s="百";break;
+    //             case 2: s="拾";break;
+    //         }
+    //         return s;
+    //     }
+    //     function m(m){
+    //         var s='';
+    //         switch (m){
+    //             case 0 : s="零";break;
+    //             case 1 : s="壹";break;
+    //             case 2 : s="贰";break;
+    //             case 3 : s="叁";break;
+    //             case 4 : s="肆";break;
+    //             case 5 : s="伍";break;
+    //             case 6 : s="陆";break;
+    //             case 7 : s="柒";break;
+    //             case 8 : s="捌";break;
+    //             case 9 : s="玖";break;
+    //             case 10 : s="十";break;
+    //         }
+    //         return s;
+    //     }
+    //     result.push("元");
+    //         dian.forEach(function(j,k){
+    //             if(k==0){
+    //                 result.push(m(parseInt(j)));
+    //                 result.push("角");
+    //             }else if(k==1&&j!="0"){
+    //                 console.log(j);
+    //                 result.push(m(parseInt(j)));
+    //                 result.push("分");
+    //             }
+    //         })
+    //     return result.toString().replace(/,/ig,"");
+    // }
+
+    // 输出字符串最长的的数字串 ☆
+
+    // function play53(str){
+    //     var arr = str.split("");
+    //     var re = [];
+    //     arr.forEach(function(b,d){
+    //         if(/[0-9]/.test(b)){
+    //             re.push("1");
+    //         }else{
+    //             re.push("0")
+    //         }
+    //     })
+    //     var s = k(re);
+    //     function k(ss){
+    //         var s1=ss.toString();
+    //         var i =s1.indexOf("1");
+    //         var d =s1.lastIndexOf("1");
+    //         var s2 = s1.slice(i,d+1);
+    //         // console.log(i,d,s2);
+    //         if(s2.indexOf("0")!=-1){
+    //             console.log(s2);
+    //             console.log(1111);
+    //             k(s2);
+    //         }else{
+    //             return s2;
+    //         }
+    //     }
+    //     return s,s.length;
+    // }
+
+    // 字符串匹配
+
+    // if(data.length>=2){
+    //     console.log(play54(data))
+    // }
+    // function play54(data){
+    //     var s1 =data[0];
+    //     var s2 = data[1];
+    //     var l = s1.length;
+    //     var len = s2.length;
+    //     if(l>len){
+    //         return p(s2,s1);
+    //     }else{
+    //         return p(s2,s1);
+    //     }
+    //     function p(s3,s4){
+    //        var i = s3.slice(0,1);
+    //        var index = s4.indexOf(i);
+    //        var n=0;
+    //        if(index==-1){
+    //            return false;
+    //        }else{
+    //           var arr1 = s3.split("");
+    //           var arr2 = s4.split("");
+    //           for(var j=0,leng=arr1.length;j<leng;j++){
+    //               if(arr1[j]==arr2[j+index]){
+    //                   n++;
+    //               }
+    //           }
+    //           if(n==leng){
+    //               return true;
+    //           }
+    //        }
+    //     }
+    // }
+
+    // 加解密
+
+    // if(data.length>=2){
+    //     console.log(play55(data))
+    // }
+    // function play55(data){
+    //     var arr1 = data[0].split("");
+    //     var arr2 = data[1].split("");
+    //     var result = [];
+    //     result.push(jia(arr1));
+    //     result.push(jie(arr2));
+    //     return  result.toString().replace(/,/g,"\n");
+    //     function jia(arr1){
+    //         var re=[];
+    //         arr1.forEach(function(a){
+    //             if(/[0-9]/.test(a)){
+    //                 if(parseInt(a)<9){
+    //                     re.push(parseInt(a)+1);
+    //                 }else{
+    //                     re.push("0");
+    //                 }
+    //             }else if(/[a-z]/.test(a)){
+    //                 var s = a.toUpperCase();
+    //                 var n = parseInt(s.charCodeAt(0))+1;
+    //                 var c = String.fromCharCode(n);
+    //                 if(s=="Z"){
+    //                     re.push("a");
+    //                 }else{
+    //                     re.push(c);
+    //                 }
+    //             }else if(/[A-Z]/.test(a)){
+    //                 var s1 = a.toLowerCase();
+    //                 var n1 = parseInt(s.charCodeAt(0))+1;
+    //                 var c1 = String.fromCharCode(n1);
+    //                 if(s1=="z"){
+    //                     re.push("A");
+    //                 }else{
+    //                     re.push(c1);
+    //                 }
+    //             }
+    //         })
+    //         return re.toString().replace(/,/g,"");
+    //     }
+    //     function jie(arr2){
+    //         var re=[];
+    //         arr2.forEach(function(a){
+    //             if(/[0-9]/.test(a)){
+    //                 if(parseInt(a)>0){
+    //                     re.push(parseInt(a)-1);
+    //                 }else{
+    //                     re.push("9");
+    //                 }
+    //             }else if(/[a-z]/.test(a)){
+    //                 var s = a.toUpperCase();
+    //                 var n = parseInt(s.charCodeAt(0))-1;
+    //                 var c = String.fromCharCode(n);
+    //                 if(s=="A"){
+    //                     re.push("z");
+    //                 }else{
+    //                     re.push(c);
+    //                 }
+    //             }else if(/[A-Z]/.test(a)){
+    //                 var s1 = a.toLowerCase();
+    //                 var n1 = parseInt(s1.charCodeAt(0))-1;
+    //                 var c1 = String.fromCharCode(n1);
+    //                 if(s1=="a"){
+    //                     re.push("Z");
+    //                 }else{
+    //                     re.push(c1);
+    //                 }
+    //             }
+    //         })
+    //         return re.toString().replace(/,/g,"");
+    //     }
+    // }
 })
 
 
