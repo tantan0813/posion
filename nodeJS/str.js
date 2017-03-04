@@ -1402,6 +1402,225 @@ rl.on("line",function(a){
     //     return result.toString().replace(/,/g,"\n");
     // }
 
+    // IP转换
+
+    // function play57(str){
+    //     var num = parseInt(str);
+    //     var s =num.toString(2);
+    //     var result = [];
+    //
+    //     var l=s.length;
+    //     if(l<32){
+    //         var sss = "000000000000000000";
+    //         var s1 = sss.slice(0,32-l);
+    //         s=s1+s;
+    //     }
+    //     for(var i=0,l=s.length;i<l;){
+    //         if(i==0){
+    //             var j=8;
+    //         }
+    //         var ss = s.slice(i,j);
+    //         i+=8;
+    //         j+=8;
+    //         result.push(parseInt(ss,2));
+    //         if(i<l){
+    //             result.push(".");
+    //         }
+    //     }
+    //     return result.toString().replace(/,/ig,"");
+    //
+    // }
+
+    // 升序合并数组
+
+    // if(data.length>3){
+    //     console.log(play58(data));
+    // }
+    // function play58(arr){
+    //     var arr1  = arr[1].split(" ");
+    //     var arr2  = arr[3].split(" ");
+    //     var re =  arr1.concat(arr2).sort(function(c,d){return c-d;});
+    //     return re.toString().replace(/,/g,"");
+    // }
+
+    //对数组操作；第三个输入：0表示按升序，1表示按降序
+
+    // if(data.length>2){
+    //     console.log(play59(data));
+    // }
+    // function play59(arr){
+    //     var arr1 = arr[1].split(" ");
+    //     var n = parseInt(arr[2]);
+    //     if(n==0){
+    //         return arr1.sort(function(b,c){return b-c;}).toString().replace(/,/g," ");
+    //     }else if(n==1){
+    //         return arr1.sort(function(b,c){return c-b;}).toString().replace(/,/g," ");
+    //     }
+    // }
+
+    //合唱队
+
+    // function play60(arr){
+    //     var arr1 = arr[0].split(" ");
+    // }
+
+    //数组合并处理×
+
+    // function play61(str){
+    //     var arr = str.split("");
+    //     var mid =[];
+    //     arr.forEach(function (b) {
+    //         if(b!=" "){
+    //             mid.push(b);
+    //         }
+    //     })
+    //     var odd =[],even=[];
+    //     for(var i=0,len=mid.length;i<len;i++){
+    //         if(i%2==0){
+    //             even.push(mid[i]);
+    //         }else{
+    //             odd.push(mid[i]);
+    //         }
+    //     }
+    //     var ar = odd.sort().concat(even.sort());
+    //     var result =[];
+    //     ar.forEach(function(c){
+    //         result.push(p(c));
+    //     })
+    //     return result.toString().replace(/,/g,"");
+    //     function p(d){
+    //         var n = parseInt(d);
+    //         var re = n.toString(2).split("");
+    //         var cc = re.reverse();
+    //         return parseInt(cc);
+    //     }
+    // }
+
+    //输入n个整数，输出其中最小的k个。
+
+    // if(data.length>1){
+    //     console.log(play62(data));
+    // }
+    // function play62(arr){
+    //     var arr1 = arr[0].split(" ");
+    //     var k = parseInt(arr1[1]);
+    //     var arr2 = arr[1].split(" ");
+    //     var re = arr2.sort();
+    //     return re.slice(0,k).toString().replace(/,/g," ");
+    // }
+
+    //火车出站顺序
+
+    // if(data.length>1){
+    //     console.log(play63(data));
+    //     }
+    // function play63(arr){
+    //     var arr1 = arr[1].split(" ");
+    //     var result = [];
+    //     permute(arr1).forEach(function(n){
+    //            result.push(n.toString().replace(/,/g," "))
+    //     });
+    //     return result.toString().replace(/,/g,"\n");
+    //     // 数组全排列
+    //     function permute(input) {
+    //         var permArr = [],
+    //             usedChars = [];
+    //         function main(input){
+    //             var i, ch;
+    //             for (i = 0; i < input.length; i++) {
+    //                 ch = input.splice(i, 1)[0];
+    //                 usedChars.push(ch);
+    //                 if (input.length == 0) {
+    //                     permArr.push(usedChars.slice());
+    //                 }
+    //                 main(input);
+    //                 input.splice(i, 0, ch);
+    //                 usedChars.pop();
+    //             }
+    //             return permArr
+    //         }
+    //         return main(input);
+    //     };
+    // }
+
+
+    //字符串分割
+
+    // console.log(play64(data))
+    // function play64(arr){
+    //     var result = [];
+    //    arr.forEach(function(b){
+    //        var l = b.length;
+    //        var s ="0000000000000000000";
+    //        if(l==8){
+    //            result.push(b)
+    //        }else if(l<8){
+    //           var ss = b.concat(s.slice(0,8-l));
+    //           result.push(ss);
+    //        }else if(l>8){
+    //            for(var i=0;i<l;){
+    //                var j=8;
+    //                result.push(b.slice(0,j));
+    //                i+=8;
+    //                j+=8;
+    //                if(j>l){
+    //                    break;
+    //                }
+    //            }
+    //            result.push(b.slice(i).concat(s.slice(0,8-(parseInt(l-i)))));
+    //        }
+    //    })
+    //     return result.toString().replace(/,/g,"\n");
+    // }
+
+    //输出单向链表的第k个值
+
+    // if(data.length>2){
+    //     console.log(play65(data));
+    // }
+    // function play65(arr){
+    //     var arr1 = arr[1].split(" ").reverse();
+    //     var n = parseInt(arr[2]);
+    //     var l =arr1.length;
+    //     if(n>l){
+    //         return false;
+    //     }else{
+    //         return arr1[n-1];
+    //     }
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 })
 
