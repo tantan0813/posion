@@ -6,24 +6,113 @@
     <link href="css/css/index.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <div id="star_alter">
-        <h4>评星</h4>
+<div class="con">
+    <section class="statue">
         <div>
-            <p>流行指数:</p>
-            <ul class="star">
-                <li><i></i></li>
-                <li><i></i></li>
-                <li><i></i></li>
-                <li><i></i></li>
-                <li><i></i></li>
+            <span>订单状态</span>
+            <p id="cancel">取消订单</p>
+            <p id="submit">付款信息提交审核</p>
+        </div>
+        <p>待付款</p>
+    </section>
+    <section class="buyerMessage">
+        <p>买家信息</p>
+        <div>
+            <p>订单编号：<span id="no">121345454152145748</span></p>
+            <p>创建时间：<span id="time">2017-12-06 16:10</span></p>
+        </div>
+    </section>
+    <section class="order">
+        <div class="order_header">
+            <span>订单信息</span>
+            <p id="update_goods">修改收货信息</p>
+        </div>
+        <div class="orderMessage">
+            <p>收货人：<span id="human">lol</span></p>
+            <p>电话:<span id="telephone">1361034564</span></p>
+            <p id="address">广州市广东神好难非常的</p>
+        </div>
+        <div class="table">
+            <ul>
+                <li></li>
+                <li>供应商</li>
+                <li>商品名称</li>
+                <li>skuid</li>
+                <li>交易类型</li>
+                <li>订单数量</li>
+                <li>单价</li>
+                <li>总金额</li>
             </ul>
-            <div class="button">
-                <div id="star_cancel"><p>取消</p></div>
-                <div id="star_determine"><p>确定</p></div>
+            <table>
+                <tr>
+                    <td><img src="" alt=""/></td>
+                    <td>供应商</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="" alt=""/></td>
+                    <td>供应商</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="" alt=""/></td>
+                    <td>供应商</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>税费：</td>
+                    <td id="tax"></td>
+                    <td>合计：</td>
+                    <td id="sum"></td>
+                </tr>
+            </table>
+            <div id="add_price">
+                <div>
+                    加价：<input type="number"/>
+                    <p id="add_submit">提交</p>
+                    <p>总价：<span id="add_result">2456122</span></p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section class="human">
+        <p>
+            <span>发票信息</span>
+            <span class="invoice">修改发票信息</span>
+        </p>
+        <div>
+            <p>发票抬头：<span id="people"></span></p>
+            <p>发票内容：<span id="peo_con"></span></p>
+        </div>
+    </section>
+    <section class="remarks">
+        <input type="text" value="订单备注"/>
+        <p id="text_submit">提交</p>
+    </section>
+</div>
 <script src="../../src/core/jquery-3.1.0.min.js" type="text/javascript"></script>
 <script src="js/es/index.js" type="text/javascript"></script>
 </body>
 </html>
+
+
+

@@ -166,7 +166,7 @@ window.onload = function() {
     }
 
     //阶乘的和
-    console.log(sum(1,10));
+    // console.log(sum(1,10));
     function sum(start, end) {
         var i=start;
         var n = end;
@@ -183,7 +183,7 @@ window.onload = function() {
         }
         return total;
     }
-    findNum();
+    // findNum();
     function findNum(){
         var re = /^[0-9]+$/ ;
         var arr = [];
@@ -205,6 +205,8 @@ window.onload = function() {
             }
         }
     }
+
+
 
 
 

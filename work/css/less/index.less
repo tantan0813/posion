@@ -2,78 +2,247 @@
   margin: 0;
   padding: 0;
 }
-#star_alter{
-  font-family: "微软雅黑", "黑体", "Microsoft YaHei UI", "Microsoft YaHei", "SimSun", "宋体", "Segoe UI", Tahoma, Helvetica, Sans-Serif;
-  width: 500px;
-  height: 300px;
-  border: 1px solid black;
-  position: fixed;
-  top: 30%;
-  left: 34%;
-  border-radius: 8px;
-  h4{
-    text-align: center;
-    font-size: 26px;
-    margin: 0;
-    padding: 34px 0 28px;
-  }
-  >div{
-    position: relative;
-    top: 7px;
-    left: 0;
-    >p{
-      display: inline-block;
-      font-size: 20px;
-      margin-left: 110px;
-    }
-    .star{
-      list-style: none;
-      display: flex;
-      position: absolute;
-      top:-3px;
-      left: 204px;
-      li{
-        width: 32px;
-        height: 30px;
-        cursor: pointer;
-        i{
-          display: block;
-          width: 100%;
-          height: 100%;
-          background: url("../../img/star.png") bottom center;
-          background-size:95% ;
+.con{
+  font-family: "微软雅黑";
+  margin-bottom: 80px;
+  .statue{
+    width: 100%;
+    >div{
+      height: 40px;
+      background: orange;
+      position: relative;
+      top: 0;
+      left: 0;
+      span{
+        line-height: 40px;
+        padding-left: 10px;
+      }
+      p{
+        display: inline-block;
+        text-align: center;
+        line-height: 26px;
+        border: 1px solid grey;
+        border-radius: 4px;
+        padding: 0 4px;
+        position: absolute;
+        top: 4px;
+        &:nth-of-type(1){
+          right: 200px;
         }
-        &.active{
-          i{
-            display: block;
-            width: 100%;
-            height: 100%;
-            background: url("../../img/staring.png") top center;
-            background-size:110% ;
+        &:nth-of-type(2){
+          right: 30px;
+        }
+      }
+    }
+    >p{
+      line-height: 58px;
+      border: 1px solid grey;
+      margin-top: 1px;
+      font-size: 26px;
+      text-indent: 20px;
+      color: #00A0E8;
+    }
+  }
+  .buyerMessage{
+    margin-top: 30px;
+    >p{
+      line-height: 40px;
+      background: orange;
+      text-indent: 10px;
+    }
+    >div{
+      margin-top: 1px;
+      border: 1px solid grey;
+      height: 50px;
+      p{
+        margin-top: 4px;
+        display: inline-block;
+        padding-right: 60px;
+        border-right:1px solid grey;
+        margin-left: 10px;
+        line-height: 26px;
+        &:nth-of-type(2){
+          margin-left: 50px;
+          border: none;
+        }
+      }
+    }
+  }
+  .order{
+    margin-top: 30px;
+    .order_header{
+      background: orange;
+      position: relative;
+      top: 0;
+      left: 0;
+      span{
+        padding-left: 10px;
+      line-height: 40px;
+      }
+      p{
+        display: inline-block;
+        border: 1px solid grey;
+        padding:2px 6px;
+        border-radius: 4px;
+        position:absolute;
+        top: 6px;
+        right: 70px;
+      }
+    }
+    .orderMessage{
+      position: relative;
+      height: 60px;
+      top: 1px;
+      left: 0;
+      border: 1px solid grey;
+      padding-bottom: 10px;
+      border-bottom: none;
+      p{
+        margin-top: 4px;
+        display: inline-block;
+        margin-left: 10px;
+        padding-right: 60px;
+        border-right: 1px solid grey;
+        &:nth-of-type(2){
+          border: none;
+          margin-left: 60px;
+        }
+        &:nth-of-type(3){
+          border: none;
+          position: absolute;
+          top: 30px;
+          left: 0;
+        }
+      }
+    }
+    .table{
+      ul{
+        width: 100%;
+        background: orange;
+        display: flex;
+        list-style: none;
+        line-height: 40px;
+        li{
+          width: 15%;
+          text-align: center;
+        }
+      }
+      table{
+        border: solid grey;
+        border-width: 1px;
+        width: 100%;
+        tr{
+          td{
+            border-right: 1px solid grey ;
+            border-bottom: 1px solid grey ;
+            text-align: center;
+            width: 12%;
+            line-height: 90px;
+            height: 90px;
+            &:last-child{
+              border-right: none;
+            }
+            img{
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          &:last-child{
+            td{
+              border-bottom: none;
+              line-height: 20px;
+              height: 40px;
+              background: cornflowerblue;
+            }
           }
         }
       }
     }
-    .button{
-      display: flex;
-      height: 104px;
-      border-top: 1px solid black;
-      position: relative;
-      top: 66px;
-      left: 0;
-      cursor: pointer;
-      div{
-        display: inline-block;
-        width: 50%;
-        line-height: 104px;
-        text-align: center;
-        color: #00b3ee;
-        font-size: 30px;
-        &:nth-of-type(1){
-          border-right: 1px solid black;
+    #add_price{
+      border: 1px solid grey;
+      border-top: none;
+      height: 50px;
+      >div{
+        display: flex;
+        position: relative;
+        top: 10px;
+        left: 10%;
+        input{
+          display: inline-block;
+          height: 24px;
+        }
+        #add_submit{
+          padding: 2px 10px;
+          margin-left: 20px;
+          border: 1px solid grey;
+          border-radius: 4px;
+        }
+        p{
+          &:nth-of-type(2){
+            margin-left: 40px;
+            span{
+              margin-left: 10px;
+              font-weight: 600;
+              font-size: 24px;
+            }
+          }
         }
       }
     }
   }
+  .human{
+    margin-top: 40px;
+    position: relative;
+    top: 0;
+    left: 0;
+    >p{
+      background: orange;
+      height: 40px;
+      span{
+        &:nth-of-type(1){
+          position: absolute;
+          top: 10px;
+          left:10px;
+        }
+      }
+      .invoice{
+        display: inline-block;
+        padding: 2px 12px;
+        border: 1px solid grey;
+        border-radius: 4px;
+        position: absolute;
+        top: 6px;
+        right:30px;
+      }
+    }
+    >div{
+      border: 1px solid grey;
+      padding: 20px 0 16px;
+      p{
+        line-height: 30px;
+        text-indent: 10px;
+      }
+    }
   }
-
+  .remarks{
+    margin-top: 40px;
+    position: relative;
+    top: 0;
+    left: 0;
+    input{
+      width: 30%;
+      line-height: 30px;
+      height: 240px;
+    }
+    p{
+      padding: 2px 10px;
+      border: 1px solid grey;
+      border-radius: 4px;
+      display: inline-block;
+      position: absolute;
+      bottom: 10px;
+      left: 32%;
+    }
+  }
+}
