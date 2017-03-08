@@ -5,6 +5,7 @@
 .con {
   font-family: "微软雅黑";
   margin-bottom: 80px;
+  display: none;
 }
 .con .statue {
   width: 100%;
@@ -241,4 +242,209 @@
   position: absolute;
   bottom: 10px;
   left: 32%;
+}
+.order_submit,
+.logistics_message,
+.order_update {
+  width: 600px;
+  position: fixed;
+  top: 20%;
+  left: 40%;
+  border: 1px solid grey;
+  font-family: "微软雅黑";
+  display: none;
+}
+.order_submit header,
+.logistics_message header,
+.order_update header {
+  text-align: center;
+  line-height: 30px;
+  background: #bfcdda;
+}
+.order_submit .context,
+.logistics_message .context,
+.order_update .context {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.order_submit .context .left,
+.logistics_message .context .left,
+.order_update .context .left {
+  width: 160px;
+  padding: 50px 0;
+  border-right: 1px solid grey;
+  margin-right: 40px;
+  text-indent: 20px;
+}
+.order_submit .context .right,
+.logistics_message .context .right,
+.order_update .context .right {
+  line-height: 36px;
+}
+.order_submit .context .right select,
+.logistics_message .context .right select,
+.order_update .context .right select {
+  width: 174px;
+}
+.order_submit footer,
+.logistics_message footer,
+.order_update footer {
+  height: 60px;
+  border-top: 1px solid grey;
+}
+.order_submit footer p,
+.logistics_message footer p,
+.order_update footer p {
+  display: inline-block;
+  width: 160px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid grey;
+  text-align: center;
+  margin: 16px 0 0 400px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.order_close {
+  width: 420px;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  border: 1px solid grey;
+  font-family: "微软雅黑";
+  display: none;
+}
+.order_close header h4 {
+  line-height: 46px;
+  font-size: 24px;
+  text-align: center;
+  border-bottom: 1px solid lightgrey;
+}
+.order_close .context {
+  font-size: 20px;
+  margin: 30px auto  50px;
+  text-indent: 60px;
+}
+.order_close footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.order_close footer p {
+  line-height: 70px;
+  width: 50%;
+  text-align: center;
+  border-top: 1px solid grey;
+  color: #00A0E8;
+  font-size: 28px;
+  cursor: pointer;
+}
+.order_close footer p:nth-of-type(1) {
+  border-right: 1px solid grey;
+}
+.logistics_message .context .right {
+  padding-top: 18px;
+}
+.logistics_message .context .right #logistics_no {
+  margin-left: 32px;
+}
+.order_update .context .right {
+  margin: 20px 0;
+}
+.logistics_message_update {
+  width: 700px;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  border: 1px solid grey;
+  font-family: "微软雅黑";
+}
+.logistics_message_update > header {
+  line-height: 40px;
+  background: #bfcdda;
+  text-align: center;
+}
+.logistics_message_update .context header {
+  border-bottom: 1px solid grey;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.logistics_message_update .context header > p {
+  width: 120px;
+  line-height: 30px;
+  border-right: 1px solid grey ;
+  text-align: center;
+}
+.logistics_message_update .context header .text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 20px;
+  font-size: 12px;
+  margin: 6px 10px 6px ;
+}
+.logistics_message_update .context header .text p {
+  border-right: 1px solid grey;
+  padding: 0 4px;
+}
+.logistics_message_update .context header .text p:last-child {
+  border: none;
+}
+.logistics_message_update .context footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid grey;
+}
+.logistics_message_update .context footer .left {
+  width: 120px;
+  border-right: 1px solid grey;
+  padding-top: 26px;
+}
+.logistics_message_update .context footer .left p {
+  padding: 40px 0;
+  text-align: center;
+}
+.logistics_message_update .context footer .right {
+  margin-left: 30px;
+}
+.logistics_message_update .context footer .right div {
+  display: inline-block;
+}
+.logistics_message_update .context footer .right input,
+.logistics_message_update .context footer .right select {
+  margin: 10px 0;
+}
+.logistics_message_update .context footer .right #new_people {
+  margin-left: 30px;
+}
+.logistics_message_update .context footer .right #new_telephone {
+  margin-left: 15px;
+}
+.logistics_message_update .context footer .right #new_detail_place {
+  margin-left: 16px;
+  width: 300px;
+}
+.logistics_message_update .context footer .right select {
+  width: 90px;
+}
+.logistics_message_update > footer {
+  height: 50px;
+}
+.logistics_message_update > footer p {
+  width: 200px;
+  border: 1px solid grey;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 460px;
+  margin-top: 16px;
 }

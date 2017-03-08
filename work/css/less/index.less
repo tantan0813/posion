@@ -5,6 +5,7 @@
 .con{
   font-family: "微软雅黑";
   margin-bottom: 80px;
+  display: none;
   .statue{
     width: 100%;
     >div{
@@ -243,6 +244,191 @@
       position: absolute;
       bottom: 10px;
       left: 32%;
+    }
+  }
+}
+.order_submit,.logistics_message,.order_update{
+  width: 600px;
+  position: fixed;
+  top: 20%;
+  left: 40%;
+  border: 1px solid grey;
+  font-family: "微软雅黑";
+  display: none;
+  header{
+    text-align: center;
+    line-height: 30px;
+    background: rgb(191, 205, 218);
+  }
+  .context{
+    display: flex;
+    .left{
+      width: 160px;
+      padding: 50px 0;
+      border-right: 1px solid grey;
+      margin-right: 40px;
+      text-indent: 20px;
+    }
+    .right{
+      line-height: 36px;
+      select{
+        width: 174px;
+      }
+    }
+  }
+  footer{
+    height: 60px;
+    border-top: 1px solid grey;
+    p{
+      display: inline-block;
+      width: 160px;
+      height: 30px;
+      line-height: 30px;
+      border: 1px solid grey;
+      text-align: center;
+      margin: 16px 0 0 400px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}
+.order_close{
+  width: 420px;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  border: 1px solid grey;
+  font-family: "微软雅黑";
+  display: none;
+  header{
+    h4{
+      line-height: 46px;
+      font-size: 24px;
+      text-align: center;
+      border-bottom: 1px solid lightgrey;
+    }
+  }
+  .context{
+    font-size: 20px;
+    margin: 30px auto  50px;
+    text-indent: 60px;
+  }
+  footer{
+    display: flex;
+    p{
+      line-height: 70px;
+      width: 50%;
+      text-align: center;
+      border-top: 1px solid grey;
+      color: #00A0E8;
+      font-size: 28px;
+      cursor: pointer;
+      &:nth-of-type(1){
+        border-right: 1px solid grey;
+      }
+    }
+  }
+}
+.logistics_message{
+  .context{
+    .right{
+      padding-top: 18px;
+      #logistics_no{
+        margin-left: 32px;
+      }
+    }
+  }
+}
+.order_update{
+  .context{
+    .right{
+      margin: 20px 0;
+    }
+  }
+}
+.logistics_message_update{
+  width: 700px;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  border: 1px solid grey;
+  font-family: "微软雅黑";
+  >header{
+    line-height: 40px;
+    background: rgb(191, 205, 218);
+    text-align: center;
+  }
+  .context{
+    header{
+      border-bottom: 1px solid grey;
+      display: flex;
+      >p{
+        width: 120px;
+        line-height: 30px;
+        border-right:1px solid grey ;
+        text-align: center;
+      }
+      .text{
+        display: flex;
+        line-height: 20px;
+        font-size: 12px;
+        margin: 6px 10px 6px ;
+        p{
+          border-right: 1px solid grey;
+          padding: 0 4px;
+          &:last-child{
+            border: none;
+          }
+        }
+      }
+    }
+    footer{
+      display: flex;
+      border-bottom: 1px solid grey;
+      .left{
+        width: 120px;
+        border-right: 1px solid grey;
+        padding-top: 26px;
+        p{
+          padding: 40px 0;
+          text-align: center;
+        }
+      }
+      .right{
+        margin-left: 30px;
+        div{
+          display: inline-block;
+        }
+        input,select{
+          margin:10px 0;
+        }
+        #new_people{
+          margin-left: 30px;
+        }
+        #new_telephone{
+          margin-left: 15px;
+        }
+        #new_detail_place{
+          margin-left: 16px;
+          width: 300px;
+        }
+        select{
+          width: 90px;
+        }
+      }
+    }
+  }
+  >footer{
+    height: 50px;
+    p{
+      width: 200px;
+      border: 1px solid grey;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 460px;
+      margin-top: 16px;
     }
   }
 }
