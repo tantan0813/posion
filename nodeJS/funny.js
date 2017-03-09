@@ -158,66 +158,143 @@ rl.on("line",function(a){
     //     }
     // }
 
-    //求抹去的数
-    data.push(a);
-    qu(data);
-    function qu(data){
-       var n = parseInt(data[0]);
-       var re = [];
-       if(data.length>1){
-           var arr1 = data[1].split(" ");
-           arr1.sort(function(b,c){return b-c;});
-           for(var i=0;i<arr1.length;i++){
-               var s = parseInt(arr1[i])+1;
-               var ss = parseInt(arr1[i+1]);
-               if(s!=ss){
-                   re.push(s+1);
-               }
-           }
-           if(re.length!=0){
-               console.log(re.toString().replace(/,/g," "));
-               console.log(re);
-           }else{
-               console.log("mistake")
-           }
-       }
+    //求抹去的数×
+
+    // qu(data);
+    // function qu(data){
+    //    var n = parseInt(data[0]);
+    //    var re = [];
+    //    if(data.length>1){
+    //        var arr1 = data[1].split(" ");
+    //        arr1.sort(function(b,c){return b-c;});
+    //        for(var i=0;i<arr1.length;i++){
+    //            var s = parseInt(arr1[i])+1;
+    //            var ss = parseInt(arr1[i+1]);
+    //            if(s!=ss){
+    //              re.push(i)
+    //            }
+    //        }
+    //        if(re.length!=0){
+    //            var er = [];
+    //            if(re.length==arr1.length){
+    //                console.log("mistake");
+    //            }else{
+    //                re.forEach(function(d){
+    //                    er.push(parseInt(arr1[d])+1);
+    //                })
+    //                console.log(re.toString().replace(/,/g," "));
+    //            }
+    //        }else{
+    //            console.log("mistake")
+    //        }
+    //    }
+    // }
+
+    //超级素数
+
+    // function su(str){
+    //     var n = parseInt(str);
+    //     var arr = [2,3,5,7,11,13,17,19,23,31,37,41,43];
+    //     var s = [];
+    //     for(var p=1;p<n; p++){
+    //         for(var q=1;q<100;q++){
+    //             var sum = Math.pow(p,q);
+    //             if(n==sum){
+    //                 if(arr.indexOf(p)!=-1){
+    //                     s.push(p);
+    //                     s.push(q);
+    //                     break;
+    //                 }
+    //             }
+    //             if(s.length!=0){
+    //                 break;
+    //             }
+    //         }
+    //     }
+    //     if(s.length==0){
+    //         console.log("No");
+    //     }else{
+    //         console.log(s.toString().replace(/,/g," "));
+    //     }
+    // }
+
+    // function su(str){
+    //     var n = parseInt(str);
+    //     var arr = [2,3,5,7,11,13,17,19,23,31,37,41,43];
+    //     var p=0,q=1;
+    //     var s = [];
+    //     for(var i=0,len=arr.length;i<len;i++){
+    //          p = parseInt(arr[i]);
+    //         console.log(p);
+    //         for(;q<100;q++){
+    //             var sum = Math.pow(p,q);
+    //             console.log(sum);
+    //             if(n==sum){
+    //                 s.concat([p],[q]);
+    //                 break;
+    //             }
+    //         }
+    //     }
+    //     console.log(s.toString().replace(/,/g," "));
+    // }
+
+
+    //N正整数L长度
+
+    // f1(a);
+    // function f1(str){
+    //     var arr = str.split(" ");
+    //     var n = parseInt(arr[0]);
+    //     var l = parseInt(arr[1]);
+    //     var sum =
+    // }
+
+    //页码
+    ye(a);
+    function ye(str){
+        var n = parseInt(str);
+        var arr = [];
+        var a = 0;
+        var b = 0;
+        var c = 0;
+        var d = 0;
+        var e = 0;
+        var f = 0;
+        var g = 0;
+        var h = 0;
+        var i = 0;
+        var j = 0;
+        for(var o=1;o<=n;o++){
+            var arr1 = o.toString().replace(/,/g,"").split("");
+           arr1.forEach(function (m) {
+                switch (parseInt(m)){
+                    case 0:a++;break;
+                    case 1:b++;break;
+                    case 2:c++;break;
+                    case 3:d++;break;
+                    case 4:e++;break;
+                    case 5:f++;break;
+                    case 6:g++;break;
+                    case 7:h++;break;
+                    case 8:i++;break;
+                    case 9:j++;break;
+                }
+           })
+        }
+        arr.push(a);
+        arr.push(b);
+        arr.push(c);
+        arr.push(d);
+        arr.push(e);
+        arr.push(f);
+        arr.push(g);
+        arr.push(h);
+        arr.push(i);
+        arr.push(j);
+        console.log(arr.toString().replace(/,/g," "));
     }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-})
+});
