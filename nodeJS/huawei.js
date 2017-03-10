@@ -1590,6 +1590,96 @@ rl.on("line",function(a){
     //     }
     // }
 
+    // 题目描述
+    // 分子为1的分数称为埃及分数。现输入一个真分数(分子比分母小的分数，叫做真分数)，请将该分数分解为埃及分数。如：8/11 = 1/2+1/5+1/55+1/110。
+    /*
+     功能: 将分数分解为埃及分数序列
+     输入参数：
+     String pcRealFraction:真分数(格式“8/11”)
+     返回值：
+     String pcEgpytFraction:分解后的埃及分数序列(格式“1/2+1/5+1/55+1/100”)
+     */
+    // 输入描述:
+    //     输入一个真分数，String型
+    // 输出描述:
+    //     输出分解后的string
+    // 输入例子:
+    //     8/11
+    // 输出例子:
+    //     1/2+1/5+1/55+1/110
+
+    //埃及分数
+    // fen(a);
+    // function fen(str){
+    //     var arr = str.split("/");
+    //     console.log(arr);
+    //     var fz = parseInt(arr[0]);
+    //     var fm = parseInt(arr[1]);
+    //
+    // }
+
+    // 题目描述
+    // 题目描述
+    // 若两个正整数的和为素数，则这两个正整数称之为“素数伴侣”，如2和5、6和13，它们能应用于通信加密。
+    // 现在密码学会请你设计一个程序，从已有的N（N为偶数）个正整数中挑选出若干对组成“素数伴侣”，挑选方案多种多样，
+    // 例如有4个正整数：2，5，6，13，如果将5和6分为一组中只能得到一组“素数伴侣”，
+    // 而将2和5、6和13编组将得到两组“素数伴侣”，能组成“素数伴侣”最多的方案称为“最佳方案”，当然密码学会希望你寻找出“最佳方案”。
+
+    // 输入:
+    // 有一个正偶数N（N≤100），表示待挑选的自然数的个数。后面给出具体的数字，范围为[2,30000]。
+    // 输出:
+    // 输出一个整数K，表示你求得的“最佳方案”组成“素数伴侣”的对数。
+// 输入描述:
+//     输入说明
+//     1 输入一个正偶数n
+//     2 输入n个整数
+
+    // 输出描述:
+    //     求得的“最佳方案”组成“素数伴侣”的对数。
+// 输入例子:
+//     4
+//     2 5 6 13
+// 输出例子: 2
+
+    // su(data);
+    // function su(arr){
+    //     var n = parseInt(arr[0]);
+    //     if(arr.length>1){
+    //         var arr1 = arr[1].split(" ");
+    //         var k = 0;
+    //         var arr2 = [];
+    //         arr1.forEach(function(b,c){
+    //             for(var i=0,len=arr1.length;i<len;i++){
+    //                 if(c!=i){
+    //                     var sum = parseInt(b)+parseInt(arr1[i]);
+    //                     var o = isPrimeNum(sum);
+    //                     console.log(sum,o)
+    //                     if(o){
+    //                         k++;
+    //                     }
+    //                 }
+    //             }
+    //         })
+    //         function isPrimeNum(num){
+    //             for (var i = 2; i < num; i++) {
+    //                 if (num%i==0){
+    //                     return false;
+    //                 }
+    //             };
+    //             return true;
+    //         }
+    //         if(k>0){
+    //             if(k>(arr1.length/2)){
+    //                 console.log(parseInt(arr1.length/2));
+    //             }else{
+    //                 console.log(k);
+    //             }
+    //         }else{
+    //             console.log("none")
+    //         }
+    //     }
+    // }
+
 })
 
 

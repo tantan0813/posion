@@ -250,49 +250,49 @@ rl.on("line",function(a){
     // }
 
     //页码
-    ye(a);
-    function ye(str){
-        var n = parseInt(str);
-        var arr = [];
-        var a = 0;
-        var b = 0;
-        var c = 0;
-        var d = 0;
-        var e = 0;
-        var f = 0;
-        var g = 0;
-        var h = 0;
-        var i = 0;
-        var j = 0;
-        for(var o=1;o<=n;o++){
-            var arr1 = o.toString().replace(/,/g,"").split("");
-           arr1.forEach(function (m) {
-                switch (parseInt(m)){
-                    case 0:a++;break;
-                    case 1:b++;break;
-                    case 2:c++;break;
-                    case 3:d++;break;
-                    case 4:e++;break;
-                    case 5:f++;break;
-                    case 6:g++;break;
-                    case 7:h++;break;
-                    case 8:i++;break;
-                    case 9:j++;break;
-                }
-           })
-        }
-        arr.push(a);
-        arr.push(b);
-        arr.push(c);
-        arr.push(d);
-        arr.push(e);
-        arr.push(f);
-        arr.push(g);
-        arr.push(h);
-        arr.push(i);
-        arr.push(j);
-        console.log(arr.toString().replace(/,/g," "));
-    }
+
+    // function ye(str){
+    //     var n = parseInt(str);
+    //     var arr = [];
+    //     var a = 0;
+    //     var b = 0;
+    //     var c = 0;
+    //     var d = 0;
+    //     var e = 0;
+    //     var f = 0;
+    //     var g = 0;
+    //     var h = 0;
+    //     var i = 0;
+    //     var j = 0;
+    //     for(var o=1;o<=n;o++){
+    //         var arr1 = o.toString().replace(/,/g,"").split("");
+    //        arr1.forEach(function (m) {
+    //             switch (parseInt(m)){
+    //                 case 0:a++;break;
+    //                 case 1:b++;break;
+    //                 case 2:c++;break;
+    //                 case 3:d++;break;
+    //                 case 4:e++;break;
+    //                 case 5:f++;break;
+    //                 case 6:g++;break;
+    //                 case 7:h++;break;
+    //                 case 8:i++;break;
+    //                 case 9:j++;break;
+    //             }
+    //        })
+    //     }
+    //     arr.push(a);
+    //     arr.push(b);
+    //     arr.push(c);
+    //     arr.push(d);
+    //     arr.push(e);
+    //     arr.push(f);
+    //     arr.push(g);
+    //     arr.push(h);
+    //     arr.push(i);
+    //     arr.push(j);
+    //     console.log(arr.toString().replace(/,/g," "));
+    // }
 
 
 
