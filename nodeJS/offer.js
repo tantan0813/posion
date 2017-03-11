@@ -291,23 +291,169 @@ rl.on("line",function(a){
 
     }
 
+    function k9(str){
+            var arr = str.split(" ");
+            var arr1 = arr.slice(0,arr.length);
+            var k = parseInt(arr[arr.length]);
+            arr1.sort(function(b,c){return b-c;});
+            console.log(arr1.slice(0,k).toString().replace(/,/g," "))
+            return arr1.slice(0,k).toString().replace(/,/g," ");
+        }
+
+
+    // k(a);
+    // function k(str){
+    //     var arr  =str.split(" ");
+    //     var len = parseInt(arr.length/2);
+    //     var re = [];
+    //     var n = [];
+    //     arr.forEach(function(b){
+    //         if(re.indexOf(b)==-1){
+    //             re.push(b);
+    //         }
+    //     });
+    //     re.forEach(function(c){
+    //         var m = 0;
+    //         arr.forEach(function(d){
+    //             if(c==d){
+    //                 m++;
+    //             }
+    //         })
+    //         n.push(m);
+    //     })
+    //     var arr2 = [];
+    //     n.forEach(function(e,f){
+    //         if(e>=len){
+    //             arr2.push(f);
+    //         }
+    //     })
+    //     var result = [];
+    //     arr2.forEach(function(j){
+    //         var i = parseInt(j);
+    //         result.push(re[i]);
+    //     })
+    //     console.log(result.toString().replace(/,/g," "))
+    // }
+
+
+    // 给定一个字符串，请你将字符串重新编码，将连续的字符替换成“连续出现的个数+字符”。比如字符串AAAABCCDAA会被编码成4A1B2C1D2A。
+
+    // function k1(str){
+    //     var arr = str.split("");
+    //     var re = [];
+    //     for(var i=0,len=arr.length;i<len;i++){
+    //             var n = 1;
+    //             var first = arr[i];
+    //             var next=arr[++i];
+    //             while(next==first&&i!=len){
+    //                 next=arr[++i];
+    //                 ++n;
+    //             }
+    //             re.push(n);
+    //             re.push(first);
+    //             console.log(re);
+    //         }
+    //     console.log(re.toString().replace(/,/g,""));
+    //
+    // }
 
 
 
+    // 在一个N*N的数组中寻找所有横，竖，左上到右下，右上到左下，四种方向的直线连续D个数字的和里面最大的值
+    function k10(str){
+        var arr  = str[0].split(" ");
+        var l = parseInt(arr[0]);
+        if(str.length>l){
+            var arr1 = [];
+            for(var i=1;i<=l;i++){
+                arr1[i] = str[i].split(" ");
+            }
+            var sum = [];
+           //每一行
+            for(var j=1;j<=l;j++){
+                var cou = 0;
+                var c = 0;
+                while(c<l){
+                    cou += parseInt(arr1[j][c]);
+                    c++;
+                }
+                sum.push(cou);
+            }
+            //每一列
+            for(var k=1;k<=l;k++){
+                var cou1 = 0;
+                var c1 = 0;
+                while(c1<l){
+                    cou1 += parseInt(arr1[k][c1]);
+                    c1++;
+                }
+                sum.push(cou1);
+            }
+            // 左上到右下
+            var s = 0;
+            for(var n=1;n<=l;n++){
+                s += parseInt(arr1[n][n]);
+                console.log(s)
+            }
+            sum.push(s);
+            console.log(sum,sum.length);
+            //左上到右下
+            var ss = 0;
+            for(var w=l;w>0;w--){
+                ss += parseInt(arr1[w][w]);
+                console.log(parseInt(arr1[w][w]))
+                sum.push(ss);
+            }
+            sum.push(ss);
+            console.log(Math.max.apply(sum))
+        }
+    }
 
+    // 输入两个字符串，从第一字符串中删除第二个字符串中所有的字符。
+    // 例如，输入”They are students.”和”aeiou”，则删除之后的第一个字符串变成”Thy r stdnts.”
+    function k11(arr){
+        var arr1 = data[0].split("");
+        var arr2 = data[1].split("");
+        arr2.forEach(function(b){
+            arr1.forEach(function(d,e){
+                if(b==d){
+                    arr1.splice(e,1);
+                }
+            })
+        })
+        console.log(arr1.toString().replace(/,/g,""));
+    }
 
+    //输入两个整数 n 和 m，从数列1，2，3.......n 中随意取几个数,使其和等于 m ,要求将其中所有的可能组合列出来×
+    function k12(str){
+        var arr = str.split(" ");
+        var n = parseInt(arr[0]);
+        var m = parseInt(arr[1]);
+        var num = [];
+        for(var i=0,len=n;i<=len;i++){
+            num.push(i);
+        }
 
+    }
+    //一年哪几个月有31天？
+    k13();
+    function k13(){
+        var arr = [1,2,3,4,5,6,7,8,9,10,11,12];
+        var re = [];
+        arr.forEach(function(b){
+           var m = parseInt(b);
+           var day = DayNumOfMonth(m);
+           if(day==31){
+               re.push(m);
+           }
+        })
+        console.log(re.toString().replace(/,/g," "));
 
-
-
-
-
-
-
-
-
-
-
+        function DayNumOfMonth(Month){
+            var  day = new Date(2014,Month,0);
+            return day.getDate();
+        }
+    }
 
 
 
