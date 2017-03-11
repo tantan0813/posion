@@ -130,55 +130,166 @@ rl.on("line",function(a){
     }
 
 
-    //如果一个数字序列逆置之后跟原序列是一样的就称这样的数字序列为回文序列。例如：
-    //{1, 2, 1}, {15, 78, 78, 15} , {112} 是回文序列,
-    //{1, 2, 2}, {15, 78, 87, 51} ,{112, 2, 11} 不是回文序列。
-    //现在给出一个数字序列，允许使用一种转换操作：
-    //选择任意两个相邻的数，然后从序列移除这两个数，并用这两个数字的和插入到这两个数之前的位置(只插入一个和)。
-    //现在对于所给序列要求出最少需要多少次操作可以将其变成回文序列。
-    //输入描述:
-    //输入为两行，第一行为序列长度n ( 1 ≤ n ≤ 50)
-    //第二行为序列中的n个整数item[i]  (1 ≤ iteam[i] ≤ 1000)，以空格分隔。
-    //输出描述:
-    //输出一个数，表示最少需要的转换次数
-    //输入例子:
-    //4
-    //1 1 1 3
-    //输出例子:
-    //2
-    data.push(a);
-    play1(data);
-    function play1(arr){
-        var arr1 = arr[1].split("");
-        p(arr1);
-        function p(arr2){
-            for(var i=0,len=arr2.length;i<len;i++){
-                var a = parseInt(arr2[i])+parseInt(arr2[i+1]);
-                var arr3 = arr2.splice(i,0,a);
-                if(arr3==)
-
+    // JavaScript回文(网易回文)
+    function k1(){
+        if(data.length>1){
+            var arr = data[1].split(" ");
+            var result = 0;
+            function fn(arr){
+                var revArr = arr.slice(0).reverse();//反转数组
+                if(revArr.join("")==arr.join("")){
+                    return result;
+                }else if (revArr[0]==arr[0]) {//如果首尾相等，删除首尾
+                    arr.shift();
+                    arr.pop();
+                    return fn(arr);//递归
+                }else {
+                    revArr.splice(0,2,parseInt(revArr[0])+parseInt(revArr[1]))//合并处理
+                    arr.splice(0,2,parseInt(arr[0])+parseInt(arr[1]))
+                    arr[0]>revArr[0]?fn(revArr):fn(arr);
+                    return ++result
+                }
             }
+            console.log(fn(arr))
         }
-
-
-
-
     }
 
 
+    //网易优雅的点
 
+    function k2(a){
+        function fn(Powr){
+            var sum = [];
+            var less = 0;
+            if(typeof Powr == "number"){
+                for(var i=0;i<=Math.sqrt(Powr);i++){
+                    var coordinate = Math.sqrt(Powr-Math.pow(i,2))//勾股定理
+                    if(coordinate.toString().split(".")[1]==undefined){ //验证开方后是否为整数
+                        if(i==0){
+                            less=4; //验证是否存在有圆点的情况
+                        }
+                        sum.push({i,coordinate})
+                    }
+                }
+                return sum.length*4-less
+            }else{
+                return "请输入数字好吗";
+            }
+        }
+        var Powr = parseInt(a);
+        console.log(fn(Powr))
+    }
 
+    // 小易来到了一条石板路前，每块石板上从1挨着编号为：1、2、3.......
+    // 这条石板路要根据特殊的规则才能前进：对于小易当前所在的编号为K的 石板，小易单次只能往前跳K的一个约数(不含1和K)步，即跳到K+X(X为K的一个非1和本身的约数)的位置。
+    // 小易当前处在编号为N的石板，他想跳到编号恰好为M的石板去，小易想知道最少需要跳跃几次可以到达。
+    // 例如：
+    // N = 4，M = 24：
+    // 4->6->8->12->18->24
+    // 于是小易最少需要跳跃5次，就可以从4号石板跳到24号石板
+    // 输入描述:
+    // 输入为一行，有两个整数N，M，以空格隔开。
+    // (4 ≤ N ≤ 100000)
+    // (N ≤ M ≤ 100000)
+    // 输出描述:
+    //     输出小易最少需要跳跃的步数,如果不能到达输出-1
+    // 输入例子:
+    //     4 24
+    // 输出例子:
+    //     5
 
+    function k3(str){
+        var arr = str.split(" ");
+        var n = parseInt(arr[0]);
+        var m = parseInt(arr[1]);
+    }
 
+    // 网易黑暗数字☆
+    function k4(a){
+        var n = parseInt(a);
+        function fn(num){
+            if(num==1){
+                return 3
+            }else if(num==2){
+                return 9
+            }else{
+                return 2*fn(num-1)+fn(num-2)
+            }
+        }
+        console.log(fn(n));
+    }
 
+    // rev操作
+    function k5(str){
+        var arr = str.split(" ");
+        var x = arr[0].split("").reverse().toString().replace(/,/g,"");
+        var y = arr[1].split("").reverse().toString().replace(/,/g,"");
+        var x1 = parseInt(x);
+        var y1 = parseInt(y);
+        var re = (x1 + y1).toString().split("").reverse().toString().replace(/,/g,"");
+        console.log(parseInt(re))
+    }
 
+    // 最大公约数
+    function k6(a){
+        var n = parseInt(a);
+        var re = [];
+        for(var i=1;i<=n;i++){
+            var arr = []
+            for(var j=1;j<=i;j++){
+                if(i%j==0&&j%2!=0){
+                   arr.push(j);
+                }
+            }
+            var max = Math.max.apply(null,arr);
+            re.push(max);
+        }
+        var sum = 0;
+        re.forEach(function(d){
+            sum += parseInt(d);
+        })
+        console.log(sum);
+    }
 
+    // 买苹果
+    function k7(a){
+        var freq = 0;
+        function fn(num){
+            if(!(num%2)&&num>=12){
+                if(num==12||num==14||num==16){
+                    return freq+=2;
+                }else if(num==18){
+                    return freq+=3;
+                }else{
+                    ++freq
+                    return fn(num-8)
+                }
+            }else if(num==6||num==8){
+                return 1;
+            }else{
+                return -1;
+            }
+        }
+        console.log(fn(parseInt(a)));
+    }
 
+    // 糖果数
+    function k8(str){
+        var arr = str.split(" ");
+        var a = (parseInt(arr[0])+parseInt(arr[2]))/2;
+        var b = (parseInt(arr[1])+parseInt(arr[3]))/2;
+        var c = parseInt(arr[3])-b;
+        if(a.toString().replace(/,/g,"").indexOf(".")==-1&&b.toString().replace(/,/g,"").indexOf(".")==-1&&c.toString().replace(/,/g,"").indexOf(".")==-1){
+            if(a>=0&&b>=0&&c>=0){
+                console.log(a,b,c);
+            }else{
+                console.log("No");
+            }
+        }else{
+            console.log("No");
+        }
 
-
-
-
-
+    }
 
 
 
