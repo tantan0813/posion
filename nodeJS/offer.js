@@ -357,8 +357,6 @@ rl.on("line",function(a){
     //
     // }
 
-
-
     // 在一个N*N的数组中寻找所有横，竖，左上到右下，右上到左下，四种方向的直线连续D个数字的和里面最大的值
     function k10(str){
         var arr  = str[0].split(" ");
@@ -435,8 +433,8 @@ rl.on("line",function(a){
         }
 
     }
+
     //一年哪几个月有31天？
-    k13();
     function k13(){
         var arr = [1,2,3,4,5,6,7,8,9,10,11,12];
         var re = [];
@@ -455,13 +453,127 @@ rl.on("line",function(a){
         }
     }
 
+    //洗牌
+    function k14(){
+        data.push(a);
+        var n = parseInt(data[0]);
+        if(data.length>n*2){
+            pai(data);
+        }
+        function pai(arr){
+            for(var i=0,l=parseInt(arr[0]);i<l;i++){
+                me(arr[2*i+1].split(' '),arr[2*i+2].split(' '));
+            }
+            function me(args,arr) {
+                var first=[],
+                    result=[],
+                    n=parseInt(args[0]),
+                    k=parseInt(args[1]);
+                for(var x=0;x<k;x++){
+                    for(var i=0;i<n;i++){
+                        first.push(arr.shift());
+                    }
+                    for(var j=0;j<n;j++){
+                        result.push(arr.pop());
+                        result.push(first.pop())
+                    }
+                    arr=result.reverse();
+                    first=[];
+                    result=[];
+                }
+                console.log(arr.join(' '))
+            }
+        }
+    }
+
+    //偶数反转
+    function k15(){
+        data.push(a);
+        if(data.length>1){
+            for(var i=0;i<data.length;i++){
+                console.log(k(data[2*i+1].split(" ")).toString().replace(/,/g," "));
+            }
+        }
+        function k(arr){
+            arr.forEach(function(b,c){
+                var e = 0;
+                if(b%2==0&&b!=0){
+                 e = parseInt(parseInt(b).toString(2).split("").reverse().toString().replace(/,/g,""));
+                 arr.splice(c,1,e);
+                }
+            })
+            return arr;
+        }
+    }
+
+    //按要求处理字符串；
+    function k16(){
+        data.push(a);
+        if(data.length>1){
+            var str = data[0];
+            console.log(str)
+            var n = parseInt(data[1]);
+           if(data.length>=n+2){
+               var arr = data.slice(2);
+               var s = [];
+                for(var i=0;i<n;i++){
+                   if(s.length<str.length){
+                       s = str.split("");
+                   }
+                    var arr1 = arr[i].split(" ");
+                    var ar = s.slice(parseInt(arr1[0]),parseInt(arr[1])+parseInt(arr1[0])+1).reverse();
+                    s = s.concat(ar);
+                }
+                console.log(s.toString().replace(/,/g,""));
+           }
+        }
+    }
+
+    //出专辑  ☆
+    function k17(a){
+        var arr = a.split(" ");
+        var n = parseInt(arr[0]);//歌曲数
+        var s = parseInt(arr[1]);//每首歌的时间
+        var l = parseInt(arr[2]);//cd时长
+        do_something(n,s,l);
+        function do_something(n,s,l){
+            var songNum = Math.floor((l+1)/(s+1)) > n ? n : Math.floor((l+1)/(s+1)) ;//每张CD可以存放的歌曲数
+            if(songNum % 13 == 0){
+                songNum -= 1 ;
+            }
+            var CDnum = Math.ceil(n/songNum) ;
+            if( n % songNum != 0 && (n % songNum)%13 == 0 && (n % songNum) == songNum -1){
+                CDnum += 1
+            }
+            console.log(CDnum);
+        }
+
+    }
 
 
 
+    // 给定一个字符串s，你可以从中删除一些字符，使得剩下的串是一个回文串。如何删除才能使得回文串最长呢？
+    // 输出需要删除的字符个数。
+    // 输入描述:
+    // 输入数据有多组，每组包含一个字符串s，且保证:1<=s.length<=1000.
+    // 输出描述:
+    //     对于每组数据，输出一个整数，代表最少需要删除的字符个数。
+    // 输入例子:
+    // abcda
+    // google
+    // 输出例子:
+    //     2
+    // 2
+    k18();
+    function k18(){
+        data.push(a);
+        data.forEach(function(b){
+            var arr = b.split("");
+            for(var i=0,l=arr.length;i<l;i++){
 
-
-
-
+            }
+        })
+    }
 });
 
 

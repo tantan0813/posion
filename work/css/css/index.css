@@ -2,449 +2,72 @@
   margin: 0;
   padding: 0;
 }
-.con {
-  font-family: "微软雅黑";
-  margin-bottom: 80px;
-  display: none;
-}
-.con .statue {
-  width: 100%;
-}
-.con .statue > div {
-  height: 40px;
-  background: orange;
+.bg {
+  border: 1px solid red;
+  background: #f7f7f9;
   position: relative;
   top: 0;
-  left: 0;
+  right: 0;
 }
-.con .statue > div span {
-  line-height: 40px;
-  padding-left: 10px;
+.bg .toll {
+  border: 1px solid red;
+  width: 192px;
+  margin-top: 130px;
+  margin-left: 69px;
 }
-.con .statue > div p {
+.bg .toll #right,
+.bg .toll #left {
   display: inline-block;
-  text-align: center;
-  line-height: 26px;
-  border: 1px solid grey;
-  border-radius: 4px;
-  padding: 0 4px;
-  position: absolute;
-  top: 4px;
+  background: dimgray;
+  opacity: 0.8;
+  width: 92px;
+  height: 93px;
 }
-.con .statue > div p:nth-of-type(1) {
-  right: 200px;
-}
-.con .statue > div p:nth-of-type(2) {
-  right: 30px;
-}
-.con .statue > p {
-  line-height: 58px;
-  border: 1px solid grey;
-  margin-top: 1px;
-  font-size: 26px;
-  text-indent: 20px;
-  color: #00A0E8;
-}
-.con .buyerMessage {
-  margin-top: 30px;
-}
-.con .buyerMessage > p {
-  line-height: 40px;
-  background: orange;
-  text-indent: 10px;
-}
-.con .buyerMessage > div {
-  margin-top: 1px;
-  border: 1px solid grey;
-  height: 50px;
-}
-.con .buyerMessage > div p {
-  margin-top: 4px;
+.bg .toll #right img,
+.bg .toll #left img {
   display: inline-block;
-  padding-right: 60px;
-  border-right: 1px solid grey;
-  margin-left: 10px;
-  line-height: 26px;
+  width: 28px;
+  margin-top: 18px;
+  margin-left: 34px;
 }
-.con .buyerMessage > div p:nth-of-type(2) {
-  margin-left: 50px;
-  border: none;
-}
-.con .order {
-  margin-top: 30px;
-}
-.con .order .order_header {
-  background: orange;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.con .order .order_header span {
-  padding-left: 10px;
-  line-height: 40px;
-}
-.con .order .order_header p {
-  display: inline-block;
-  border: 1px solid grey;
-  padding: 2px 6px;
-  border-radius: 4px;
-  position: absolute;
-  top: 6px;
-  right: 70px;
-}
-.con .order .orderMessage {
-  position: relative;
-  height: 60px;
-  top: 1px;
-  left: 0;
-  border: 1px solid grey;
-  padding-bottom: 10px;
-  border-bottom: none;
-}
-.con .order .orderMessage p {
-  margin-top: 4px;
-  display: inline-block;
-  margin-left: 10px;
-  padding-right: 60px;
-  border-right: 1px solid grey;
-}
-.con .order .orderMessage p:nth-of-type(2) {
-  border: none;
-  margin-left: 60px;
-}
-.con .order .orderMessage p:nth-of-type(3) {
-  border: none;
-  position: absolute;
-  top: 30px;
-  left: 0;
-}
-.con .order .table ul {
-  width: 100%;
-  background: orange;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  line-height: 40px;
-}
-.con .order .table ul li {
-  width: 15%;
-  text-align: center;
-}
-.con .order .table table {
-  border: solid grey;
-  border-width: 1px;
-  width: 100%;
-}
-.con .order .table table tr td {
-  border-right: 1px solid grey ;
-  border-bottom: 1px solid grey ;
-  text-align: center;
-  width: 12%;
-  line-height: 90px;
-  height: 90px;
-}
-.con .order .table table tr td:last-child {
-  border-right: none;
-}
-.con .order .table table tr td img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.con .order .table table tr:last-child td {
-  border-bottom: none;
-  line-height: 20px;
-  height: 40px;
-  background: cornflowerblue;
-}
-.con .order #add_price {
-  border: 1px solid grey;
-  border-top: none;
-  height: 50px;
-}
-.con .order #add_price > div {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  top: 10px;
-  left: 10%;
-}
-.con .order #add_price > div input {
-  display: inline-block;
-  height: 24px;
-}
-.con .order #add_price > div #add_submit {
-  padding: 2px 10px;
-  margin-left: 20px;
-  border: 1px solid grey;
-  border-radius: 4px;
-}
-.con .order #add_price > div p:nth-of-type(2) {
-  margin-left: 40px;
-}
-.con .order #add_price > div p:nth-of-type(2) span {
-  margin-left: 10px;
-  font-weight: 600;
-  font-size: 24px;
-}
-.con .human {
-  margin-top: 40px;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.con .human > p {
-  background: orange;
-  height: 40px;
-}
-.con .human > p span:nth-of-type(1) {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-.con .human > p .invoice {
-  display: inline-block;
-  padding: 2px 12px;
-  border: 1px solid grey;
-  border-radius: 4px;
-  position: absolute;
-  top: 6px;
-  right: 30px;
-}
-.con .human > div {
-  border: 1px solid grey;
-  padding: 20px 0 16px;
-}
-.con .human > div p {
-  line-height: 30px;
-  text-indent: 10px;
-}
-.con .remarks {
-  margin-top: 40px;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.con .remarks input {
-  width: 30%;
-  line-height: 30px;
-  height: 240px;
-}
-.con .remarks p {
-  padding: 2px 10px;
-  border: 1px solid grey;
-  border-radius: 4px;
-  display: inline-block;
-  position: absolute;
-  bottom: 10px;
-  left: 32%;
-}
-.order_submit,
-.logistics_message,
-.order_update {
-  width: 600px;
-  position: fixed;
-  top: 20%;
-  left: 40%;
-  border: 1px solid grey;
-  font-family: "微软雅黑";
-  display: none;
-}
-.order_submit header,
-.logistics_message header,
-.order_update header {
-  text-align: center;
-  line-height: 30px;
-  background: #bfcdda;
-}
-.order_submit .context,
-.logistics_message .context,
-.order_update .context {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-.order_submit .context .left,
-.logistics_message .context .left,
-.order_update .context .left {
-  width: 160px;
-  padding: 50px 0;
-  border-right: 1px solid grey;
-  margin-right: 40px;
-  text-indent: 20px;
-}
-.order_submit .context .right,
-.logistics_message .context .right,
-.order_update .context .right {
-  line-height: 36px;
-}
-.order_submit .context .right select,
-.logistics_message .context .right select,
-.order_update .context .right select {
-  width: 174px;
-}
-.order_submit footer,
-.logistics_message footer,
-.order_update footer {
-  height: 60px;
-  border-top: 1px solid grey;
-}
-.order_submit footer p,
-.logistics_message footer p,
-.order_update footer p {
-  display: inline-block;
-  width: 160px;
-  height: 30px;
-  line-height: 30px;
-  border: 1px solid grey;
-  text-align: center;
-  margin: 16px 0 0 400px;
-  border-radius: 4px;
+.bg .toll #right:hover,
+.bg .toll #left:hover {
   cursor: pointer;
+  opacity: 0.4;
 }
-.order_close {
-  width: 420px;
-  position: fixed;
-  top: 20%;
-  left: 0;
-  border: 1px solid grey;
-  font-family: "微软雅黑";
-  display: none;
-}
-.order_close header h4 {
-  line-height: 46px;
-  font-size: 24px;
-  text-align: center;
-  border-bottom: 1px solid lightgrey;
-}
-.order_close .context {
-  font-size: 20px;
-  margin: 30px auto  50px;
-  text-indent: 60px;
-}
-.order_close footer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-.order_close footer p {
-  line-height: 70px;
-  width: 50%;
-  text-align: center;
-  border-top: 1px solid grey;
-  color: #00A0E8;
-  font-size: 28px;
-  cursor: pointer;
-}
-.order_close footer p:nth-of-type(1) {
-  border-right: 1px solid grey;
-}
-.logistics_message .context .right {
-  padding-top: 18px;
-}
-.logistics_message .context .right #logistics_no {
-  margin-left: 32px;
-}
-.order_update .context .right {
-  margin: 20px 0;
-}
-.logistics_message_update {
-  width: 700px;
-  position: fixed;
-  top: 20%;
-  left: 0;
-  border: 1px solid grey;
-  font-family: "微软雅黑";
-}
-.logistics_message_update > header {
-  line-height: 40px;
-  background: #bfcdda;
-  text-align: center;
-}
-.logistics_message_update .context header {
-  border-bottom: 1px solid grey;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-.logistics_message_update .context header > p {
-  width: 120px;
-  line-height: 30px;
-  border-right: 1px solid grey ;
-  text-align: center;
-}
-.logistics_message_update .context header .text {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 20px;
-  font-size: 12px;
-  margin: 6px 10px 6px ;
-}
-.logistics_message_update .context header .text p {
-  border-right: 1px solid grey;
-  padding: 0 4px;
-}
-.logistics_message_update .context header .text p:last-child {
-  border: none;
-}
-.logistics_message_update .context footer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-bottom: 1px solid grey;
-}
-.logistics_message_update .context footer .left {
-  width: 120px;
-  border-right: 1px solid grey;
-  padding-top: 26px;
-}
-.logistics_message_update .context footer .left p {
-  padding: 40px 0;
-  text-align: center;
-}
-.logistics_message_update .context footer .right {
-  margin-left: 30px;
-}
-.logistics_message_update .context footer .right div {
+.bg .toll p {
   display: inline-block;
-}
-.logistics_message_update .context footer .right input,
-.logistics_message_update .context footer .right select {
-  margin: 10px 0;
-}
-.logistics_message_update .context footer .right #new_people {
-  margin-left: 30px;
-}
-.logistics_message_update .context footer .right #new_telephone {
-  margin-left: 15px;
-}
-.logistics_message_update .context footer .right #new_detail_place {
-  margin-left: 16px;
-  width: 300px;
-}
-.logistics_message_update .context footer .right select {
-  width: 90px;
-}
-.logistics_message_update > footer {
-  height: 50px;
-}
-.logistics_message_update > footer p {
-  width: 200px;
-  border: 1px solid grey;
+  width: 92px;
+  background: dimgray;
+  opacity: 0.8;
+  line-height: 32px;
+  margin-top: 6px;
+  color: white;
   text-align: center;
-  line-height: 30px;
-  border-radius: 4px;
+}
+.bg .toll p img {
+  margin-right: 10px;
+}
+.bg .toll p:hover {
   cursor: pointer;
-  margin-left: 460px;
-  margin-top: 16px;
+  opacity: 0.4;
+}
+.bg .toll footer {
+  background: dimgray;
+  opacity: 0.8;
+  line-height: 25px;
+  margin-top: 2px;
+  color: white;
+  text-align: center;
+}
+.bg .toll footer:hover {
+  cursor: pointer;
+  opacity: 0.4;
+}
+.bg .img {
+  width: 70%;
+  border: 1px solid green;
+  position: absolute;
+  top: 0;
+  right: 0;
 }

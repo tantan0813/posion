@@ -6,234 +6,25 @@
     <link href="css/css/index.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<div class="con">
-    <section class="statue">
-        <div>
-            <span>订单状态</span>
-            <p id="cancel">取消订单</p>
-            <p id="submit">付款信息提交审核</p>
-        </div>
-        <p>待付款</p>
-    </section>
-    <section class="buyerMessage">
-        <p>买家信息</p>
-        <div>
-            <p>订单编号：<span id="no">121345454152145748</span></p>
-            <p>创建时间：<span id="time">2017-12-06 16:10</span></p>
-        </div>
-    </section>
-    <section class="order">
-        <div class="order_header">
-            <span>订单信息</span>
-            <p id="update_goods">修改收货信息</p>
-        </div>
-        <div class="orderMessage">
-            <p>收货人：<span id="human">lol</span></p>
-            <p>电话:<span id="telephone">1361034564</span></p>
-            <p id="address">广州市广东神好难非常的</p>
-        </div>
-        <div class="table">
-            <ul>
-                <li></li>
-                <li>供应商</li>
-                <li>商品名称</li>
-                <li>skuid</li>
-                <li>交易类型</li>
-                <li>订单数量</li>
-                <li>单价</li>
-                <li>总金额</li>
-            </ul>
-            <table>
-                <tr>
-                    <td><img src="" alt=""/></td>
-                    <td>供应商</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><img src="" alt=""/></td>
-                    <td>供应商</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><img src="" alt=""/></td>
-                    <td>供应商</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>税费：</td>
-                    <td id="tax"></td>
-                    <td>合计：</td>
-                    <td id="sum"></td>
-                </tr>
-            </table>
-            <div id="add_price">
-                <div>
-                    加价：<input type="number"/>
-                    <p id="add_submit">提交</p>
-                    <p>总价：<span id="add_result">2456122</span></p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="human">
-        <p>
-            <span>发票信息</span>
-            <span class="invoice">修改发票信息</span>
-        </p>
-        <div>
-            <p>发票抬头：<span id="people"></span></p>
-            <p>发票内容：<span id="peo_con"></span></p>
-        </div>
-    </section>
-    <section class="remarks">
-        <input type="text" value="订单备注"/>
-        <p id="text_submit">提交</p>
-    </section>
-</div>
-
-<section class="order_submit">
-    <header>发货</header>
-    <div class="context">
-        <div class="left">付款信息提交</div>
-        <div class="right">
-            户主姓名：<input type="text" id="pay_name"/><br/>
-            交易银行：<select id="pay_account_place">
-                <option >中国银行</option>
-                <option >中国工商银行</option>
-                <option >招商银行</option>
-                <option >中国建设银行</option>
-                <option >中国农业银行</option>
-                <option >中国民生银行</option>
-                <option >中国光大银行</option>
-                <option >中信银行</option>
-                <option >交通银行</option>
-                <option >兴业银行</option>
-                <option >上海浦东发展银行</option>
-                <option >中国人民银行</option>
-                <option >华夏银行</option>
-                <option >深圳发展银行</option>
-                <option >广东发展银行</option>
-                <option >中国邮政储蓄银行</option>
-                <option >花旗中国银行</option>
-                <option >汇丰中国银行</option>
-                <option >渣打中国银行</option>
-                <option >香港汇丰银行</option>
-                <option >渣打(香港)银行</option>
-                <option >恒生银行</option>
-                <option >欧力士银行</option>
-                <option >美国运通银行</option>
-                <option > 华侨银行</option>
-                </select><br/>
-            交易账户：<input type="text/number" id="pay_account"/>
-        </div>
-    </div>
-    <footer>
-        <p id="submit_order_pay">提交</p>
-    </footer>
-</section>
-<section class="order_close">
-    <header>
-        <h4>关闭订单</h4>
-    </header>
-    <div class="context">
-        <p>确认关闭订单？</p>
-    </div>
-    <footer>
-        <p id="order_close_cancel">取消</p>
-        <p id="order_close_sure">确定</p>
-    </footer>
-</section>
-<section class="logistics_message">
-    <header>发货</header>
-    <div class="context">
-        <div class="left">发货信息</div>
-        <div class="right">
-            选择物流公司：<select id="logistics_company">
-            <option>顺丰快递</option>
-            <option>圆通快递</option>
-            <option>申通快递</option>
-            <option>韵达快递</option>
-            <option>中通快递</option>
-            <option>天天快递</option>
-            <option>汇通快递</option>
-            <option>优速快递</option>
-            <option>国通快递</option>
-            <option>中国邮政EMS</option>
-        </select><br/>
-            物流单号：<input type="text/number" id="logistics_no"/>
-        </div>
-    </div>
-    <footer>
-        <p id="submit_logistics">提交</p>
-    </footer>
-</section>
-<section class="order_update">
-    <header>发货</header>
-    <div class="context">
-        <div class="left">发票信息</div>
-        <div class="right">
-            发票抬头：<input type="text" id="invoice_head"/><br/>
-            发票内容：<input type="text/number" id="invoice_context"/>
-        </div>
-    </div>
-    <footer>
-        <p id="submit_order_update">提交</p>
-    </footer>
-</section>
-<section class="logistics_message_update">
-    <header>修改地址</header>
-    <div class="context">
+<div class="col-md-8 bg" style="height: 430px">
+    <div class="toll">
         <header>
-            <p>原地址</p>
-            <div class="text">
-                <p>收货人：<span id="people_01">lolloilll</span></p>
-                <p>电话：<span id="telephone_01">18779119080</span></p>
-                <p>地址：<span id="address_01">不咋上车费和第三超凡大师玩儿佛耳挂女大夫</span></p>
-            </div>
+            <img src="img/header_title_s.png"/>
         </header>
-        <footer>
-            <div class="left">
-                <p>新地址</p>
-            </div>
-            <div class="right">
-                收货人：<input type="text" id="new_people"/><br/>
-                联系电话：<input type="text" id="new_telephone"/><br/>
-                选择所在地：<div data-toggle="distpicker">
-                <select></select>
-                <select></select>
-                <select></select>
-            </div><br/>
-                详细地址：<input type="text" id="new_detail_place"/>
-            </div>
-        </footer>
+        <div id="right">
+            <img src="img/small_right.png"/>
+        </div>
+        <div id="left">
+            <img src="img/small_left.png"/>
+        </div>
+        <p id="num">1/30</p>
+        <p id="all_screen">
+            <img src="img/small.png"/>全屏
+        </p>
+        <footer>搜索故事</footer>
     </div>
-    <footer>
-        <p id="new_logistics_submit">提交</p>
-    </footer>
-</section>
-<script src="../../src/core/jquery-3.1.0.min.js" type="text/javascript"></script>
-<script src="js/es/index.js" type="text/javascript"></script>
-<script src="js/es/distpicker.data.js"></script>
-<script src="js/es/distpicker.js"></script>
+    <div class="img"></div>
+</div>
 </body>
 </html>
 

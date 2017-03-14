@@ -18,6 +18,7 @@ rl.on('line', function(line){
 	}
 });
 function wash(arr) {
+	console.log(arr);
 	for(var i=0,l=parseInt(arr[0]);i<l;i++){
 		me(arr[2*i+1].split(' '),arr[2*i+2].split(' '));
 	}
