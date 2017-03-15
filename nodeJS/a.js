@@ -24,6 +24,7 @@ var data = [];
     //             //     // data = data.slice(0,0);//清空data
     //             // }
     // })
+
 // rl.on('line',function(a){
 //     data.push(a);
 //     var n = data[0]-0;
@@ -127,6 +128,7 @@ var data = [];
 //     }
 //
 // })
+
 rl.on("line",function(a){
     data.push(a);
     // console.log(data);

@@ -564,7 +564,6 @@ rl.on("line",function(a){
     // 输出例子:
     //     2
     // 2
-    k18();
     function k18(){
         data.push(a);
         data.forEach(function(b){
@@ -573,6 +572,204 @@ rl.on("line",function(a){
 
             }
         })
+    }
+
+    // 小Q最近遇到了一个难题：把一个字符串的大写字母放到字符串的后面，各个字符的相对位置不变，且不能申请额外的空间。
+    function k19(a){
+        var arr = a.split("");
+        var arr1 = [];
+        var arr2 = [];
+        for(var i=0,len=arr.length;i<len;i++){
+            if(/[A-Z]/.test(arr[i])){
+                arr2.push(arr[i]);
+            }else{
+                arr1.push(arr[i])
+            }
+        }
+        console.log(arr1.concat(arr2).toString().replace(/,/g,""));
+    }
+
+    // 小Q今天在上厕所时想到了这个问题：有n个数，两两组成二元组，差最小的有多少对呢？差最大呢？
+    function k20(a){
+        data.push(a);
+        if(data.length>1){
+            var n = parseInt(data[0]);
+            var arr  = data[1].split(" ").sort(function(b,c){return b-c;});
+            var big=0,lit=0;
+            arr.forEach(function(c){
+                if(c==parseInt(arr[n-1])){
+                    big++;
+                }
+            });
+            var cha = [];
+            for(var i=0;i<n-1;i++){
+                cha.push(parseInt(arr[i+1])-parseInt(arr[i]));
+            }
+            var small = Math.min.apply(null,cha);
+            cha.forEach(function(d){
+                if(parseInt(d)==small){
+                    lit++;
+                }
+            });
+            console.log(lit+" "+big)
+        }
+    }
+
+    // 有一楼梯共m级，刚开始时你在第一级，若每次只能跨上一级或者二级，要走上m级，共有多少走法？注：规定从一级到一级有0种走法。
+    // 给定一个正整数int n，请返回一个数，代表上楼的方式数。保证n小于等于100。为了防止溢出，请返回结果Mod 1000000007的值。
+    // 测试样例：
+    // 3
+    // 返回：2
+
+    function k21(a){
+        var n = parseInt(a);
+
+    }
+
+
+
+    // 小东和三个朋友一起在楼上抛小球，他们站在楼房的不同层，假设小东站的楼层距离地面N米，
+    // 球从他手里自由落下，每次落地后反跳回上次下落高度的一半，并以此类推知道全部落到地面不跳，求4个小球一共经过了多少米？(数字都为整数)
+    function k22(a){
+        var arr = a.split(",");
+        var arr1 = [];
+        var ree = 0;
+        arr.forEach(function(b){
+            var  h = parseInt(b);
+            ree += h;
+            var s = h;
+            while(h>0.0001){
+                h = h/2;
+                s = s + h;
+            }
+            arr1.push(s);
+        });
+        var re = 0;
+        arr1.forEach(function(c){
+            re += c;
+        })
+        console.log(Math.round(re+ree));
+    };
+
+
+
+    // 给定 x, k ，求满足 x + y = x | y 的第 k 小的正整数 y 。 | 是二进制的或(or)运算，例如 3 | 5 = 7。
+    // 比如当 x=5，k=1时返回 2，因为5+1=6 不等于 5|1=5，而 5+2=7 等于 5 | 2 = 7。
+    function k23(a){
+        var arr = a.split(" ");
+        var x=parseInt(arr[0]),k=parseInt(arr[1]);
+        for(var y=1;y<2000000000;y++){
+            var he = x+y;
+            var or = x^y;
+            if(he==or){
+                console.log(y);
+                break;
+            }
+        }
+    }
+
+    // 小易经常沉迷于网络游戏.有一次,他在玩一个打怪升级的游戏,他的角色的初始能力值为 a.
+    // 在接下来的一段时间内,他将会依次遇见n个怪物,每个怪物的防御力为b1,b2,b3...bn.
+    // 如果遇到的怪物防御力bi小于等于小易的当前能力值c,那么他就能轻松打败怪物,并 且使得自己的能力值增加bi;
+    // 如果bi大于c,那他也能打败怪物,但他的能力值只能增加bi 与c的最大公约数.那么问题来了,在一系列的锻炼后,小易的最终能力值为多少?
+    function k24(a){
+        data.push(a);
+        if(data.length%2==0){
+            var result = [];
+            for(var i=0,len=data.length;i<len;i+2){
+                var arr = data[i].split(" ");
+                var n = parseInt(arr[0]);
+                var a = parseInt(arr[1]);
+                var arr1 = data[i+1].split(" ");
+                arr1.forEach(function(b){
+                    if(a>=parseInt(b)){
+                        a+=parseInt(b);
+                    }else{
+                        a += parseInt(gcd(a,parseInt(b)));
+                    }
+                })
+                result.push(a);
+                console.log(result.toString().replace(/,/g,"\n"));
+                return true;
+            }
+            }
+        //求最大公约数
+        function gcd(m ,n){
+            if(n) return gcd(n ,m%n);//只要除不尽就不断递归；
+            return m;
+        }
+        }
+
+    // 兰博教训提莫之后,然后和提莫讨论起约德尔人,谈起约德尔人,自然少不了一个人,那 就是黑默丁格------约德尔人历史上最伟大的科学家.
+    // 提莫说,黑默丁格最近在思考一个问题:黑默丁格有三个炮台,炮台能攻击到距离它R的敌人
+    // (两点之间的距离为两点连续的距离,例如(3,0),(0,4)之间的距离是5),
+    // 如果一个炮台能攻击 到敌人,那么就会对敌人造成1×的伤害.黑默丁格将三个炮台放在N*M方格中的点上,并且给出敌人 的坐标.
+    function k25(a){
+        var arr = a.split(" ");
+        var n=0;
+        var r = parseInt(arr[0]);
+        var x0 = parseInt(arr[arr.length-2]);
+        var y0 = parseInt(arr[arr.length-1]);
+        for(var i=1,len=arr.length-2;i<len;i++){
+            var x = parseInt(arr[i]);
+            i++;
+            var y = parseInt(arr[i]);
+            var s = Math.sqrt(Math.pow((x0-x),2)+Math.pow((y0-y),2));
+            if(s<=r){
+                n++;
+            }
+        }
+        console.log(n+"x");
+    }
+
+
+
+    // 有这样一道智力题：“某商店规定：三个空汽水瓶可以换一瓶汽水。小张手上有十个空汽水瓶，她最多可以换多少瓶汽水喝？”答案是5瓶，
+    // 方法如下：先用9个空瓶子换3瓶汽水，喝掉3瓶满的，喝完以后4个空瓶子，用3个再换一瓶，喝掉这瓶满的，这时候剩2个空瓶子。
+    // 然后你让老板先借给你一瓶汽水，喝掉这瓶满的，喝完以后用3个空瓶子换一瓶满的还给老板。如果小张手上有n个空汽水瓶，最多可以换多少瓶汽水喝？
+    // 输入描述:
+    // 输入文件最多包含10组测试数据，每个数据占一行，仅包含一个正整数n（1<=n<=100），表示小张手上的空汽水瓶数。n=0表示输入结束，你的程序不应当处理这一行。
+    // 输出描述:
+    // 对于每组测试数据，输出一行，表示最多可以喝的汽水瓶数。如果一瓶也喝不到，输出0。
+    // 输入例子:
+    // 3
+    // 10
+    // 81
+    // 0
+    // 输出例子:
+    // 1
+    // 5
+    // 40
+    k26(a);
+    function k26(a){
+       data.push(a);
+       var re = [];
+       data.forEach(function(b){
+            if(b==0){
+                // console.log(data.slice(0,data.length-1));
+                l(data.slice(0,data.length-1));
+            }
+       })
+        function l(arr){
+           arr.forEach(function(c){
+               var n = parseInt(c);
+               var num = 0;
+               while(n>=2){
+                   if(n==2){
+                       num++;
+                   }else{
+                       var k = n%3;
+                       var d = Math.floor(n/3);
+                       num+=d;
+                        n=0;
+                        n=k+d;
+                   };
+               }
+               console.log(num);
+               re.push(num);
+           })
+            // console.log(re.toString().replace(/,/g,"\n"));
+        }
     }
 });
 
