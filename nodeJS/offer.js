@@ -3,6 +3,10 @@ var rl = line.createInterface({input:process.stdin,output:process.stdout})
 var data = [];
 rl.on("line",function(a){
 
+    // var line = require("readline");
+    // var rl =line.createInterface({input:process.stdin,output:process.stdout});
+    // rl.on("line",function(a){
+
     // 在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
     // 请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
     function Find(target, array) {
@@ -727,20 +731,8 @@ rl.on("line",function(a){
     // 有这样一道智力题：“某商店规定：三个空汽水瓶可以换一瓶汽水。小张手上有十个空汽水瓶，她最多可以换多少瓶汽水喝？”答案是5瓶，
     // 方法如下：先用9个空瓶子换3瓶汽水，喝掉3瓶满的，喝完以后4个空瓶子，用3个再换一瓶，喝掉这瓶满的，这时候剩2个空瓶子。
     // 然后你让老板先借给你一瓶汽水，喝掉这瓶满的，喝完以后用3个空瓶子换一瓶满的还给老板。如果小张手上有n个空汽水瓶，最多可以换多少瓶汽水喝？
-    // 输入描述:
-    // 输入文件最多包含10组测试数据，每个数据占一行，仅包含一个正整数n（1<=n<=100），表示小张手上的空汽水瓶数。n=0表示输入结束，你的程序不应当处理这一行。
-    // 输出描述:
-    // 对于每组测试数据，输出一行，表示最多可以喝的汽水瓶数。如果一瓶也喝不到，输出0。
-    // 输入例子:
-    // 3
-    // 10
-    // 81
-    // 0
-    // 输出例子:
-    // 1
-    // 5
-    // 40
-    k26(a);
+
+    //好未来秋招
     function k26(a){
        data.push(a);
        var re = [];
@@ -770,6 +762,98 @@ rl.on("line",function(a){
            })
             // console.log(re.toString().replace(/,/g,"\n"));
         }
+    }
+    function k40(a){
+        var str = a.replace(/\s+/," ");
+        var arr = str.split(" ").reverse();
+        var s = "";
+        arr.forEach(function(b){
+            s+= b+ " ";
+        })
+        console.log(s.slice(0,s.length-1));
+    }
+    function k41(a){
+        data.push(a);
+        if(data.length>1){
+            console.log(p(data).toString().replace(/,/g,""));
+            function p(arr){
+                var arr1 = arr[0].split("");
+                var arr2 = arr[1].split("");
+                var result = [];
+                arr1.forEach(function(b){
+                   if(arr2.indexOf(b)==-1){
+                       result.push(b);
+                   }
+                })
+                return result;
+            }
+        }
+    }
+    // 输入两个整数 n 和 m，从数列1，2，3.......n 中随意取几个数,使其和等于 m ,要求将其中所有的可能组合列出来
+    function k42(a){
+        var arr = a.split(" ");
+        var n = parseInt(arr[0]);
+        var m = parseInt(arr[1]);
+        var num = [];
+        for(var i=1;i<=n;i++){
+            num.push(i);
+        }
+       var index = num.indexOf(m);
+        var result = [];
+        if(index==-1){
+            console.log("not have");
+            return false;
+        }else{
+            for(var i=0;i<index;i++){
+                index--;
+                result.push(num[i]+" "+num[index]);
+            }
+            result.push(m);
+            console.log(result.toString().replace(/,/g,"\n"))
+        }
+    }
+
+    function k43(a){
+        var reg = /\d+/g;
+        var arr = a.match(reg);
+        var result = [];
+        arr.forEach(function(b,c){
+            result.push(b.length);
+        })
+        var max = Math.max.apply(null,result);
+        var re = [];
+        arr.forEach(function(v){
+            if(v.length==max){
+                re.push(v);
+            }
+        })
+        console.log(re.toString().replace(/,/g," "))
+    }
+    function k44(a){
+        var arr = a.split(" ");
+        var n = arr.length/2;
+        var re = [],su=[];
+        arr.forEach(function(b){
+            if(re.indexOf(b)==-1){
+                re.push(b);
+            }
+        });
+        re.forEach(function(c){
+            var count = 0;
+            arr.forEach(function(d){
+                if(c==d){
+                    count++;
+                }
+            });
+            su.push(count);
+        });
+        var result = [];
+        su.forEach(function(e,f){
+            if(parseInt(e)>=n){
+                result.push(re[f]);
+            }
+        })
+        console.log(result.toString().replace(/,/g, " "));
     }
 });
 
