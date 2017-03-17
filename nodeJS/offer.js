@@ -812,7 +812,6 @@ rl.on("line",function(a){
             console.log(result.toString().replace(/,/g,"\n"))
         }
     }
-
     function k43(a){
         var reg = /\d+/g;
         var arr = a.match(reg);
@@ -855,6 +854,67 @@ rl.on("line",function(a){
         })
         console.log(result.toString().replace(/,/g, " "));
     }
+
+    // 质数校验
+    function k45(a){
+        data.push(a);
+        var n = parseInt(data[0]);
+        if(data.length>n){
+            var arr = data.slice(1);
+            var result = [];
+            arr.forEach(function(b){
+                var num = parseInt(b);
+                if(num==2){
+                    result.push("yes");
+                }else if(num==1){
+                    result.push("error");
+                }else{
+                    for(var i=1;i<num;i++){
+                        var flag = 0;//非质数
+                        if(num%i==0&&i!=1){
+                            flag = 0;
+                            break;
+                        }else{
+                            flag = 1;
+                        }
+                    }
+                    if(flag==0){
+                        result.push("no");
+                    }else if(flag==1){
+                        result.push("yes");
+                    }
+                }
+            });
+            console.log(result.toString().replace(/,/g,"\n"));
+            return true;
+        }
+
+    }
+
+    // 小Hi想知道，如果他每次都按照一种固定的顺序重排数组，那么最少经过几次重排之后数组会恢复初始的顺序？
+    // 具体来讲，给定一个1 - N 的排列 P，小Hi每次重排都是把第 i 个元素放到第 Pi个位置上。
+    // 例如对于 P = (2, 3, 1)，假设初始数组是(1, 2, 3)，重排一次之后变为(3, 1, 2)，重排两次之后变为(2, 3, 1)，重排三次之后变回(1, 2, 3)。
+    // 被排数组中的元素可以认为是两两不同的。
+    // 输入
+    // 第一行一个整数 N ，代表数组的长度。 (1 ≤ N ≤ 100)
+    // 第二行N个整数，代表1 - N 的一个排列 P 。
+    // 输出
+    // 输出最少重排的次数。
+    // 样例输入
+    // 3
+    // 2 3 1
+    // 样例输出
+    // 3
+    k46(a);
+    function k46(a){
+        data.push(a);
+        var num = parseInt(data[0]);
+        if(data.length>1){
+            
+        }
+    }
+
+
 });
 
 
