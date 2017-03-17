@@ -910,7 +910,22 @@ rl.on("line",function(a){
         if(data.length>1){
             var arr1 = data[0].split(" ");
             var n=parseInt(arr1[0]),x=parseInt(arr1[1]);
-
+            var arr2 = data[1].split(" ").sort(function(e,f){return e-f});
+            var total = 0;
+            arr2.filter(function(b){ total += parseInt(b)});
+            if(total<x){
+                console.log(-1);
+            }else{
+                var sum = 0;
+                var re = [];
+                arr2.forEach(function(d){
+                    sum += parseInt(d);
+                    if(sum>=x){
+                        re.push(sum);
+                    }
+                })
+                console.log(re[0]);
+            }
             }
         }
 
