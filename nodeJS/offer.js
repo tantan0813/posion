@@ -3,6 +3,10 @@ var rl = line.createInterface({input:process.stdin,output:process.stdout})
 var data = [];
 rl.on("line",function(a){
 
+    // var line = require("readline");
+    // var rl =line.createInterface({input:process.stdin,output:process.stdout});
+    // rl.on("line",function(a){
+
     // 在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
     // 请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
     function Find(target, array) {
@@ -728,6 +732,10 @@ rl.on("line",function(a){
     // 方法如下：先用9个空瓶子换3瓶汽水，喝掉3瓶满的，喝完以后4个空瓶子，用3个再换一瓶，喝掉这瓶满的，这时候剩2个空瓶子。
     // 然后你让老板先借给你一瓶汽水，喝掉这瓶满的，喝完以后用3个空瓶子换一瓶满的还给老板。如果小张手上有n个空汽水瓶，最多可以换多少瓶汽水喝？
 
+<<<<<<< HEAD
+=======
+    //好未来秋招
+>>>>>>> 13d0449ef2bdc93dc42bebc07e50532e469cdc5f
     function k26(a){
        data.push(a);
        var re = [];
@@ -775,6 +783,7 @@ rl.on("line",function(a){
             console.log(re.sort(function(b,c){return b-c;}).toString().replace(/,/g,"\n"));
         }
     }
+<<<<<<< HEAD
 
 
 
@@ -792,6 +801,163 @@ rl.on("line",function(a){
         console.log(parseInt(a,16));
     }
 
+=======
+    function k40(a){
+        var str = a.replace(/\s+/," ");
+        var arr = str.split(" ").reverse();
+        var s = "";
+        arr.forEach(function(b){
+            s+= b+ " ";
+        })
+        console.log(s.slice(0,s.length-1));
+    }
+    function k41(a){
+        data.push(a);
+        if(data.length>1){
+            console.log(p(data).toString().replace(/,/g,""));
+            function p(arr){
+                var arr1 = arr[0].split("");
+                var arr2 = arr[1].split("");
+                var result = [];
+                arr1.forEach(function(b){
+                   if(arr2.indexOf(b)==-1){
+                       result.push(b);
+                   }
+                })
+                return result;
+            }
+        }
+    }
+    // 输入两个整数 n 和 m，从数列1，2，3.......n 中随意取几个数,使其和等于 m ,要求将其中所有的可能组合列出来
+    function k42(a){
+        var arr = a.split(" ");
+        var n = parseInt(arr[0]);
+        var m = parseInt(arr[1]);
+        var num = [];
+        for(var i=1;i<=n;i++){
+            num.push(i);
+        }
+       var index = num.indexOf(m);
+        var result = [];
+        if(index==-1){
+            console.log("not have");
+            return false;
+        }else{
+            for(var i=0;i<index;i++){
+                index--;
+                result.push(num[i]+" "+num[index]);
+            }
+            result.push(m);
+            console.log(result.toString().replace(/,/g,"\n"))
+        }
+    }
+    function k43(a){
+        var reg = /\d+/g;
+        var arr = a.match(reg);
+        var result = [];
+        arr.forEach(function(b,c){
+            result.push(b.length);
+        })
+        var max = Math.max.apply(null,result);
+        var re = [];
+        arr.forEach(function(v){
+            if(v.length==max){
+                re.push(v);
+            }
+        })
+        console.log(re.toString().replace(/,/g," "))
+    }
+    function k44(a){
+        var arr = a.split(" ");
+        var n = arr.length/2;
+        var re = [],su=[];
+        arr.forEach(function(b){
+            if(re.indexOf(b)==-1){
+                re.push(b);
+            }
+        });
+        re.forEach(function(c){
+            var count = 0;
+            arr.forEach(function(d){
+                if(c==d){
+                    count++;
+                }
+            });
+            su.push(count);
+        });
+        var result = [];
+        su.forEach(function(e,f){
+            if(parseInt(e)>=n){
+                result.push(re[f]);
+            }
+        })
+        console.log(result.toString().replace(/,/g, " "));
+    }
+
+    // 质数校验
+    function k45(a){
+        data.push(a);
+        var n = parseInt(data[0]);
+        if(data.length>n){
+            var arr = data.slice(1);
+            var result = [];
+            arr.forEach(function(b){
+                var num = parseInt(b);
+                if(num==2){
+                    result.push("yes");
+                }else if(num==1){
+                    result.push("error");
+                }else{
+                    for(var i=1;i<num;i++){
+                        var flag = 0;//非质数
+                        if(num%i==0&&i!=1){
+                            flag = 0;
+                            break;
+                        }else{
+                            flag = 1;
+                        }
+                    }
+                    if(flag==0){
+                        result.push("no");
+                    }else if(flag==1){
+                        result.push("yes");
+                    }
+                }
+            });
+            console.log(result.toString().replace(/,/g,"\n"));
+            return true;
+        }
+
+    }
+
+    // coder消费优惠
+    function k46(a){
+        data.push(a);
+        if(data.length>1){
+            var arr1 = data[0].split(" ");
+            var n=parseInt(arr1[0]),x=parseInt(arr1[1]);
+            var arr2 = data[1].split(" ").sort(function(e,f){return e-f});
+            var total = 0;
+            arr2.filter(function(b){ total += parseInt(b)});
+            if(total<x){
+                console.log(-1);
+            }else{
+                var sum = 0;
+                var re = [];
+                arr2.forEach(function(d){
+                    sum += parseInt(d);
+                    if(sum>=x){
+                        re.push(sum);
+                    }
+                })
+                console.log(re[0]);
+            }
+            }
+        }
+
+
+
+>>>>>>> 13d0449ef2bdc93dc42bebc07e50532e469cdc5f
 });
 
 
