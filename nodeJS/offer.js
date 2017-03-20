@@ -917,6 +917,105 @@ rl.on("line",function(a){
         }
 
 
+    //2017编程模拟题
+    //循环单词☆
+    function k50(a){
+        data.push(a);
+        var n = parseInt(data[0]);
+        if(data.length>n){
+            var arr = data.slice(1);
+            var re = [];
+            arr.forEach(function(b){
+                var arr1 = b.split("");
+                arr1.forEach(function(c,d){
+                    var s = arr1.slice(0,d);
+                    var ss = arr1.slice(d);
+                    var sss = ss.concat(s).toString().replace(/,/g,"");
+                    re.push(sss);
+                })
+            });
+            var su = [];
+            arr.forEach(function(d){
+                if(re.indexOf(d)!=-1){
+                    var ssss = d.split("").sort().toString();
+                    if(su.indexOf(ssss)==-1){
+                        su.push(ssss);
+                    }
+                }
+            })
+            console.log(su.length);
+        }
+    }
+    //连续整数
+    function k51(a){
+        var arr = a.split(" ");
+        var arr1 = arr[0].split("");
+        var arr2 = arr[1].split("");
+        arr1.forEach(function(b,c){
+            if(b=="A"){
+                arr1.splice(c,1,"T");
+            }else if(b=="T"){
+                arr1.splice(c,1,"A");
+            }else if(b=="G"){
+                arr1.splice(c,1,"C");
+            }else if(b=="C"){
+                arr1.splice(c,1,"G");
+            }
+        });
+        var n=0;
+        for(var i=0;i<arr1.length;i++){
+            if(arr1[i]!=arr2[i]){
+                n++;
+            }
+        };
+        console.log(n);
+    }
+    //连续整数☆
+    function k52(a) {
+        data.push(a);
+        if (data.length > 1) {
+            var arr = data[1].split(" ").sort(function (b, c) {
+                return b - c;
+            });
+
+        }
+    }
+    //超级素数☆
+    function k53(a){
+        var n = parseInt(a);
+        var arr = [2,3,5,7,11,13,17,23,29,31,37,41,43,51,57,59,61];
+        var p=0,q=0;
+        for(var j=0;j<10^18;j++){
+            var sum = 0;
+            for(var i=0;i<10000000;i++){
+                sum = Math.pow(j,i);
+                if(sum==n){
+                    if(su(j)){
+                        p=j;
+                        q=i;
+                        console.log(p+" "+ q);
+                        return true;
+                    }
+                }
+            }
+        }
+        if(p==0){
+            console.log("NO");
+            return false;
+        }
+        function su(num){
+            var n = parseInt(num);
+            for(var i=1;i<num;i++){
+                if(num%i==0&&i!=1){
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+        }
+    }
+
+
 
 });
 

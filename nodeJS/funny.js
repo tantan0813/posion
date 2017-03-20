@@ -57,7 +57,8 @@ rl.on("line",function(a){
     //     }
     // }
 
-    //放入鱼缸种类数问题（2017IT模拟考试）
+    //（2017IT模拟考试）
+    //放入鱼缸种类数问题
 
     // if(data.length>2){
     //     console.log(yu(data));
@@ -122,7 +123,7 @@ rl.on("line",function(a){
     //             })
     //             console.log(re1.length);
     //         }
-    //     }
+        }
     // }
 
     //DNA合成
