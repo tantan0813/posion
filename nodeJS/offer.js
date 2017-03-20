@@ -732,16 +732,21 @@ rl.on("line",function(a){
     // 方法如下：先用9个空瓶子换3瓶汽水，喝掉3瓶满的，喝完以后4个空瓶子，用3个再换一瓶，喝掉这瓶满的，这时候剩2个空瓶子。
     // 然后你让老板先借给你一瓶汽水，喝掉这瓶满的，喝完以后用3个空瓶子换一瓶满的还给老板。如果小张手上有n个空汽水瓶，最多可以换多少瓶汽水喝？
 
+<<<<<<< HEAD
+=======
     //好未来秋招
+>>>>>>> 13d0449ef2bdc93dc42bebc07e50532e469cdc5f
     function k26(a){
        data.push(a);
        var re = [];
-       data.forEach(function(b){
-            if(b==0){
-                // console.log(data.slice(0,data.length-1));
-                l(data.slice(0,data.length-1));
-            }
-       })
+        l(data);
+       // data.forEach(function(b){
+       //      if(b==0){
+       //          // console.log(data.slice(0,data.length-1));
+       //          l(data.slice(0,data.length-1));
+       //          return false;
+       //      }
+       // });
         function l(arr){
            arr.forEach(function(c){
                var n = parseInt(c);
@@ -749,20 +754,54 @@ rl.on("line",function(a){
                while(n>=2){
                    if(n==2){
                        num++;
+                       break;
                    }else{
                        var k = n%3;
                        var d = Math.floor(n/3);
-                       num+=d;
-                        n=0;
+                        num+=d;
                         n=k+d;
                    };
                }
-               console.log(num);
                re.push(num);
-           })
-            // console.log(re.toString().replace(/,/g,"\n"));
+           });
+            console.log(re.toString().replace(/,/g,"\n"));
         }
     }
+
+
+    function k27(a){
+        data.push(a);
+        var n = parseInt(data[0]);
+        if(data.length>n){
+            var arr = data.slice(1);
+            var re = [];
+            arr.forEach(function(b){
+                if(re.indexOf(b)==-1){
+                    re.push(b);
+                }
+            })
+            console.log(re.sort(function(b,c){return b-c;}).toString().replace(/,/g,"\n"));
+        }
+    }
+<<<<<<< HEAD
+
+
+
+    // 写出一个程序，接受一个十六进制的数值字符串，输出该数值的十进制字符串。（多组同时输入 ）
+    // 输入描述:
+    // 输入一个十六进制的数值字符串。
+    // 输出描述:
+    // 输出该数值的十进制字符串。
+    // 输入例子:
+    // 0xA
+    // 输出例子:
+    //     10
+    k28(a);
+    function k28(a){
+        console.log(parseInt(a,16));
+    }
+
+=======
     function k40(a){
         var str = a.replace(/\s+/," ");
         var arr = str.split(" ").reverse();
@@ -1017,6 +1056,7 @@ rl.on("line",function(a){
 
 
 
+>>>>>>> 13d0449ef2bdc93dc42bebc07e50532e469cdc5f
 });
 
 
