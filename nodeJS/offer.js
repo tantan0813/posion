@@ -704,10 +704,6 @@ rl.on("line",function(a){
         }
         }
 
-    // 兰博教训提莫之后,然后和提莫讨论起约德尔人,谈起约德尔人,自然少不了一个人,那 就是黑默丁格------约德尔人历史上最伟大的科学家.
-    // 提莫说,黑默丁格最近在思考一个问题:黑默丁格有三个炮台,炮台能攻击到距离它R的敌人
-    // (两点之间的距离为两点连续的距离,例如(3,0),(0,4)之间的距离是5),
-    // 如果一个炮台能攻击 到敌人,那么就会对敌人造成1×的伤害.黑默丁格将三个炮台放在N*M方格中的点上,并且给出敌人 的坐标.
     function k25(a){
         var arr = a.split(" ");
         var n=0;
@@ -728,21 +724,16 @@ rl.on("line",function(a){
 
 
 
+
     // 有这样一道智力题：“某商店规定：三个空汽水瓶可以换一瓶汽水。小张手上有十个空汽水瓶，她最多可以换多少瓶汽水喝？”答案是5瓶，
     // 方法如下：先用9个空瓶子换3瓶汽水，喝掉3瓶满的，喝完以后4个空瓶子，用3个再换一瓶，喝掉这瓶满的，这时候剩2个空瓶子。
     // 然后你让老板先借给你一瓶汽水，喝掉这瓶满的，喝完以后用3个空瓶子换一瓶满的还给老板。如果小张手上有n个空汽水瓶，最多可以换多少瓶汽水喝？
 
+    //好未来秋招
     function k26(a){
        data.push(a);
        var re = [];
         l(data);
-       // data.forEach(function(b){
-       //      if(b==0){
-       //          // console.log(data.slice(0,data.length-1));
-       //          l(data.slice(0,data.length-1));
-       //          return false;
-       //      }
-       // });
         function l(arr){
            arr.forEach(function(c){
                var n = parseInt(c);
@@ -763,8 +754,6 @@ rl.on("line",function(a){
             console.log(re.toString().replace(/,/g,"\n"));
         }
     }
-
-
     function k27(a){
         data.push(a);
         var n = parseInt(data[0]);
@@ -792,7 +781,6 @@ rl.on("line",function(a){
     function k28(a){
         console.log(parseInt(a,16));
     }
-
     function k40(a){
         var str = a.replace(/\s+/," ");
         var arr = str.split(" ").reverse();
@@ -945,6 +933,87 @@ rl.on("line",function(a){
             }
             }
         }
+    //时间差秒计
+    //new Date(yyyy,mth,dd,hh,mm,ss);
+    function k47(a){
+        data.push(a);
+        if(data.length>1){
+            p(data[0],data[1]);
+        }
+        function p(s1,s2){
+            var d1=new Date(s1);
+            var d2=new Date(s2);
+            console.log(parseInt(d2.getTime()-d1.getTime())/1000);
+           console.log((parseInt(l(s2).getTime())-parseInt(l(s1).getTime()))/1000);
+        }
+        function l(s){
+            var arr1 = s.split(" ");
+            var ar1 = arr1[0].split("-"),ar2=arr1[1].split(":");
+            var y=parseInt(ar1[0]),m=parseInt(ar1[1]),dd=parseInt(ar1[2]);
+            var hh=parseInt(ar2[0]),mm=parseInt(ar2[1]),ss=parseInt(ar2[2]);
+            var d = new Date(y,m,dd,hh,mm,ss);
+            return d;
+        }
+    }
+
+    function k48(a){
+        data.push(a);
+        if(data.length>2){
+            var arr1 = data[0].split(" ");
+            var newMin=parseInt(arr1[0]),newMax=parseInt(arr1[1]);
+            var n = parseInt(data[1]);
+            var min,max,count=0;
+            if(n>1){
+                var arr2 = data[2].split(" ").sort(function(b,c){return b-c});
+                min=parseInt(arr2[0]),max=parseInt(arr2[arr2.length-1]);
+            }else if(n==1){
+                min=parseInt(data[2]);
+                for(var i=newMin;i<=newMax;i++){
+                    if(i<parseInt(min/10)||i>parseInt(min*10)||(i>parseInt(min/2)&&i<parseInt(min*2))){
+                        count++;
+                    }
+                }
+                console.log(count);
+                return count;
+            };
+            for(var i=newMin;i<=newMax;i++){
+                if(i<(min/10)||i>(min*10)||(i>(min/2)&&i<(min*2))){
+                    if(i>(max*10)||(i>(max/2)&&i<(max*2))){
+                        count++;
+                    }
+                }
+            }
+            console.log(count);
+            return count;
+        }
+    }
+
+    function k49(a){
+        data.push(a);
+        var n = parseInt(data[0]);
+        var result = [];
+        var count = 0;
+        if(data.length>n){
+            var arr = data.slice(1);
+            arr.forEach(function(b){
+                var s =b.split("");
+                for(var i=0;i<s.length;i++){
+                    var n=0;
+                    var s1 = s.slice(0,i);
+                    var s2 = s.slice(i).concat(s1);
+                    var ss = s2.toString().replace(/,/g,"");
+                    if(arr.indexOf(ss)==-1){
+                        n++;
+                    }
+                }
+                if(n>1){
+                    result.push(n);
+                }
+            });
+            console.log(result);
+            console.log(result.length);
+        }
+    }
 
 
     //2017编程模拟题

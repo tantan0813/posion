@@ -95,6 +95,7 @@ rl.on("line",function(a){
 
     //输出循环单词的种数
 
+<<<<<<< HEAD
     // num(data);
     // function num(arr){
     //     var n = parseInt(arr[0]);
@@ -125,6 +126,38 @@ rl.on("line",function(a){
     //         }
         }
     // }
+=======
+    num(data);
+    function num(arr){
+        var n = parseInt(arr[0]);
+        var m = 0;
+        if(arr.length>n){
+            var arr1 = arr.slice(1);
+            var re1 = [];
+            var m=0;
+            arr1.forEach(function(b){
+                var s = b.split("");
+                for(var i=0;i<s.length;i++){
+                    var ss1 = s.slice(0,i);
+                    var ss2 = s.slice(i).concat(ss1);
+                    var re = ss2.toString().replace(/,/g,"");
+                    if(b==re){
+                        m++;
+                    }
+                }
+            })
+            if(m==n){
+                arr1.forEach(function(c){
+                    var s1 = c.split("").sort().toString().replace(/,/g,"");
+                    if(re1.indexOf(s1)==-1){
+                        re1.push(s1);
+                    }
+                })
+                console.log(re1.length);
+            }
+        }
+    }
+>>>>>>> b4eff9f52e77dfa82d3fbc1eff872e766cf51bea
 
     //DNA合成
 
