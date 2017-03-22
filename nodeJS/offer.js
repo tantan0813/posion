@@ -653,7 +653,7 @@ rl.on("line",function(a){
             re += c;
         })
         console.log(Math.round(re+ree));
-    };
+    }
 
 
 
@@ -1225,7 +1225,6 @@ rl.on("line",function(a){
     //     10
     // 输出例子:
     //     2
-    k57(a);
     function k57(a){
         var n = parseInt(a);
         var su = 1;
@@ -1241,7 +1240,76 @@ rl.on("line",function(a){
             console.log(s2.length-s1.length);
         }
     }
+    //按要求做字符串进制转换
 
+    function k58(a){
+        var arr = a.split(" ");
+        var n = parseInt(arr[0]);//其他进制传十进制
+        var s = parseInt(arr[1]);
+        if(s>=2&&s<=16){
+            if(s>9){
+                s=16;
+            }
+            var re = n.toString(s);//十进制转其他进制
+            console.log(re);
+            return true;
+        }else{
+            console.log("请输入合理数字");
+            return false;
+        }
+    }
+
+    // 给定一个有n个正整数的数组A和一个整数sum,求选择数组A中部分数字和为sum的方案数。
+    // 当两种选取方案有一个数字的下标不一样,我们就认为是不同的组成方案。
+    // 输入描述:
+    // 输入为两行:
+    //     第一行为两个正整数n(1 ≤ n ≤ 1000)，sum(1 ≤ sum ≤ 1000)
+    // 第二行为n个正整数A[i](32位整数)，以空格隔开。
+    // 输出描述:
+    // 输出所求的方案数
+    // 输入例子:
+    //     5 15
+    // 5 5 10 2 3
+    // 输出例子:
+    //     4
+    k59(a);
+    function k59(a){
+        data.push(a);
+        if(data.length>1){
+            var arr1=data[0].split(" "),arr2=data[1].split(" ");
+            var n = parseInt(arr1[0]);
+            var su = parseInt(arr1[1]);
+            var mid = [];
+            for(var i=0,len=arr2.length;i<len;i++){
+                for(var j=i;j<=len;j++){
+                    var s = arr2.slice(i,j).toString();
+                    if(s!=""){
+                        mid.push(s);
+                    }
+                }
+            }
+            var he = [];
+            mid.forEach(function(b){
+                var ar = b.split(",");
+                var sum = 0;
+                ar.forEach(function(c){
+                    sum+=parseInt(c);
+                })
+                he.push(sum);
+            })
+            var count=0;
+            he.forEach(function(d){
+                if(su==d){
+                    count++;
+                }
+            })
+            if(count>0){
+                console.log(count);
+            }else{
+                console.log("not have");
+            }
+        }
+    }
 });
 
 
