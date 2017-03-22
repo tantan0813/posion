@@ -1,15 +1,41 @@
-/**
- * Created by Administrator on 2017/3/6.
- */
-//cvte机测
-// $("*").hover(function(e){
-//     e.stopPropagation();
-//     var now = this;
-//     this.title = this.className;
-// });
-
-
-(function (){
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            width: 50%;
+            margin: 30px auto;
+            border: 1px solid black;
+            border-radius: 12px;
+            min-width: 300px;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        .container #pao {
+            width: 100%;
+            height: 100%;
+        }
+        .container #toll {
+            width: 20px;
+            height: 20px;
+            background: blue;
+            border-radius: 50%;
+            position: absolute;
+            top: -4px;
+            left: -4px;
+        }
+    </style>
+</head>
+<body>
+<section class="container">
+    <canvas id="pao"></canvas>
+    <div id="toll"></div>
+</section>
+</body>
+<script>
     window.addEventListener("load", function(){
         // 2.获取canvas duix
         var canvas = document.getElementById('pao');
@@ -35,14 +61,14 @@
         ctx.strokeStyle = "#0000ff";//线条颜色
         ctx.lineWidth =2;//指定线条宽度
         ctx.stroke();
-        // setInterval(play,800);
+         setInterval(play,800);
         // play();
         var x=0,y=0;
         function play(){
             var moving = document.getElementById("toll");
             if(x<20&&y<200){
                 x+=1;y=12*x-0.1*x*x;
-                moving.style.top = 0.96*y-4+"px";
+                moving.style.top = 1.24*y-4+"px";
                 moving.style.left = x*10-4+"px";
             }else{
                 x=0;
@@ -50,4 +76,5 @@
             }
         }
     },false);
-})();
+</script>
+</html>

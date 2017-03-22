@@ -732,10 +732,6 @@ rl.on("line",function(a){
     // 方法如下：先用9个空瓶子换3瓶汽水，喝掉3瓶满的，喝完以后4个空瓶子，用3个再换一瓶，喝掉这瓶满的，这时候剩2个空瓶子。
     // 然后你让老板先借给你一瓶汽水，喝掉这瓶满的，喝完以后用3个空瓶子换一瓶满的还给老板。如果小张手上有n个空汽水瓶，最多可以换多少瓶汽水喝？
 
-<<<<<<< HEAD
-=======
-    //好未来秋招
->>>>>>> 13d0449ef2bdc93dc42bebc07e50532e469cdc5f
     function k26(a){
        data.push(a);
        var re = [];
@@ -783,9 +779,6 @@ rl.on("line",function(a){
             console.log(re.sort(function(b,c){return b-c;}).toString().replace(/,/g,"\n"));
         }
     }
-<<<<<<< HEAD
-
-
 
     // 写出一个程序，接受一个十六进制的数值字符串，输出该数值的十进制字符串。（多组同时输入 ）
     // 输入描述:
@@ -796,12 +789,10 @@ rl.on("line",function(a){
     // 0xA
     // 输出例子:
     //     10
-    k28(a);
     function k28(a){
         console.log(parseInt(a,16));
     }
 
-=======
     function k40(a){
         var str = a.replace(/\s+/," ");
         var arr = str.split(" ").reverse();
@@ -1053,10 +1044,135 @@ rl.on("line",function(a){
             }
         }
     }
+    //输出最大子串
+    function k54(a){
+        data.push(a);
+        if(data.length>1){
+            var arr = data[1].split(" ");
+            var mid = [];//
+            for(var i=0,len=arr.length;i<len;i++){
+                for(var j=i;j<=len;j++){
+                    var s = arr.slice(i,j).toString();
+                    if(s!==""&&mid.indexOf(s)==-1){
+                        mid.push(s);
+                    }
+                }
+            }
+            var su = [];
+           mid.forEach(function(b){
+               var arr1 = b.split(",");
+               var sum = 0;
+               arr1.forEach(function(c){
+                   sum+=parseInt(c);
+                   su.push(sum);
+               })
+           });
+           console.log(su);
+            var max = Math.max.apply(null,su);
+            console.log(max);
+            return max;
+        }
+    }
+    //某餐馆有n张桌子，每张桌子有一个参数：a 可容纳的最大人数； 有m批客人，每批客人有两个参数:b人数，c预计消费金额。
+    // 在不允许拼桌的情况下，请实现一个算法选择其中一部分客人，使得总预计消费金额最大
+    // 输入描述:
+    //     输入包括m+2行。
+    // 第一行两个整数n(1 <= n <= 50000),m(1 <= m <= 50000)
+    // 第二行为n个参数a,即每个桌子可容纳的最大人数,以空格分隔,范围均在32位int范围内。
+    // 接下来m行，每行两个参数b,c。分别表示第i批客人的人数和预计消费金额,以空格分隔,范围均在32位int范围内。
+    // 输出描述:
+    // 输出一个整数,表示最大的总预计消费金额
+    // 输入例子:
+    //     3 5
+    // 2 4 2
+    // 1 3
+    // 3 5
+    // 3 7
+    // 5 9
+    // 1 10
+    // 输出例子:
+    //     20
 
+    function k55(a){
+        data.push(a);
+        var arr = data[0].split(" ");
+        var n = parseInt(arr[0]);
+        var m = parseInt(arr[1]);
+        if(data.length>m+1){
+            var arr1 = data[1].split(" ");//每桌的容纳量
+            var arr2 = data.slice(2);//客人数、消费金额
+            var result = [];
+            arr1.forEach(function(b){
+                var num = [];
+                arr2.forEach(function(c){
+                    var ar = c.split(" ");
+                    var s = ar[0];
+                    var mon = ar[1];
+                    if(parseInt(s)<=parseInt(b)){
+                        num.push(mon);
+                    }
+                })
+                console.log(num);
+                var max = Math.max.apply(null,num);
+                result.push(max);
+            });
+            var sum = 0;
+            result.forEach(function(d){
+                sum+=parseInt(d);
+            })
+            console.log(sum);
+        }
+    }
 
+    // 小青蛙有一天不小心落入了一个地下迷宫,小青蛙希望用自己仅剩的体力值P跳出这个地下迷宫。
+    // 为了让问题简单,假设这是一个n*m的格子迷宫,迷宫每个位置为0或者1,0代表这个位置有障碍物,小青蛙达到不了这个位置;1代表小青蛙可以达到的位置。
+    // 小青蛙初始在(0,0)位置,地下迷宫的出口在(0,m-1)(保证这两个位置都是1,并且保证一定有起点到终点可达的路径),
+    // 小青蛙在迷宫中水平移动一个单位距离需要消耗1点体力值,向上爬一个单位距离需要消耗3个单位的体力值,向下移动不消耗体力值,
+    // 当小青蛙的体力值等于0的时候还没有到达出口,小青蛙将无法逃离迷宫。现在需要你帮助小青蛙计算出能否用仅剩的体力值跳出迷宫(即达到(0,m-1)位置)。
+    // 输入描述:
+    // 输入包括n+1行:
+    //     第一行为三个整数n,m(3 <= m,n <= 10),P(1 <= P <= 100)
+    // 接下来的n行:
+    //     每行m个0或者1,以空格分隔
+    // 输出描述:
+    //     如果能逃离迷宫,则输出一行体力消耗最小的路径,输出格式见样例所示;如果不能逃离迷宫,则输出"Can not escape!"。
+    // 输入例子:
+    // 4 4 10
+    // 1 0 0 1
+    // 1 1 0 1
+    // 0 1 1 1
+    // 0 0 1 1
+    // 输出例子:
+    //     [0,0],[1,0],[1,1],[2,1],[2,2],[2,3],[1,3],[0,3]
+    function k56(a){
 
->>>>>>> 13d0449ef2bdc93dc42bebc07e50532e469cdc5f
+    }
+    // 输入一个正整数n,求n!(即阶乘)末尾有多少个0？ 比如: n = 10; n! = 3628800,所以答案为2
+    // 输入描述:
+    //     输入为一行，n(1 ≤ n ≤ 1000)
+    // 输出描述:
+    //     输出一个整数,即题目所求
+    // 输入例子:
+    //     10
+    // 输出例子:
+    //     2
+    k57(a);
+    function k57(a){
+        var n = parseInt(a);
+        var su = 1;
+        for(var i=1;i<=n;i++){
+            su *=i;
+        }
+        var s = su.toString().split("").reverse().toString().replace(/,/g,"");
+        var s1 = parseInt(s).toString().replace(/,/g,"");
+        var s2 = su.toString().replace(/,/g,"");
+        if(s1==s2){
+            console.log("not have")
+        }else{
+            console.log(s2.length-s1.length);
+        }
+    }
+
 });
 
 
