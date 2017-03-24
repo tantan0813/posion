@@ -89,4 +89,25 @@ rl.on("line",function(a) {
        }
        console.log(count+"x");
     }
+
+
+    // 买颜料
+    function k5(a){
+        data.push(a);
+        if(data.length>1){
+            var arr = data[1].split(" ");
+           for(var i=0;i<arr.length;i++){
+               for(var j=i;j<arr.length;j++){
+                   var n =parseInt(arr[i]);
+                   var m =parseInt(arr[j]);
+                   var c = n^m;
+                   var index = arr.indexOf(c.toString());
+                   if(index!=-1){
+                       arr.splice(index,1);
+                   }
+               }
+           }
+           console.log(arr.length);
+        }
+    }
 });
