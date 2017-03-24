@@ -1353,10 +1353,14 @@ rl.on("line",function(a){
             var b = parseInt(arr1[1]);
             var c = parseInt(arr1[2]);
             var count = 0;
-            for(var i=a;i<=b;i++){
+            for(var i=a;i<=c;i++){
                 if(i%c==0){
-                    count++;
+                    break;
                 }
+            }
+            while(i<=b){
+                i+=c;
+                count++;
             }
             if(count>0){
                 console.log(count);
@@ -1375,11 +1379,145 @@ rl.on("line",function(a){
         var num = Math.pow(26,c+d);
         console.log(num);
     }
-    //网易盘古编程题
-    //AAAABCCDAA
-    //输出例子:
-        //4A1B2C1D2A
+    // 牛牛手里有N根木棒,分别编号为1~N,现在他从N根里想取出三根木棒，使得三根木棒构成一个三角形,你能计算出牛牛有多少种取法吗?
+    // (考虑两种取法中使用的木棒编号有一个不一样就认为是不同的取法)。
+    // 输入描述:
+    // 首先输入一个正整数N，接下来的一行共有N个正整数表示每个木棒的长度。
+    // N ≤ 50, 木棒的长度 ≤ 10000.
+    // 输出描述:
+    //     输出一个整数表示方法数。
+    // 输入例子:
+    // 5
+    // 1 2 3 4 5
+    // 输出例子:
+    //     3
+    function k65(a){
+        data.push(a);
+        if(data.length>1){
+            var arr = data[1].split(" ");
+            var re = [],num=[];
+            arr.forEach(function(a){
+                if(re.indexOf(a)==-1){
+                    re.push(a);
+                }
+            });
+            re.forEach(function(b){
+                var n=0;
+                arr.forEach(function(d){
+                    n++;
+                })
+                num.push(n);
+            })
+        }
+    }
+    // 包含所有点最小面积
+    function k66(a){
+        data.push(a)
+        var n = parseInt(data[0]);
+        if(data.length>n){
+            var x=[],y=[];
+            var arr = data.slice(1);
+            arr.forEach(function(b){
+                var ar = b.split(" ");
+                x.push(ar[0]);
+                y.push(ar[1]);
+            })
+            var maxX =  Math.max.apply(null,x);
+            var minX =  Math.min.apply(null,x);
+            var maxY =  Math.max.apply(null,y);
+            var minY =  Math.min.apply(null,y);
+            console.log((maxY-minX)*(maxY-minY));
+            console.log(maxX,maxY);
+        }
+    }
+    // 满足条件的字符串
+    function k67(a){
+        data.push(a);
+        data.forEach(function(b){
+            var left=[],right=[];
+            var arr1 = b.split("");
+            var arr2 = b.split("").reverse();
+            var sum = 1,sum2=1;
+            arr1.forEach(function(c){
+                sum*=parseInt(c);
+                left.push(sum);
+            })
+            arr2.forEach(function(c){
+                sum2*=parseInt(c);
+                right.push(sum2);
+            });
+            console.log(arr1,arr2)
+            console.log(left,right)
+            var flag=0;
+            for(var i=0,len=arr1.length;i<len;i++){
+                var j=len-i;
+                if(left[i]==right[j]){
+                    flag=1;
+                    break;
+                }
+            }
+            if(flag==1){
+                console.log("YES");
+            }else{
+                console.log("NO");
+            }
+        })
 
+    }
+    // 多少种字符串
+    function k68(a){
+        data.push(a);
+        var n = parseInt(data[0]);
+        if(data.length>n){
+            var arr = data.slice(1);
+            var re=[];
+            arr.forEach(function(b){
+                var ar = b.split("").sort();
+                var s = ar.toString();
+                if(re.indexOf(s)==-1){
+                    re.push(s);
+                }
+            })
+            if(re.length>0){
+                console.log(re.length);
+            }else{
+                console.log("error");
+            }
+        }
+
+    }
+    // 01创造新物品
+    function k69(a){
+        data.push(a);
+        var arr = data[0].split(" ");
+        var n = parseInt(arr[0]);
+        var m = parseInt(arr[1]);
+        var l = parseInt(arr[2]);
+        if(data.length>n){
+            var re = 0;
+          var ar = data.slice(1);
+          ar.forEach(function(b){
+              var s = b.split("");
+              var count0=0,count1=0;
+              s.forEach(function(c){
+                  if(c==0){
+                      count0++;
+                  }else if(c==1){
+                      count1++;
+                  }
+              })
+              if(count0<=m&&count1<=l){
+                  re++;
+                  m-=count0;
+                  l-=count1;
+              }
+          })
+            console.log(re);
+        }
+
+    }
+    //网易盘古编程题
+    //AAAABCCDAA输出例子:4A1B2C1D2A
     function k63(a){
         var key = a;
         var result = "";
@@ -1399,7 +1537,6 @@ rl.on("line",function(a){
         result += lastKeyCount + lastKey;
         console.log(result);
     }
-    k63(a);
     function k64(a){
         var key = a;
         var result = "";
@@ -1413,7 +1550,5 @@ rl.on("line",function(a){
         console.log(result);
     }
 });
-
-
 
 
