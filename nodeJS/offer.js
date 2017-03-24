@@ -1516,39 +1516,6 @@ rl.on("line",function(a){
         }
 
     }
-    //网易盘古编程题
-    //AAAABCCDAA输出例子:4A1B2C1D2A
-    function k63(a){
-        var key = a;
-        var result = "";
-        var lastKey = "", lastKeyCount = 0, currentKey;
-        for(var i = 0; i < key.length; i++ ){
-            currentKey = key.substr(i,1);//截取第i个字符串
-            if( currentKey == lastKey ){
-                lastKeyCount++;
-            } else {
-                if( lastKey != ""){
-                    result += lastKeyCount + lastKey;
-                }
-                lastKey = currentKey;
-                lastKeyCount = 1;
-            }
-        }
-        result += lastKeyCount + lastKey;
-        console.log(result);
-    }
-    function k64(a){
-        var key = a;
-        var result = "";
-        var currentKey, keyCount, tempArr;
-        for( var i = 0 ; i < key.length; i++ ){
-            currentKey = key.substr(i, 1);
-            tempArr = (new RegExp('^' + currentKey + '+')).exec( key.substr(i) );
-            result += tempArr[0].length + currentKey;
-            i += tempArr[0].length - 1;
-        }
-        console.log(result);
-    }
 });
 
 
