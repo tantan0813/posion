@@ -1272,7 +1272,6 @@ rl.on("line",function(a){
     // 5 5 10 2 3
     // 输出例子:
     //     4
-    k59(a);
     function k59(a){
         data.push(a);
         if(data.length>1){
@@ -1309,6 +1308,104 @@ rl.on("line",function(a){
                 console.log("not have");
             }
         }
+    }
+    //2017IT模拟考试第二场
+    function k60(a){
+        data.push(a);
+        if(data.length>1){
+            var s1 = data[0];
+            var s2 = data[1];
+            var arr1 = p(s1);
+            var arr2 = p(s2);
+            console.log(arr1,arr2);
+            var mid = [];
+            arr1.forEach(function(b){
+                arr2.forEach(function(c){
+                    if(b==c){
+                        var d = c.split(",");
+                        mid.push(d.length)
+                    }
+                })
+            })
+            var max = Math.max.apply(null,mid);
+            console.log(max);
+        }
+        function p(str){
+            var arr = str.split("");
+            var re = [];
+            for(var i=0,len=arr.length;i<len;i++){
+                for(var j=i;j<=arr.length;j++){
+                    var s = arr.slice(i,j).toString();
+                    re.push(s);
+                }
+            }
+            return re;
+        }
+    }
+    function k61(a){
+            var arr1 = a.split(" ");
+            var a = parseInt(arr1[0]);
+            var b = parseInt(arr1[1]);
+            var c = parseInt(arr1[2]);
+            var count = 0;
+            for(var i=a;i<=b;i++){
+                if(i%c==0){
+                    count++;
+                }
+            }
+            if(count>0){
+                console.log(count);
+                return count;
+            }else{
+                console.log("not have");
+            }
+        }
+    function k62(a) {
+        var arr1 = a.split(" ");
+        var n = parseInt(arr1[0]);
+        var m = parseInt(arr1[1]);
+        var k = parseInt(arr1[2]);
+        var c = Math.ceil((m-k)/2);
+        var d = n-m;
+        var num = Math.pow(26,c+d);
+        console.log(num);
+    }
+    //网易盘古编程题
+    //AAAABCCDAA
+    //输出例子:
+        //4A1B2C1D2A
+
+    function k63(a){
+        var key = a;
+        var result = "";
+        var lastKey = "", lastKeyCount = 0, currentKey;
+        for(var i = 0; i < key.length; i++ ){
+            currentKey = key.substr(i,1);//截取第i个字符串
+            if( currentKey == lastKey ){
+                lastKeyCount++;
+            } else {
+                if( lastKey != ""){
+                    result += lastKeyCount + lastKey;
+                }
+                lastKey = currentKey;
+                lastKeyCount = 1;
+            }
+        }
+        result += lastKeyCount + lastKey;
+        console.log(result);
+    }
+    k63(a);
+    function k64(a){
+        var key = a;
+        var result = "";
+        var currentKey, keyCount, tempArr;
+        for( var i = 0 ; i < key.length; i++ ){
+            currentKey = key.substr(i, 1);
+            tempArr = (new RegExp('^' + currentKey + '+')).exec( key.substr(i) );
+            result += tempArr[0].length + currentKey;
+            i += tempArr[0].length - 1;
+        }
+        console.log(result);
     }
 });
 
