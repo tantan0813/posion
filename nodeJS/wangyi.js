@@ -89,8 +89,6 @@ rl.on("line",function(a) {
        }
        console.log(count+"x");
     }
-
-
     // 买颜料
     function k5(a){
         data.push(a);
