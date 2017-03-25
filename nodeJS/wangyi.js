@@ -178,10 +178,63 @@ rl.on("line",function(a) {
     //     125000000
     // 输出例子:
     //     1
-    k9(a);
     function k9(a){
         var x=parseInt(a),n=0;
         var l1=4*x+3,l2=8*x+7;
-        
+
+    }
+
+    // 考拉有n个字符串字符串，任意两个字符串长度都是不同的。考拉最近学习到有两种字符串的排序方法：
+    // 1.根据字符串的字典序排序。例如：
+    // "car" < "carriage" < "cats" < "doggies < "koala"
+    // 2.根据字符串的长度排序。例如：
+    // "car" < "cats" < "koala" < "doggies" < "carriage"
+    // 考拉想知道自己的这些字符串排列顺序是否满足这两种排序方法，考拉要忙着吃树叶，所以需要你来帮忙验证。
+    // 输入描述:
+    // 输入第一行为字符串个数n(n ≤ 100)
+    // 接下来的n行,每行一个字符串,字符串长度均小于100，均由小写字母组成
+    // 输出描述:
+    //     如果这些字符串是根据字典序排列而不是根据长度排列输出"lexicographically",
+    //     如果根据长度排列而不是字典序排列输出"lengths",
+    //     如果两种方式都符合输出"both"，否则输出"none"
+    // 输入例子:
+    //     3
+    // a
+    // aa
+    // bbb
+    // 输出例子:
+    //     both
+    k10(a);
+    function k10(a){
+        data.push(a);
+        var n=parseInt(data[0]);
+        if(data.length>n){
+            var arr = data.slice(1);
+            var arr1 = data.slice(1);
+            var arr2 = arr.sort();
+            var n=0,m=0;
+            if(arr1==arr2){
+                n=1;
+            }
+           for(var i=0,len=arr.length;i<len;i++){
+               console.log(arr[i],arr[i+1].split(""),typeof arr[i]);
+                var s1=arr[i].split("");
+                var s2=arr[i+1].split("");
+                if(s1.length>s2.length){
+                    m=0;
+                    break;
+                }
+                m=1;
+           }
+           if(n==1&&m==1){
+               console.log("both")
+           }else if(n==1){
+               console.log("lexicographically")
+           }else if(m==1){
+               console.log("lengths")
+           }else {
+               console.log("none");
+           }
+        }
     }
 });
