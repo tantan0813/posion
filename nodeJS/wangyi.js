@@ -337,10 +337,14 @@ rl.on("line",function(a) {
         for(var q=y;q<=z;q++){
             arr2.push(q);
         }
+        var re=[];
         arr2.forEach(function(b){
-            if(arr1.indexOf(b)==-1){
-                arr1.push(b);
-            }
+            arr1.forEach(function(c){
+                var d=b/c;
+                if(re.indexOf(d)==-1){
+                    re.push(d);
+                }
+            })
         })
         console.log(arr1.length);
     }
@@ -482,6 +486,7 @@ rl.on("line",function(a) {
     // 1 2 3
     // 输出例子:
     //     8 9 7
+    k19(a);
     function k19(a){
         data.push(a);
         if(data.length>1){
@@ -651,29 +656,35 @@ rl.on("line",function(a) {
     // 3
     // 输出例子:
     //     4
-    k24(a);
     function k24(a){
         data.push(a);
         if(data.length>1){
             var index=data[0].indexOf("X");
             var num = data[0].slice(0,index);
             var a = data[0].slice(index).length;
-            var n=Math.pow(10,a+1)-1;
-            console.log(num,a);
+            var m=Math.pow(10,a)-1;
             var n=parseInt(data[1]);
             var count=0;
-            for(var i=0;i<=n;i++){
+            for(var i=0;i<=m;i++){
                 var s =  i.toString().split("");
-                while (s.length<n){
-                    s.pop("0");
+                while (s.length<a){
+                    s.unshift("0");
                 }
+                var ss = num+s.toString().replace(/,/g,"");
+                var c=parseInt(ss);
                 if(c%n==0){
-                    count++;
+                    i+=n-1;
+                    count++;console.log(c);
                 }
             }
-        }
             console.log(count);
+        }
+
     }
+
+
+
+
 });
 
 
