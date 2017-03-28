@@ -323,7 +323,8 @@ rl.on("line",function(a) {
             return fbnq(n-1)+fbnq(n-2);
         }
     }
-    //网易春招编程题前端
+    //网易春招编程题
+    //求集合
     function k13(a){
         var arr = a.split(" ");
         var w=parseInt(arr[0]);
@@ -348,6 +349,7 @@ rl.on("line",function(a) {
         })
         console.log(arr1.length);
     }
+    // 保留最后的非重复元素
     function k14(a){
         data.push(a);
         var n=parseInt(data[0]);
@@ -362,6 +364,7 @@ rl.on("line",function(a) {
             console.log(re.reverse().toString().replace(/,/g," "))
         }
     }
+    // 忽略权重的计算
     function k15(a){
         var s1 = a.slice(0,3);
         var arr = a.slice(3).split("");
@@ -391,6 +394,59 @@ rl.on("line",function(a) {
             }
         }
     }
+    // 记单词
+    function k22(a){
+        data.push(a);
+        if(data.length>2){
+            var arr1=data[0].split(" ");
+            var n=parseInt(arr1[0]),m=parseInt(arr1[1]);
+            var sore=0,re=[];
+            var arr2=data[1].split(" ");
+            var arr3=data[2].split(" ");
+            arr2.forEach(function(c){
+                arr3.forEach(function(d){
+                    if(d==c){
+                        if(re.indexOf(d)==-1){re.push(d)}
+                    }
+                })
+            })
+            re.forEach(function(e){
+                var c=Math.pow(e.length,2);
+                sore+=c;
+            })
+            console.log(sore);
+        }
+    }
+    //紧急加班//枚举去每个出租车点打车需要的总时间,最后和完全步行总时间取个最小值即可。
+    function k17(a){
+        data.push(a);
+        if(data.length>4){
+            var n=parseInt(data[0]),wt=0,tt=0;
+            var arr3=data[3].split(" "),x3=parseInt(arr3[0]),y3=parseInt(arr3[1]);
+            var arr4=data[4].split(" "),w=parseInt(arr4[0]),t=parseInt(arr4[1]);
+            var arr1=[],arr2=[],re=[];
+            var w1=Math.abs(x3*w)+Math.abs(y3*w);
+            re.push(w1);
+            if(n==1){
+                arr1.push(data[1]);
+                arr2.push(data[2]);
+            }else{
+                arr1=data[1].split(" ");
+                arr2=data[2].split(" ");
+            }
+
+            for(var i=0;i<n;i++){
+                var x=parseInt(arr1[i]);
+                var y=parseInt(arr2[i]);
+                w1=Math.abs(x*w)+Math.abs(y*w);
+                var t1=Math.abs(x3-x)*t+Math.abs(y3-y)*t;
+                re.push(w1+t1);
+            }
+            var min=Math.min.apply(null,re);
+            console.log(min);
+        }
+    }
+
     // 一种双核CPU的两个核能够同时的处理任务，现在有n个已知数据量的任务需要交给CPU处理，假设已知CPU的每个核1秒可以处理1kb，每个核同时只能处理一项任务。
     // n个任务可以按照任意顺序放入CPU进行处理，现在需要设计一个方案让CPU处理完这批任务所需的时间最少，求这个最小的时间。
     // 输入描述:
@@ -426,33 +482,6 @@ rl.on("line",function(a) {
         }
     }
 
-    // 终于到周末啦！小易走在市区的街道上准备找朋友聚会，突然服务器发来警报,小易需要立即回公司修复这个紧急bug。
-    // 假设市区是一个无限大的区域，每条街道假设坐标是(X，Y)，小易当前在(0，0)街道，办公室在(gx,gy)街道上。
-    // 小易周围有多个出租车打车点，小易赶去办公室有两种选择，一种就是走路去公司，另外一种就是走到一个出租车打车点，然后从打车点的位置坐出租车去公司。
-    // 每次移动到相邻的街道(横向或者纵向)走路将会花费walkTime时间，打车将花费taxiTime时间。小易需要尽快赶到公司去，现在小易想知道他最快需要花费多少时间去公司。
-    // 输入描述:
-    // 输入数据包括五行:
-    //     第一行为周围出租车打车点的个数n(1 ≤ n ≤ 50)
-    // 第二行为每个出租车打车点的横坐标tX[i] (-10000 ≤ tX[i] ≤ 10000)
-    // 第三行为每个出租车打车点的纵坐标tY[i] (-10000 ≤ tY[i] ≤ 10000)
-    // 第四行为办公室坐标gx,gy(-10000 ≤ gx,gy ≤ 10000),以空格分隔
-    // 第五行为走路时间walkTime(1 ≤ walkTime ≤ 1000)和taxiTime(1 ≤ taxiTime ≤ 1000),以空格分隔
-    // 输出描述:
-    //     输出一个整数表示，小易最快能赶到办公室的时间
-    // 输入例子:
-    //     2
-    //     -2 -2
-    // 0 -2
-    // -4 -2
-    // 15 3
-    // 输出例子:
-    //     42
-    function k17(a){
-        data.push(a);
-        if(data.length>4){
-
-            }
-        }
     // 在幼儿园有n个小朋友排列为一个队伍，从左到右一个挨着一个编号为(0~n-1)。
     // 其中有一些是男生，有一些是女生，男生用'B'表示，女生用'G'表示。小朋友们都很顽皮，当一个男生挨着的是女生的时候就会发生矛盾。
     // 作为幼儿园的老师，你需要让男生挨着女生或者女生挨着男生的情况最少。
@@ -470,7 +499,6 @@ rl.on("line",function(a) {
     function k18(a){
         var arr=a.split("");
         var n=0;
-
     }
     // 小易拥有一个拥有魔力的手环上面有n个数字(构成一个环),当这个魔力手环每次使用魔力的时候就会发生一种奇特的变化：
     // 每个数字会变成自己跟后面一个数字的和(最后一个数字的后面一个数字是第一个),一旦某个位置的数字大于等于100就马上对100取模(比如某个位置变为103,就会自动变为3).
@@ -486,7 +514,6 @@ rl.on("line",function(a) {
     // 1 2 3
     // 输出例子:
     //     8 9 7
-    k19(a);
     function k19(a){
         data.push(a);
         if(data.length>1){
@@ -531,7 +558,6 @@ rl.on("line",function(a) {
     // 012345
     // 输出例子:
     //     720
-
     function k20(a){
         data.push(a);
         var n=parseInt(data[0]);
@@ -550,7 +576,7 @@ rl.on("line",function(a) {
                         case "5":w++; break;
                     }
                 })
-            })
+            });
             console.log(z*tw*th*fu*w);
         }
     }
@@ -582,45 +608,6 @@ rl.on("line",function(a) {
         }
     }
 
-    // 小易参与了一个记单词的小游戏。游戏开始系统提供了m个不同的单词，小易记忆一段时间之后需要在纸上写出他记住的单词。
-    // 小易一共写出了n个他能记住的单词，如果小易写出的单词是在系统提供的，将获得这个单词长度的平方的分数。
-    // 注意小易写出的单词可能重复，但是对于每个正确的单词只能计分一次。
-    // 输入描述:
-    // 输入数据包括三行：
-    // 第一行为两个整数n(1 ≤ n ≤ 50)和m(1 ≤ m ≤ 50)。以空格分隔
-    // 第二行为n个字符串，表示小易能记住的单词，以空格分隔，每个单词的长度小于等于50。
-    // 第三行为m个字符串，系统提供的单词，以空格分隔，每个单词的长度小于等于50。
-    // 输出描述:
-    // 输出一个整数表示小易能获得的分数
-    // 输入例子:
-    //     3 4
-    // apple orange strawberry
-    // strawberry orange grapefruit watermelon
-    // 输出例子:
-    //     136
-    function k22(a){
-        data.push(a);
-        if(data.length>2){
-            var arr1=data[0].split(" ");
-            var n=parseInt(arr1[0]),m=parseInt(arr1[1]);
-            var sore=0,re=[];
-            var arr2=data[1].split(" ");
-            var arr3=data[2].split(" ");
-            arr2.forEach(function(c){
-                arr3.forEach(function(d){
-                    if(d==c){
-                        if(re.indexOf(d)==-1){re.push(d)}
-                    }
-                })
-            })
-            re.forEach(function(e){
-                var c=Math.pow(e.length,2);
-                sore+=c;
-            })
-            console.log(sore);
-        }
-    }
-
     // 小易有n块砖块，每一块砖块有一个高度。小易希望利用这些砖块堆砌两座相同高度的塔。
     // 为了让问题简单，砖块堆砌就是简单的高度相加，某一块砖只能使用在一座塔中一次。
     // 小易现在让能够堆砌出来的两座塔的高度尽量高，小易能否完成呢。
@@ -639,7 +626,25 @@ rl.on("line",function(a) {
     function k23(a){
         data.push(a);
         if(data.length>1){
-            var arr = data[1].split(" ");
+            var arr = data[1].split(" ").sort(function(b,c){return b-c;});
+            var num=arr.reduce(function(a,b){return parseInt(a)+parseInt(b)})/2;
+            var left=[];
+            var sum1=0,sum2=0;
+            for(var i=0,len=arr.length;i<len;){
+                left.push(arr.shift());
+                left.push(arr.shift());
+                sum1=left.reduce(function(a,b){return parseInt(a)+parseInt(b)});
+                sum2=arr.reduce(function(a,b){return parseInt(a)+parseInt(b)});
+                if(sum1>=sum2){
+                    break;
+                }
+            }
+            console.log(num,left,sum1,sum2);
+            if(sum1==sum2){
+                console.log(sum1);
+            }else{
+                console.log(-1);
+            }
         }
     }
 
@@ -659,30 +664,59 @@ rl.on("line",function(a) {
     function k24(a){
         data.push(a);
         if(data.length>1){
-            var index=data[0].indexOf("X");
-            var num = data[0].slice(0,index);
-            var a = data[0].slice(index).length;
-            var m=Math.pow(10,a)-1;
-            var n=parseInt(data[1]);
+            var n=parseInt(data[1]),len1=data[1].length;
             var count=0;
-            for(var i=0;i<=m;i++){
-                var s =  i.toString().split("");
-                while (s.length<a){
-                    s.unshift("0");
-                }
-                var ss = num+s.toString().replace(/,/g,"");
-                var c=parseInt(ss);
-                if(c%n==0){
-                    i+=n-1;
-                    count++;console.log(c);
-                }
-            }
-            console.log(count);
-        }
+            var s2 = data[0].match(/X+/g).toString().replace(/,/g,"");
+            var s1=data[0].slice(data[0].length-len1);
+            var len2=s1.length,l=Math.pow(10,len2)-1;
+            for(var i=0;i<l;i++){
 
+            }
+        }
     }
 
 
+
+    // 复习
+    function k25(a){
+        data.push(a);
+        if(a==0){
+            var re=[];
+            var n=0;
+            for(var i=0,len=data.length-1;i<len;i++){
+                var c=0;
+                 n=parseInt(data[i]);
+                 while(n>=2){
+                     if(n==2){
+                         c+=1;
+                         break;
+                     }else{
+                         var m=Math.floor(n/3);
+                         var k=n%3;
+                         c+=m;
+                         n=k+m;
+                     }
+                 }
+                 re.push(c);
+            }
+            console.log(re.toString().replace(/,/g,"\n"))
+        }
+    }
+    function k26(a){
+        data.push(a);
+        var n=parseInt(data[0]);
+        if(data.length>n){
+            var arr=data.slice(1);
+            var re=[];
+            arr.forEach(function(b){
+                if(re.indexOf(b)==-1){
+                    re.push(b);
+                }
+            });
+            re.sort(function(b,c){return b-c});
+            console.log(re.toString().replace(/,/g,"\n"));
+        }
+    }
 
 
 });
