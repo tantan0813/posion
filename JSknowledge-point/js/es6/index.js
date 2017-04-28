@@ -25,7 +25,19 @@ window.onload = function(){
         // }
         return fn;
     }
-    console.log(add(1,2,3)(4,6)(9,0)(10,111));
-    var n=70;
-    console.log(n.toString().length);
+
+    // console.log(add(1,2,3)(4,6)(9,0)(10,111));
+    // var n=70;
+    // console.log(n.toString().length);
+
+    var test = (function(a) {
+        this.a = a;
+        return function(b) {
+            return this.a + b;
+        }
+    }(function(a, b) {
+        return a;
+    }(1, 2)));
+
+    console.log(test(4)); //输出什么？？？？
 }
