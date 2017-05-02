@@ -1,12 +1,13 @@
 /**
  * Created by Administrator on 2017/3/27.
  */
-window.onload = function(){
+$(document).ready (function(){
     // 实现一个函数，运算结果可以满足如下预期结果：
     // add(1)(2) // 3
     // add(1, 2, 3)(10) // 16
     // add(1)(2)(3)(4)(5) // 15
     // 要点：高阶函数、reduce、valueOf/toString（自动调用）
+    console.log(1111111);
     function add(){
         var args = Array.prototype.slice.call(arguments);
         var fn = function () {
@@ -14,6 +15,7 @@ window.onload = function(){
             return add.apply(null, args.concat(arg_fn));
         }
         fn.toString = function () {
+
             return args.reduce(function(a, b) {
                 return a + b;
             })
@@ -30,14 +32,14 @@ window.onload = function(){
     // var n=70;
     // console.log(n.toString().length);
 
-    var test = (function(a) {
-        this.a = a;
-        return function(b) {
-            return this.a + b;
-        }
-    }(function(a, b) {
-        return a;
-    }(1, 2)));
+    // var test = (function(a) {
+    //     this.a = a;
+    //     return function(b) {
+    //         return this.a + b;
+    //     }
+    // }(function(a, b) {
+    //     return a;
+    // }(1, 2)));
 
-    console.log(test(4)); //输出什么？？？？
-}
+    // console.log(test(4)); //输出什么？？？？
+});

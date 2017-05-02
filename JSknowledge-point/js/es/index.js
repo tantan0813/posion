@@ -1,1 +1,1 @@
-"use strict";window.onload=function(){var n=function(n){return this.a=n,function(n){return this.a+n}}(function(n,t){return n}(1,2));console.log(n(4))};
+"use strict";$(document).ready(function(){console.log(1111111)});
