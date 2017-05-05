@@ -674,9 +674,6 @@ rl.on("line",function(a) {
             }
         }
     }
-
-
-
     // 复习
     function k25(a){
         data.push(a);
@@ -717,7 +714,202 @@ rl.on("line",function(a) {
             console.log(re.toString().replace(/,/g,"\n"));
         }
     }
+    //今日头条
 
+
+    // 字符串
+    function k27(a){
+        data.push(a);
+        if(data.length>1){
+            var s=data[0];
+            var n=parseInt(data[1]);
+            if(data.length>n+1){
+                for(var i=0;i<n;i++){
+                    var arr=data[i+2].split(" ");
+                    var p=parseInt(arr[0]);
+                    var l=parseInt(arr[1]);
+                    var arr1=s.split("");
+                    var s1=arr1.slice(p,p+l).reverse().toString().replace(/,/g,"");
+                    arr1.splice(p+l,0,s1);
+                    s=arr1.toString().replace(/,/g,"");
+                }
+                console.log(s);
+            }
+        }
+    }
+    // cd
+    function k28(a){
+        var arr=a.split(" ");
+        var n=parseInt(arr[0]),s=parseInt(arr[1]),l=parseInt(arr[2]);
+        var num=Math.floor((l+1)/(s+1))//一张CD可以存放的歌曲数量
+        if(num>n){
+            if(n%13==0){
+                console.log(2);
+            }else{
+                console.log(1);
+            }
+        }else{
+            if(num%13==0){
+                var count=0;
+                while(n>=13){
+                    var c=Math.floor(n/(num-1));
+                    count+=c;
+                    n=n-c;
+                }
+                console.log(count);
+            }else{
+                console.log(Math.ceil(n/num));
+            }
+        }
+    }
+
+
+    // 给出 n 个字符串，对于每个 n 个排列 p，按排列给出的顺序(p[0] , p[1] … p[n-1])依次连接这 n 个字符串都能得到一个长度为这些字符串长度之和的字符串。
+    // 所以按照这个方法一共可以生成 n! 个字符串。
+    // 一个字符串的权值等于把这个字符串循环左移 i 次后得到的字符串仍和原字符串全等的数量，i 的取值为 [1 , 字符串长度]。
+    // 求这些字符串最后生成的 n! 个字符串中权值为 K 的有多少个。
+    // 注：定义把一个串循环左移 1 次等价于把这个串的第一个字符移动到最后一个字符的后面。
+    // 输入描述:
+    // 每组测试用例仅包含一组数据，每组数据第一行为两个正整数 n, K ， n 的大小不超过 8 ， K 不超过 200。
+    // 接下来有 n 行，每行一个长度不超过 20 且仅包含大写字母的字符串。
+    // 输出描述:
+    // 输出一个整数代表权值为 K 的字符串数量。
+    // 输入例子:
+    // 3 2
+    // AB
+    // RAAB
+    // RA
+    // 输出例子:
+    //     3
+    function k29(a){
+        data.push(a);
+        var arr=data[0].split(" ");
+        var c=parseInt(arr[0]),k=parseInt(arr[1]);
+        if(data.length>c){
+            var arr1=data.slice(1);
+            var arr2 = permute(arr1);
+            var count=0;
+            arr2.forEach(function(b){
+                var ar1=b.split(",");
+                for(var i=0;i<k;i++){
+                    var d=ar1.shift();
+                    ar1.push(d);
+                }
+                var s=ar1.toString().replace(/,/g,"");
+                if(s==b.replace(/,/g,"")){
+                    count++;
+                }
+            });
+            console.log(count);
+            // 数组全排列
+            function permute(input) {
+                var permArr = [],
+                    usedChars = [];
+                function main(input){
+                    var i, ch;
+                    for (i = 0; i < input.length; i++) {
+                        ch = input.splice(i, 1)[0];
+                        usedChars.push(ch);
+                        if (input.length == 0) {
+                            permArr.push(usedChars.slice().toString());
+                        }
+                        main(input);
+                        input.splice(i, 0, ch);
+                        usedChars.pop();
+                    }
+                    return permArr;
+                }
+                return main(input);
+            };
+
+
+        }
+    }
+
+    // 给定 x, k ，求满足 x + y = x | y 的第 k 小的正整数 y 。 | 是二进制的或(or)运算，例如 3 | 5 = 7。
+    // 比如当 x=5，k=1时返回 2，因为5+1=6 不等于 5|1=5，而 5+2=7 等于 5 | 2 = 7。
+    // 输入描述:
+    // 每组测试用例仅包含一组数据，每组数据为两个正整数 x , k。 满足 0 < x , k ≤ 2,000,000,000。
+    // 输出描述:
+    // 输出一个数y。
+    // 输入例子:
+    // 5 1
+    // 输出例子:
+    //     2
+    function k30(a){
+        var arr = a.split(" ");
+        var x=parseInt(arr[0]),k=parseInt(arr[1]);
+        var re=[];
+        var n=Math.pow(10,32);
+        for(var y=1;y<n;y++){
+            if((x+y)==(x|y)){
+                re.push(y);
+            }
+            if(re.length>=k){
+                console.log(re[k-1]);
+                break;
+            }
+        }
+    }
+
+    // 头条熟悉环境编程题
+    function k31(a){
+        var s=a;
+        var len=s.length;
+        var arr=s.split("");
+        var count=0;
+        for(var i=0;i<len;i++){
+            var arr1=arr.concat();//复制数组
+            var s1="";
+            if(i==0){
+                s1="";
+            }else{
+                s1=s.slice(0,i);
+            }
+            arr1.splice(0,i);
+            var s2=arr1.toString().replace(/,/g,"");
+            s2+=s1;
+            if(s==s2){
+                count++;
+            }
+        }
+        console.log(count);
+    }
+    function k32(a){
+        var arr = a.split(" ");
+        var n= parseInt(arr[0]),m=parseInt(arr[1]);
+        var re=[];
+        for(var i=1;i<=n;i++){
+            re.push(i);
+        }
+        re.sort();
+        console.log(re[m-1]);
+    }
+    function k33(a){
+        data.push(a);
+        if(data.length>1){
+            var arr=data[0].split(" ");
+            var n=parseInt(arr[0]),m=parseInt(arr[1]);
+            var arr1=data[1].split(" ");
+            var re=[];
+            for(var i=0,len=arr1.length;i<len;i++){
+                console.log(i);
+                for(var j=i+1;j<len;j++){
+                    var c=parseInt(arr1[i])^parseInt(arr1[j]);
+                    re.push(c);
+                }
+            }
+            var count=0;
+            re.forEach(function(a){
+                if(parseInt(a)>m){
+                    count++;
+                }
+            })
+            console.log(count);
+            // print(count);
+        }
+
+<<<<<<< HEAD
     // var line;
     // var data=[];
     // while(line=read_line()){
@@ -740,6 +932,114 @@ rl.on("line",function(a) {
         }
     }
 
+=======
+    }
+   //出题
+    function k34(a){
+        data.push(a);
+        if(data.length>1){
+            var n=parseInt(data[0]);
+            var arr=data[1].split(" ").sort(function(b,c){return b-c;});
+            var count=0;
+            for (var i = 0; i < n-1; i++) {
+                if(arr[i+1]-arr[i]>20){
+                    count+=2;
+                    // i++;
+                    continue;
+                }else if (arr[i+1]-arr[i]>10) {
+                    count+=1;
+                    i++;
+                    continue;
+                }else if (arr[i+1]-arr[i]>=0) {
+                    // i++;
+                    continue;
+                }
+            }
+            var sum=n+count;
+            if (sum%3==1) {
+                sum+=2;
+            }else if (sum%3==2) {
+                sum+=1;
+            }
+            console.log(sum-n);
+            // print(sum-n);
+        }
+    }
+    function k35(a){
+        data.push(a);
+        if(data.length>1){
+            var n=parseInt(data[1]);
+            var s=data[0];
+            var re=[];
+            for(var i=0,len=s.length;i<len;i+=n){
+                var s1="";
+                if(i==0){
+                    s1=s.slice(0,n);
+                }else{
+                    s1=s.slice(i,i+n);
+                }
+                re.push(s1);
+            }
+            var arr=[];
+            re.forEach(function(a){
+                if(/^\s/.test(a)){
+                    a=a.slice(1);
+                    while(a.length<9){
+                        a+=" ";
+                    }
+                    arr.push(a);
+                }else{
+                    arr.push(a);
+                }
+            });
+            var ss=arr.toString().replace(/,/g,"\n");
+            console.log(ss);
+            // print(ss);
+        }
+
+    }
+    function k36(a){
+        var line = a.split(' ');
+        var n = parseInt(line[0]),m = parseInt(line[1]);
+        var count = 0;
+        for (var i=0;i<=n;i++){
+            for (var j=0;j<=n;j++){
+                for (var z=0;z<=n;z++){
+                    if(i+2*j+5*z==m&&i+j+z==n){
+                        count++;
+                    }
+                }
+            }
+        }
+        console.log(count);
+        // print (count);
+    }
+    // var line;
+    // while(line = read_line()){
+    //     data.push(a);
+    // }
+    function k37(a){
+        data.push(a);
+        var i=data.indexOf("END");
+        var j=data.lastIndexOf("START");
+        var k=data.lastIndexOf("END");
+        var arr1=data.slice(1,i);
+        var arr2=data.slice(j+1,k);
+        var re=[];
+        arr2.forEach(function(a){
+            var arr=a.split(",");
+            arr1.forEach(function(b){
+                var ar=b.split(" ");
+                if(ar[1]==arr[0]){
+                    re.push(ar[0]+","+arr[1]);
+                }else{
+                    re.push(a);
+                }
+            })
+        })
+        print(re.toString().replace(/,/g,"\n"));
+    }
+>>>>>>> 31c88205eaa5a5f1edf13f6d9823f2477f800341
 
 });
 

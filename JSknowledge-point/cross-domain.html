@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跨域方法探究</title>
+</head>
+<body>
+<div id="test">2222</div>
+</body>
+<script src="../../src/core/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script src="js/es/cross-domain.js" type="text/javascript"></script>
+<script type="text/javascript">
+    function abc(re) {//引用跨域成功回调函数abc函数
+        var fun = k1; //引用js文件k1函数（不能有触发条件的js文件）
+        fun(re);
+    }
+</script>
+</html>
