@@ -718,6 +718,28 @@ rl.on("line",function(a) {
         }
     }
 
+    // var line;
+    // var data=[];
+    // while(line=read_line()){
+    //     data.push(line);
+    // }
+    k80(a);
+    function k80(a){
+        data.push(a);
+        if(data.length>1){
+            var arr=data[1].split(" ");
+            var re="";
+            for(var i=0,len=arr.length;i<len;i++){
+                if(parseInt(arr[i+1])>parseInt(arr[i])){
+                    re+="1";
+                }else{
+                    re+="-1";
+                }
+            }
+            console.log(re);
+        }
+    }
+
 
 });
 
